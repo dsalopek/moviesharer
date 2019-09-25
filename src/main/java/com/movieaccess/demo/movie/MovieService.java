@@ -19,7 +19,7 @@ public class MovieService {
     public List<Movie> getAllMovies(){
         List<Movie> movies = new LinkedList<Movie>();
         movieRepository.findAll().forEach(movies::add);
-        Collections.sort(movies);
+//        Collections.sort(movies);
         return movies;
     }
 

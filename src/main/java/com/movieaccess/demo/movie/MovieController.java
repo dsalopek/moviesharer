@@ -32,13 +32,8 @@ public class MovieController {
 
     @PutMapping("/movies/{id}")
     public void updateMovie(@PathVariable(value = "id") int id, @RequestBody Movie movie){
-        Movie tempMovie = new Movie();
-        tempMovie.setId(id);
-        tempMovie.setImdbId(movie.getImdbId());
-        tempMovie.setAddedDate(movie.getAddedDate());
-        tempMovie.setAddedBy(movie.getAddedBy());
-        tempMovie.setActive(movie.isActive());
-        this.movieService.updateMovie(tempMovie);
+        movie.setId(id);
+        this.movieService.updateMovie(movie);
     }
 
 }
