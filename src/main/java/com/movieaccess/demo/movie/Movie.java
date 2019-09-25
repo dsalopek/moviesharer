@@ -31,7 +31,6 @@ public class Movie implements Comparable<Movie>{
         this.addedBy = addedBy;
         this.addedDate = addedDate;
         this.active = active;
-        this.addedDate = new Date("2019-04-23");
     }
 
     public int getId() {
