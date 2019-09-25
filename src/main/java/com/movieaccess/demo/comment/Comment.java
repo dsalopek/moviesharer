@@ -1,38 +1,39 @@
-package com.movieaccess.demo.movie;
+package com.movieaccess.demo.comment;
+
+import com.movieaccess.demo.movie.Movie;
 
 import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name = "movie")
-public class Movie implements Comparable<Movie> {
+@Table
+public class Comment implements Comparable<Comment>{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
-    @Column(name = "imdbid")
-    private String imdbId;
+    @ManyToOne
+    private Movie movie;
 
-    @Column(name = "addedby")
+    @Column(name = "content")
+    private String content;
+
+    @Column(name="addedby")
     private String addedBy;
 
-    @Column(name = "addeddate")
+    @Column(name="addeddate")
     private Date addedDate;
 
-    @Column(name = "active")
+    @Column(name="active")
     private boolean active;
 
-    public Movie() {
-    }
+    public Comment() {}
 
-    public Movie(int id) {
+    public Comment(int id, Movie movie, String content, String addedBy, Date addedDate, boolean active) {
         this.id = id;
-    }
-
-    public Movie(int id, String imdbId, String addedBy, Date addedDate, boolean active) {
-        this.id = id;
-        this.imdbId = imdbId;
+        this.movie = movie;
+        this.content = content;
         this.addedBy = addedBy;
         this.addedDate = addedDate;
         this.active = active;
@@ -46,12 +47,20 @@ public class Movie implements Comparable<Movie> {
         this.id = id;
     }
 
-    public String getImdbId() {
-        return imdbId;
+    public Movie getMovie() {
+        return movie;
     }
 
-    public void setImdbId(String imdbId) {
-        this.imdbId = imdbId;
+    public void setMovie(Movie movie) {
+        this.movie = movie;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
     }
 
     public String getAddedBy() {
@@ -79,17 +88,18 @@ public class Movie implements Comparable<Movie> {
     }
 
     @Override
+    public int compareTo(Comment o) {
+        return o.getAddedDate().compareTo(this.getAddedDate());
+    }
+
+    @Override
     public String toString() {
-        return "Movie{" +
+        return "Comment{" +
                 "id=" + id +
+                ", content='" + content + '\'' +
                 ", addedBy='" + addedBy + '\'' +
                 ", addedDate=" + addedDate +
                 ", active=" + active +
                 '}';
-    }
-
-    @Override
-    public int compareTo(Movie o) {
-        return o.getAddedDate().compareTo(this.getAddedDate());
     }
 }
