@@ -1,6 +1,7 @@
 package com.movieaccess.demo.movie;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -16,7 +17,7 @@ public class MovieController {
     }
 
     @GetMapping("/movies")
-    public List<Movie> getAllMovies(){
+    public Page<Movie> getAllMovies(){
         return this.movieService.getAllMovies();
     }
 
@@ -32,13 +33,8 @@ public class MovieController {
 
     @PutMapping("/movies/{id}")
     public void updateMovie(@PathVariable(value = "id") int id, @RequestBody Movie movie){
-        Movie tempMovie = new Movie();
-        tempMovie.setId(id);
-        tempMovie.setImdbId(movie.getImdbId());
-        tempMovie.setAddedDate(movie.getAddedDate());
-        tempMovie.setAddedBy(movie.getAddedBy());
-        tempMovie.setActive(movie.isActive());
-        this.movieService.updateMovie(tempMovie);
+        movie.setId(id);
+        this.movieService.updateMovie(movie);
     }
 
 }
