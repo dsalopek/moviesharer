@@ -1,5 +1,6 @@
 package com.movieaccess.demo.comment;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.movieaccess.demo.movie.Movie;
 
 import javax.persistence.*;
@@ -13,7 +14,8 @@ public class Comment implements Comparable<Comment>{
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
-    @ManyToOne
+    @JsonIgnore
+    @ManyToOne(fetch = FetchType.LAZY)
     private Movie movie;
 
     @Column(name = "content")
