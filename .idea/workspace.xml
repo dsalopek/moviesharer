@@ -2,8 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a7a3144-964a-4b5d-ba87-df272292eff3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/exception/CommentErrorResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/exception/CommentNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/exception/CommentRestExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/exception/MovieErrorResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/exception/MovieNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/exception/MovieRestExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/comment/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/comment/Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/comment/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/comment/CommentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/comment/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/comment/CommentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/movie/MovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/movie/MovieController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/movie/MovieRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/movie/MovieRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/movie/MovieService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/movie/MovieService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/movieaccess/demo/movie/MovieController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/movieaccess/demo/movie/MovieController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/movieaccess/demo/movie/MovieService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/movieaccess/demo/movie/MovieService.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -93,20 +106,23 @@
     </option>
   </component>
   <component name="ProjectId" id="1RIlKTn1Ftycd4uHykPXvrhU0Y1" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
-    <property name="RequestMappingsPanelWidth0" value="15" />
-    <property name="RequestMappingsPanelWidth1" value="15" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/comment" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/movie" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/movie" />
       <recent name="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/comment" />
     </key>
   </component>
@@ -135,22 +151,7 @@
     <option name="allServicesViewState">
       <serviceView>
         <treeState>
-          <expand>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@a02e62fd" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@a02e62fd" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@4e849163" type="9fbbdea:ServiceModel$ServiceNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@a02e62fd" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@7e61357b" type="9fbbdea:ServiceModel$ServiceNode" />
-            </path>
-          </expand>
+          <expand />
           <select />
         </treeState>
       </serviceView>
@@ -169,7 +170,7 @@
       <workItem from="1569362433080" duration="6448000" />
       <workItem from="1569369470134" duration="7066000" />
       <workItem from="1569629368677" duration="721000" />
-      <workItem from="1569931867925" duration="2448000" />
+      <workItem from="1569931867925" duration="6566000" />
     </task>
     <servers />
   </component>
