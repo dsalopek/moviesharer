@@ -8,29 +8,30 @@ import java.util.Date;
 
 @Entity
 @Table
-public class Comment implements Comparable<Comment>{
+public class Comment implements Comparable<Comment> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
-    @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "movie_id")
     private Movie movie;
 
     @Column(name = "content")
     private String content;
 
-    @Column(name="addedby")
+    @Column(name = "addedby")
     private String addedBy;
 
-    @Column(name="addeddate")
+    @Column(name = "addeddate")
     private Date addedDate;
 
-    @Column(name="active")
+    @Column(name = "active")
     private boolean active;
 
-    public Comment() {}
+    public Comment() {
+    }
 
     public Comment(int id, Movie movie, String content, String addedBy, Date addedDate, boolean active) {
         this.id = id;
