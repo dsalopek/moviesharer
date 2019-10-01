@@ -50,6 +50,7 @@ public class Comment implements Comparable<Comment> {
         this.id = id;
     }
 
+    @JsonIgnore
     public Movie getMovie() {
         return movie;
     }
