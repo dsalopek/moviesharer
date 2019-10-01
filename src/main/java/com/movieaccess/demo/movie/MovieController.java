@@ -27,14 +27,13 @@ public class MovieController {
     }
 
     @PostMapping("/movies")
-    public void addMovie(@RequestBody Movie movie) {
-        this.movieService.addMovie(movie);
+    public Movie addMovie(@RequestBody Movie movie) {
+        return this.movieService.addMovie(movie);
     }
 
     @PutMapping("/movies/{id}")
-    public void updateMovie(@PathVariable(value = "id") int id, @RequestBody Movie movie) {
-        movie.setId(id);
-        this.movieService.updateMovie(movie);
+    public Movie updateMovie(@PathVariable(value = "id") int id, @RequestBody Movie movie) {
+        return this.movieService.updateMovie(movie, id);
     }
 
 }
