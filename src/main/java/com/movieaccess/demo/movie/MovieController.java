@@ -17,22 +17,22 @@ public class MovieController {
     }
 
     @GetMapping("/movies")
-    public Page<Movie> getAllMovies(){
+    public List<Movie> getAllMovies() {
         return this.movieService.getAllMovies();
     }
 
-    @GetMapping("/movies/{id}" )
-    public Movie getSingleMovie(@PathVariable(value = "id") int id){
+    @GetMapping("/movies/{id}")
+    public Movie getSingleMovie(@PathVariable(value = "id") int id) {
         return this.movieService.getOneMovie(id);
     }
 
     @PostMapping("/movies")
-    public void addMovie(@RequestBody Movie movie){
+    public void addMovie(@RequestBody Movie movie) {
         this.movieService.addMovie(movie);
     }
 
     @PutMapping("/movies/{id}")
-    public void updateMovie(@PathVariable(value = "id") int id, @RequestBody Movie movie){
+    public void updateMovie(@PathVariable(value = "id") int id, @RequestBody Movie movie) {
         movie.setId(id);
         this.movieService.updateMovie(movie);
     }
