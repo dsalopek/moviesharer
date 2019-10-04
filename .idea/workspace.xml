@@ -2,21 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a7a3144-964a-4b5d-ba87-df272292eff3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/exception/CommentErrorResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/exception/CommentNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/exception/CommentRestExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/exception/MovieErrorResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/exception/MovieNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/exception/MovieRestExceptionHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/comment/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/comment/CommentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/comment/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/comment/CommentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/movie/MovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/movie/MovieController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/movie/MovieRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/movie/MovieRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/movie/MovieService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/movie/MovieService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/movieaccess/demo/movie/MovieController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/movieaccess/demo/movie/MovieController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/movieaccess/demo/movie/MovieService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/movieaccess/demo/movie/MovieService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moviesharer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/moviesharer.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -171,6 +160,8 @@
       <workItem from="1569369470134" duration="7066000" />
       <workItem from="1569629368677" duration="721000" />
       <workItem from="1569931867925" duration="6566000" />
+      <workItem from="1570021157917" duration="211000" />
+      <workItem from="1570057180733" duration="1135000" />
     </task>
     <servers />
   </component>
@@ -180,9 +171,25 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
+        <entry key="1">
+          <value>
+            <State />
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
               <option name="COLUMN_ORDER" />
             </State>
           </value>
