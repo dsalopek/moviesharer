@@ -1,10 +1,15 @@
 package com.movieaccess.demo.movie;
 
+import lombok.Builder;
+import lombok.Data;
+
 import javax.persistence.*;
 import java.util.Date;
 
 @Entity
 @Table(name = "movie")
+@Builder
+@Data
 public class Movie implements Comparable<Movie> {
 
     @Id
