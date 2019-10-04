@@ -27,18 +27,16 @@ public class CommentController {
     }
 
     @PostMapping("/movies/{movieId}/comments")
-    public void addComment(@RequestBody Comment comment,
+    public Comment addComment(@RequestBody Comment comment,
                            @PathVariable int movieId){
         comment.setMovie(new Movie(movieId));
-        this.commentService.addComment(comment);
+        return this.commentService.addComment(comment);
     }
 
     @PutMapping("/movies/{movieId}/comments/{commentId}")
-    public void updateComment(@RequestBody Comment comment,
+    public Comment updateComment(@RequestBody Comment comment,
                               @PathVariable int commentId,
                               @PathVariable int movieId){
-        comment.setId(commentId);
-        comment.setMovie(new Movie(movieId));
-        this.commentService.updateComment(comment);
+        return this.commentService.updateComment(comment, commentId, movieId);
     }
 }
