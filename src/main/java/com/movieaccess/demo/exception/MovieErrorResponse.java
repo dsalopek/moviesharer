@@ -8,6 +8,12 @@ public class MovieErrorResponse {
     public MovieErrorResponse() {
     }
 
+    public MovieErrorResponse(int status, String message, long timeStamp) {
+        this.status = status;
+        this.message = message;
+        this.timeStamp = timeStamp;
+    }
+
     public int getStatus() {
         return status;
     }

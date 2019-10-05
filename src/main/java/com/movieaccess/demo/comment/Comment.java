@@ -1,41 +1,21 @@
 package com.movieaccess.demo.comment;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.movieaccess.demo.movie.Movie;
-
-import javax.persistence.*;
 import java.util.Date;
 
-@Entity
-@Table
 public class Comment implements Comparable<Comment> {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "movie_id")
-    private Movie movie;
-
-    @Column(name = "content")
+    private int movieId;
     private String content;
-
-    @Column(name = "addedby")
     private String addedBy;
-
-    @Column(name = "addeddate")
     private Date addedDate;
-
-    @Column(name = "active")
     private boolean active;
 
     public Comment() {
     }
 
-    public Comment(int id, Movie movie, String content, String addedBy, Date addedDate, boolean active) {
+    public Comment(int id, int movieId, String content, String addedBy, Date addedDate, boolean active) {
         this.id = id;
-        this.movie = movie;
+        this.movieId = movieId;
         this.content = content;
         this.addedBy = addedBy;
         this.addedDate = addedDate;
@@ -50,13 +30,12 @@ public class Comment implements Comparable<Comment> {
         this.id = id;
     }
 
-    @JsonIgnore
-    public Movie getMovie() {
-        return movie;
+    public int getMovieId() {
+        return movieId;
     }
 
-    public void setMovie(Movie movie) {
-        this.movie = movie;
+    public void setMovieId(int movieId) {
+        this.movieId = movieId;
     }
 
     public String getContent() {
@@ -100,6 +79,7 @@ public class Comment implements Comparable<Comment> {
     public String toString() {
         return "Comment{" +
                 "id=" + id +
+                ", movieId=" + movieId +
                 ", content='" + content + '\'' +
                 ", addedBy='" + addedBy + '\'' +
                 ", addedDate=" + addedDate +

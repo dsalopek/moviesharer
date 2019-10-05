@@ -11,7 +11,7 @@
     <database id="3" parent="1" name="movie_sharer">
       <ObjectId>16389</ObjectId>
       <Owner>andrewsalopek</Owner>
-      <IntrospectionStateNumber>638</IntrospectionStateNumber>
+      <IntrospectionStateNumber>668</IntrospectionStateNumber>
       <Current>1</Current>
       <Relations>sequence|table|16390|16392|1
 </Relations>
@@ -110,7 +110,7 @@
       <Comment>standard public schema</Comment>
       <StateNumber>359</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>639</IntrospectionStateNumber>
+      <IntrospectionStateNumber>669</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <access-method id="20" parent="3" name="btree">
@@ -193,7 +193,7 @@
     <table id="30" parent="19" name="movie">
       <ObjectId>16392</ObjectId>
       <Owner>andrewsalopek</Owner>
-      <StateNumber>637</StateNumber>
+      <StateNumber>657</StateNumber>
     </table>
     <column id="31" parent="29" name="id">
       <Position>1</Position>
@@ -226,10 +226,10 @@
       <StateNumber>630</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="36" parent="29" name="movie_id">
+    <column id="36" parent="29" name="movieid">
       <Position>6</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>630</StateNumber>
+      <StateNumber>667</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <index id="37" parent="29" name="comment_pkey">
@@ -249,7 +249,7 @@
     <foreign-key id="39" parent="29" name="fkj6owqni09n6r5rspfx1xtfu23">
       <ObjectId>16430</ObjectId>
       <StateNumber>637</StateNumber>
-      <ColNames>movie_id</ColNames>
+      <ColNames>movieid</ColNames>
       <RefTableId>16392</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>movie</RefTableName>

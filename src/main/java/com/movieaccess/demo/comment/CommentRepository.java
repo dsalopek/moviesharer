@@ -1,9 +1,23 @@
 package com.movieaccess.demo.comment;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-public interface CommentRepository extends JpaRepository<Comment, Integer> {
-    public List<Comment> findAllByMovieId(int movieId);
+@Repository
+public class CommentRepository {
+    private JdbcTemplate jdbcTemplate;
+
+    @Autowired
+    public CommentRepository(JdbcTemplate jdbcTemplate) {
+        this.jdbcTemplate = jdbcTemplate;
+    }
+
+    @Transactional(readOnly = true)
+    public List<Comment> commentByMovie(int movieId) {
+        return jdbcTemplate.query("select * from comment where movieid = ?", new Object[]{movieId}, new CommentRowMapper());
+    }
 }

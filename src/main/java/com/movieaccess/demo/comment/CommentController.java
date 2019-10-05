@@ -1,10 +1,8 @@
 package com.movieaccess.demo.comment;
 
-import com.movieaccess.demo.movie.Movie;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.nio.file.Path;
 import java.util.List;
 
 @RestController
@@ -29,7 +27,7 @@ public class CommentController {
     @PostMapping("/movies/{movieId}/comments")
     public Comment addComment(@RequestBody Comment comment,
                            @PathVariable int movieId){
-        comment.setMovie(new Movie(movieId));
+        //comment.setMovie(new Movie(movieId));
         return this.commentService.addComment(comment);
     }
 

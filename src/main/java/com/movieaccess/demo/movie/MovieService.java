@@ -26,26 +26,21 @@ public class MovieService {
     }
 
     public Movie getOneMovie(Integer id) {
-        return movieRepository.findById(id)
-                .orElseThrow(() -> new MovieNotFoundException("Movie not found for movieId: " + id));
+        Movie movie;
+        try{
+            movie = movieRepository.findOne(id);
+        } catch(Exception e){
+            //Still isnt working...other methods?
+            throw new MovieNotFoundException("Movie not found with id: "+id);
+        }
+        return movie;
     }
 
     public Movie addMovie(Movie movie) {
-        return movieRepository.save(movie);
+        return null;
     }
 
     public Movie updateMovie(Movie newMovie, int id) {
-        return movieRepository.findById(id)
-                .map(movie -> {
-                    movie.setImdbId(newMovie.getImdbId());
-                    movie.setAddedBy("dylan");
-                    movie.setAddedDate(new Date(System.currentTimeMillis()));
-                    movie.setActive(newMovie.isActive());
-                    return movieRepository.save(movie);
-                })
-                .orElseGet(() -> {
-                    newMovie.setId(id);
-                    return movieRepository.save(newMovie);
-                });
+        return null;
     }
 }

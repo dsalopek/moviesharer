@@ -21,33 +21,18 @@ public class CommentService {
 
     public List<Comment> getAllComments(int movieId) {
         List<Comment> comments = new LinkedList<Comment>();
-        commentRepository.findAllByMovieId(movieId).forEach(comments::add);
-        return comments;
+        return commentRepository.commentByMovie(movieId);
     }
 
     public Comment getOneComment(int commentId) {
-        return commentRepository.findById(commentId)
-                .orElseThrow(() -> new CommentNotFoundException("Comment not found for commentId: " + commentId));
+        return null;
     }
 
     public Comment addComment(Comment comment) {
-        return commentRepository.save(comment);
+        return null;
     }
 
     public Comment updateComment(Comment newComment, int commentId, int movieId) {
-        return commentRepository.findById(newComment.getId())
-                .map(comment -> {
-                    comment.setContent(newComment.getContent());
-                    comment.setMovie(new Movie(movieId));
-                    comment.setAddedDate(new Date(System.currentTimeMillis()));
-                    comment.setAddedBy("dylan");
-                    comment.setActive(newComment.isActive());
-                    return commentRepository.save(comment);
-                })
-                .orElseGet(() -> {
-                    newComment.setId(commentId);
-                    newComment.setMovie(new Movie(movieId));
-                    return commentRepository.save(newComment);
-                });
+        return null;
     }
 }
