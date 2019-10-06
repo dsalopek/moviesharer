@@ -1,30 +1,15 @@
 package com.movieaccess.demo.movie;
 
-import javax.persistence.*;
 import java.util.Date;
 
-@Entity
-@Table(name = "movie")
 public class Movie implements Comparable<Movie> {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-
-    @Column(name = "imdbid")
     private String imdbId;
-
-    @Column(name = "addedby")
     private String addedBy;
-
-    @Column(name = "addeddate")
     private Date addedDate;
-
-    @Column(name = "active")
     private boolean active;
 
-    public Movie() {
-    }
+    public Movie() {}
 
     public Movie(int id) {
         this.id = id;
