@@ -2,46 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a7a3144-964a-4b5d-ba87-df272292eff3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/comment/CommentRowMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/comment/CommentDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/comment/CommentServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/movie/MovieDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/movie/MovieServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/4e69235a-6587-47f7-833f-60feb77fa316.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4e69235a-6587-47f7-833f-60feb77fa316.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/4e69235a-6587-47f7-833f-60feb77fa316/storage_v2/_src_/database/movie_sharer.YvQjpw/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4e69235a-6587-47f7-833f-60feb77fa316/storage_v2/_src_/database/movie_sharer.YvQjpw/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_persistence_javax_persistence_api_2_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_transaction_javax_transaction_api_1_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_dom4j_dom4j_2_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_0_4_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_3_11_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_23_2_GA.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_0_5_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_1_8_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_2_1_8_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_1_10_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_2_1_10_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_5_1_9_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_5_1_9_RELEASE.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moviesharer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/moviesharer.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/DemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/DemoApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/JdbiConfiguration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/comment/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/comment/Comment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/comment/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/comment/CommentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/comment/CommentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/comment/CommentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/comment/CommentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/comment/CommentDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/comment/CommentRowMapper.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/comment/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/comment/CommentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/dao/MovieDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/exception/MovieErrorResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/exception/MovieErrorResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/exception/MovieRestExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/exception/MovieRestExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/mapper/MovieMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/movie/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/movie/Movie.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/movie/MovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/movie/MovieController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/movie/MovieRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/movie/MovieRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/movie/MovieRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/movie/MovieDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/movie/MovieService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/demo/movie/MovieService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/movieaccess/demo/movie/Movie.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/movieaccess/demo/movie/Movie.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/movieaccess/demo/movie/MovieController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/movieaccess/demo/movie/MovieController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/movieaccess/demo/movie/MovieRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/movieaccess/demo/movie/MovieRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/movieaccess/demo/movie/MovieRepository.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/movieaccess/demo/movie/MovieService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/movieaccess/demo/movie/MovieService.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -108,8 +84,7 @@
         <item name="movie_sharer: database" type="162271b6:PgImplModel$Database" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="movie: table" type="69fad909:PgImplModel$LocalTable" />
+        <item name="sequences" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
     </expand>
     <select />
@@ -117,8 +92,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -208,7 +183,7 @@
       <workItem from="1569931867925" duration="6566000" />
       <workItem from="1570021157917" duration="211000" />
       <workItem from="1570057180733" duration="2505000" />
-      <workItem from="1570192053979" duration="12826000" />
+      <workItem from="1570192053979" duration="25293000" />
     </task>
     <servers />
   </component>
@@ -226,12 +201,13 @@
         <entry key="MAIN">
           <value>
             <State>
+              <option name="BEK_SORT_TYPE" value="1" />
               <option name="FILTERS">
                 <map>
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="HEAD" />
                       </list>
                     </value>
                   </entry>
@@ -239,6 +215,36 @@
               </option>
               <option name="COLUMN_ORDER" />
             </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="master" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/master" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="jdbi-exploration" />
+                </option>
+              </RecentGroup>
+            </list>
           </value>
         </entry>
       </map>
