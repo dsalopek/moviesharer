@@ -11,9 +11,10 @@
     <database id="3" parent="1" name="movie_sharer">
       <ObjectId>16389</ObjectId>
       <Owner>andrewsalopek</Owner>
-      <IntrospectionStateNumber>638</IntrospectionStateNumber>
+      <IntrospectionStateNumber>687</IntrospectionStateNumber>
       <Current>1</Current>
       <Relations>sequence|table|16390|16392|1
+sequence|table|16447|16420|1
 </Relations>
     </database>
     <database id="4" parent="1" name="postgres">
@@ -110,7 +111,7 @@
       <Comment>standard public schema</Comment>
       <StateNumber>359</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>639</IntrospectionStateNumber>
+      <IntrospectionStateNumber>688</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <access-method id="20" parent="3" name="btree">
@@ -177,7 +178,15 @@
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
-    <sequence id="28" parent="19" name="movie_id_seq">
+    <sequence id="28" parent="19" name="comment_id_seq">
+      <ObjectId>16447</ObjectId>
+      <StateNumber>684</StateNumber>
+      <Owner>andrewsalopek</Owner>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="29" parent="19" name="movie_id_seq">
       <ObjectId>16390</ObjectId>
       <StateNumber>578</StateNumber>
       <Owner>andrewsalopek</Owner>
@@ -185,78 +194,79 @@
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
-    <table id="29" parent="19" name="comment">
+    <table id="30" parent="19" name="comment">
       <ObjectId>16420</ObjectId>
       <Owner>andrewsalopek</Owner>
       <StateNumber>637</StateNumber>
     </table>
-    <table id="30" parent="19" name="movie">
+    <table id="31" parent="19" name="movie">
       <ObjectId>16392</ObjectId>
       <Owner>andrewsalopek</Owner>
-      <StateNumber>637</StateNumber>
+      <StateNumber>657</StateNumber>
     </table>
-    <column id="31" parent="29" name="id">
+    <column id="32" parent="30" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>630</StateNumber>
+      <StateNumber>685</StateNumber>
+      <DefaultExpression>nextval(&apos;comment_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="32" parent="29" name="active">
+    <column id="33" parent="30" name="active">
       <Position>2</Position>
       <DataType>boolean|0s</DataType>
       <StateNumber>630</StateNumber>
       <TypeId>16</TypeId>
     </column>
-    <column id="33" parent="29" name="addedby">
+    <column id="34" parent="30" name="addedby">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>630</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="34" parent="29" name="addeddate">
+    <column id="35" parent="30" name="addeddate">
       <Position>4</Position>
       <DataType>timestamp|0s</DataType>
       <StateNumber>630</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="35" parent="29" name="content">
+    <column id="36" parent="30" name="content">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>630</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="36" parent="29" name="movie_id">
+    <column id="37" parent="30" name="movieid">
       <Position>6</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>630</StateNumber>
+      <StateNumber>667</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="37" parent="29" name="comment_pkey">
+    <index id="38" parent="30" name="comment_pkey">
       <ObjectId>16426</ObjectId>
       <StateNumber>630</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="38" parent="29" name="comment_pkey">
+    <key id="39" parent="30" name="comment_pkey">
       <ObjectId>16427</ObjectId>
       <StateNumber>630</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>comment_pkey</UnderlyingIndexName>
     </key>
-    <foreign-key id="39" parent="29" name="fkj6owqni09n6r5rspfx1xtfu23">
+    <foreign-key id="40" parent="30" name="fkj6owqni09n6r5rspfx1xtfu23">
       <ObjectId>16430</ObjectId>
       <StateNumber>637</StateNumber>
-      <ColNames>movie_id</ColNames>
+      <ColNames>movieid</ColNames>
       <RefTableId>16392</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>movie</RefTableName>
       <RefKeyName>id</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="40" parent="30" name="id">
+    <column id="41" parent="31" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -264,38 +274,38 @@
       <DefaultExpression>nextval(&apos;movie_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="41" parent="30" name="imdbid">
+    <column id="42" parent="31" name="imdbid">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>578</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="42" parent="30" name="addedby">
+    <column id="43" parent="31" name="addedby">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>578</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="43" parent="30" name="addeddate">
+    <column id="44" parent="31" name="addeddate">
       <Position>4</Position>
       <DataType>date|0s</DataType>
       <StateNumber>578</StateNumber>
       <TypeId>1082</TypeId>
     </column>
-    <column id="44" parent="30" name="active">
+    <column id="45" parent="31" name="active">
       <Position>6</Position>
       <DataType>boolean|0s</DataType>
       <StateNumber>606</StateNumber>
       <TypeId>16</TypeId>
     </column>
-    <index id="45" parent="30" name="id">
+    <index id="46" parent="31" name="id">
       <ObjectId>16428</ObjectId>
       <StateNumber>632</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="46" parent="30" name="id">
+    <key id="47" parent="31" name="id">
       <ObjectId>16429</ObjectId>
       <StateNumber>632</StateNumber>
       <ColNames>id</ColNames>

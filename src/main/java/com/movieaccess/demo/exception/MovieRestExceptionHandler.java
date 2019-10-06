@@ -1,31 +1,25 @@
 package com.movieaccess.demo.exception;
 
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-@ControllerAdvice
+@RestControllerAdvice
 public class MovieRestExceptionHandler {
-    @ExceptionHandler
-    public ResponseEntity<MovieErrorResponse> handleException(MovieNotFoundException exc){
-        MovieErrorResponse error = new MovieErrorResponse();
-
-        error.setStatus(HttpStatus.NOT_FOUND.value());
-        error.setMessage(exc.getMessage());
-        error.setTimeStamp(System.currentTimeMillis());
-
-        return new ResponseEntity<>(error, HttpStatus.NOT_FOUND);
+    @ExceptionHandler(value = {MovieNotFoundException.class})
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public MovieErrorResponse unknownException(Exception exc) {
+        return new MovieErrorResponse(HttpStatus.NOT_FOUND.value(),
+                exc.getMessage(),
+                System.currentTimeMillis());
     }
 
-    @ExceptionHandler
-    public ResponseEntity<MovieErrorResponse> handleException(Exception exc){
-        MovieErrorResponse error = new MovieErrorResponse();
-
-        error.setStatus(HttpStatus.BAD_REQUEST.value());
-        error.setMessage(exc.getMessage());
-        error.setTimeStamp(System.currentTimeMillis());
-
-        return new ResponseEntity<>(error, HttpStatus.BAD_REQUEST);
+    @ExceptionHandler(value = {Exception.class})
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    public MovieErrorResponse badRequest(Exception exc) {
+        return new MovieErrorResponse(HttpStatus.BAD_REQUEST.value(),
+                exc.getMessage(),
+                System.currentTimeMillis());
     }
 }

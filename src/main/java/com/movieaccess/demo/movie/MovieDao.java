@@ -2,7 +2,7 @@ package com.movieaccess.demo.movie;
 
 import java.util.List;
 
-public interface MovieService {
+public interface MovieDao {
     List<Movie> getAllMovies();
     Movie getMovieById(int id);
     void createMovie(Movie movie);
