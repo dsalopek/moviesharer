@@ -1,5 +1,7 @@
-package com.movieaccess.demo.comment;
+package com.movieaccess.rest.controller;
 
+import com.movieaccess.rest.model.Comment;
+import com.movieaccess.rest.service.CommentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

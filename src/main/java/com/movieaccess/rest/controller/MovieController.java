@@ -1,5 +1,7 @@
-package com.movieaccess.demo.movie;
+package com.movieaccess.rest.controller;
 
+import com.movieaccess.rest.model.Movie;
+import com.movieaccess.rest.service.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

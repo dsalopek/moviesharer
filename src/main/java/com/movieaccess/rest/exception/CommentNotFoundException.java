@@ -1,4 +1,4 @@
-package com.movieaccess.demo.exception;
+package com.movieaccess.rest.exception;
 
 public class CommentNotFoundException extends RuntimeException {
     public CommentNotFoundException(String message) {

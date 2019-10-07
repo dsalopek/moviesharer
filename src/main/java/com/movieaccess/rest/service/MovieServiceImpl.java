@@ -1,7 +1,9 @@
-package com.movieaccess.demo.movie;
+package com.movieaccess.rest.service;
 
-import com.movieaccess.demo.comment.CommentDao;
-import com.movieaccess.demo.exception.MovieNotFoundException;
+import com.movieaccess.rest.dao.CommentDao;
+import com.movieaccess.rest.exception.MovieNotFoundException;
+import com.movieaccess.rest.model.Movie;
+import com.movieaccess.rest.dao.MovieDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
