@@ -1,17 +1,11 @@
-package com.movieaccess.demo.exception;
+package com.movieaccess.rest.exception;
 
-public class MovieErrorResponse {
+public class CommentErrorResponse {
     private int status;
     private String message;
     private long timeStamp;
 
-    public MovieErrorResponse() {
-    }
-
-    public MovieErrorResponse(int status, String message, long timeStamp) {
-        this.status = status;
-        this.message = message;
-        this.timeStamp = timeStamp;
+    public CommentErrorResponse() {
     }
 
     public int getStatus() {

@@ -1,4 +1,4 @@
-package com.movieaccess.demo.comment;
+package com.movieaccess.rest.model;
 import java.util.Date;
 
 public class Comment implements Comparable<Comment> {

@@ -1,4 +1,4 @@
-package com.movieaccess.demo;
+package com.movieaccess.rest;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

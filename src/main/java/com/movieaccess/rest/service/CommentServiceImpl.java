@@ -1,5 +1,7 @@
-package com.movieaccess.demo.comment;
+package com.movieaccess.rest.service;
 
+import com.movieaccess.rest.model.Comment;
+import com.movieaccess.rest.dao.CommentDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

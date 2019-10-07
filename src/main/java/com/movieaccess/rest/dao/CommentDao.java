@@ -1,4 +1,6 @@
-package com.movieaccess.demo.comment;
+package com.movieaccess.rest.dao;
+
+import com.movieaccess.rest.model.Comment;
 
 import java.util.List;
 

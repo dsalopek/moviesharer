@@ -1,4 +1,6 @@
-package com.movieaccess.demo.movie;
+package com.movieaccess.rest.dao;
+
+import com.movieaccess.rest.model.Movie;
 
 import java.util.List;
 

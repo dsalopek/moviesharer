@@ -1,5 +1,6 @@
-package com.movieaccess.demo.comment;
+package com.movieaccess.rest.dao;
 
+import com.movieaccess.rest.model.Comment;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;

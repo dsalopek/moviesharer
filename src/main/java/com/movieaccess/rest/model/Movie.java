@@ -1,4 +1,4 @@
-package com.movieaccess.demo.movie;
+package com.movieaccess.rest.model;
 
 import java.util.Date;
 
