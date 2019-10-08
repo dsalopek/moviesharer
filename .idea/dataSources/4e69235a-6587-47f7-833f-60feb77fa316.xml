@@ -11,10 +11,13 @@
     <database id="3" parent="1" name="movie_sharer">
       <ObjectId>16389</ObjectId>
       <Owner>andrewsalopek</Owner>
-      <IntrospectionStateNumber>687</IntrospectionStateNumber>
+      <IntrospectionStateNumber>753</IntrospectionStateNumber>
       <Current>1</Current>
       <Relations>sequence|table|16390|16392|1
 sequence|table|16447|16420|1
+sequence|table|16450|16452|1
+sequence|table|16465|16467|1
+sequence|table|16472|16474|1
 </Relations>
     </database>
     <database id="4" parent="1" name="postgres">
@@ -111,7 +114,7 @@ sequence|table|16447|16420|1
       <Comment>standard public schema</Comment>
       <StateNumber>359</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>688</IntrospectionStateNumber>
+      <IntrospectionStateNumber>754</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <access-method id="20" parent="3" name="btree">
@@ -194,17 +197,56 @@ sequence|table|16447|16420|1
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
-    <table id="30" parent="19" name="comment">
+    <sequence id="30" parent="19" name="roles_id_seq">
+      <ObjectId>16465</ObjectId>
+      <StateNumber>732</StateNumber>
+      <Owner>andrewsalopek</Owner>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="31" parent="19" name="user_id_seq">
+      <ObjectId>16450</ObjectId>
+      <StateNumber>700</StateNumber>
+      <Owner>andrewsalopek</Owner>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="32" parent="19" name="user_roles_map_id_seq">
+      <ObjectId>16472</ObjectId>
+      <StateNumber>736</StateNumber>
+      <Owner>andrewsalopek</Owner>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <table id="33" parent="19" name="comment">
       <ObjectId>16420</ObjectId>
       <Owner>andrewsalopek</Owner>
       <StateNumber>637</StateNumber>
     </table>
-    <table id="31" parent="19" name="movie">
+    <table id="34" parent="19" name="movie">
       <ObjectId>16392</ObjectId>
       <Owner>andrewsalopek</Owner>
       <StateNumber>657</StateNumber>
     </table>
-    <column id="32" parent="30" name="id">
+    <table id="35" parent="19" name="roles">
+      <ObjectId>16467</ObjectId>
+      <Owner>andrewsalopek</Owner>
+      <StateNumber>732</StateNumber>
+    </table>
+    <table id="36" parent="19" name="user_roles_map">
+      <ObjectId>16474</ObjectId>
+      <Owner>andrewsalopek</Owner>
+      <StateNumber>736</StateNumber>
+    </table>
+    <table id="37" parent="19" name="users">
+      <ObjectId>16452</ObjectId>
+      <Owner>andrewsalopek</Owner>
+      <StateNumber>752</StateNumber>
+    </table>
+    <column id="38" parent="33" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -212,51 +254,51 @@ sequence|table|16447|16420|1
       <DefaultExpression>nextval(&apos;comment_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="33" parent="30" name="active">
+    <column id="39" parent="33" name="active">
       <Position>2</Position>
       <DataType>boolean|0s</DataType>
       <StateNumber>630</StateNumber>
       <TypeId>16</TypeId>
     </column>
-    <column id="34" parent="30" name="addedby">
+    <column id="40" parent="33" name="addedby">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>630</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="35" parent="30" name="addeddate">
+    <column id="41" parent="33" name="addeddate">
       <Position>4</Position>
       <DataType>timestamp|0s</DataType>
       <StateNumber>630</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="36" parent="30" name="content">
+    <column id="42" parent="33" name="content">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>630</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="37" parent="30" name="movieid">
+    <column id="43" parent="33" name="movieid">
       <Position>6</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>667</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="38" parent="30" name="comment_pkey">
+    <index id="44" parent="33" name="comment_pkey">
       <ObjectId>16426</ObjectId>
       <StateNumber>630</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="39" parent="30" name="comment_pkey">
+    <key id="45" parent="33" name="comment_pkey">
       <ObjectId>16427</ObjectId>
       <StateNumber>630</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>comment_pkey</UnderlyingIndexName>
     </key>
-    <foreign-key id="40" parent="30" name="fkj6owqni09n6r5rspfx1xtfu23">
+    <foreign-key id="46" parent="33" name="fkj6owqni09n6r5rspfx1xtfu23">
       <ObjectId>16430</ObjectId>
       <StateNumber>637</StateNumber>
       <ColNames>movieid</ColNames>
@@ -266,7 +308,7 @@ sequence|table|16447|16420|1
       <RefKeyName>id</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="41" parent="31" name="id">
+    <column id="47" parent="34" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -274,43 +316,184 @@ sequence|table|16447|16420|1
       <DefaultExpression>nextval(&apos;movie_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="42" parent="31" name="imdbid">
+    <column id="48" parent="34" name="imdbid">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>578</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="43" parent="31" name="addedby">
+    <column id="49" parent="34" name="addedby">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>578</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="44" parent="31" name="addeddate">
+    <column id="50" parent="34" name="addeddate">
       <Position>4</Position>
       <DataType>date|0s</DataType>
       <StateNumber>578</StateNumber>
       <TypeId>1082</TypeId>
     </column>
-    <column id="45" parent="31" name="active">
+    <column id="51" parent="34" name="active">
       <Position>6</Position>
       <DataType>boolean|0s</DataType>
       <StateNumber>606</StateNumber>
       <TypeId>16</TypeId>
     </column>
-    <index id="46" parent="31" name="id">
+    <index id="52" parent="34" name="id">
       <ObjectId>16428</ObjectId>
       <StateNumber>632</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="47" parent="31" name="id">
+    <key id="53" parent="34" name="id">
       <ObjectId>16429</ObjectId>
       <StateNumber>632</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>id</UnderlyingIndexName>
+    </key>
+    <column id="54" parent="35" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>732</StateNumber>
+      <DefaultExpression>nextval(&apos;roles_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="55" parent="35" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>732</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="56" parent="35" name="roles_id_uindex">
+      <ObjectId>16471</ObjectId>
+      <StateNumber>733</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <column id="57" parent="36" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>736</StateNumber>
+      <DefaultExpression>nextval(&apos;user_roles_map_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="58" parent="36" name="userid">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>736</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="59" parent="36" name="roleid">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>736</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="60" parent="36" name="active">
+      <Position>4</Position>
+      <DataType>boolean|0s</DataType>
+      <StateNumber>736</StateNumber>
+      <DefaultExpression>true</DefaultExpression>
+      <TypeId>16</TypeId>
+    </column>
+    <index id="61" parent="36" name="user_roles_map_id_uindex">
+      <ObjectId>16479</ObjectId>
+      <StateNumber>737</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="62" parent="36" name="user_roles_map_pk">
+      <ObjectId>16480</ObjectId>
+      <StateNumber>738</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="63" parent="36" name="user_roles_map_pk">
+      <ObjectId>16481</ObjectId>
+      <StateNumber>738</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>user_roles_map_pk</UnderlyingIndexName>
+    </key>
+    <column id="64" parent="37" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>700</StateNumber>
+      <DefaultExpression>nextval(&apos;user_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="65" parent="37" name="username">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>700</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="66" parent="37" name="email">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>700</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="67" parent="37" name="role">
+      <Position>4</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>752</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="68" parent="37" name="active">
+      <Position>5</Position>
+      <DataType>boolean|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>700</StateNumber>
+      <DefaultExpression>true</DefaultExpression>
+      <TypeId>16</TypeId>
+    </column>
+    <column id="69" parent="37" name="password">
+      <Position>6</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>709</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="70" parent="37" name="user_id_uindex">
+      <ObjectId>16461</ObjectId>
+      <StateNumber>752</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="71" parent="37" name="user_pk">
+      <ObjectId>16463</ObjectId>
+      <StateNumber>752</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <index id="72" parent="37" name="user_username_uindex">
+      <ObjectId>16462</ObjectId>
+      <StateNumber>752</StateNumber>
+      <ColNames>username</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="73" parent="37" name="user_email_uindex">
+      <ObjectId>16460</ObjectId>
+      <StateNumber>752</StateNumber>
+      <ColNames>email</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="74" parent="37" name="user_pk">
+      <ObjectId>16464</ObjectId>
+      <StateNumber>704</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>user_pk</UnderlyingIndexName>
     </key>
   </database-model>
 </dataSource>
