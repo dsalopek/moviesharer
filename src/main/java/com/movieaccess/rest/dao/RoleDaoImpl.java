@@ -50,14 +50,9 @@ public class RoleDaoImpl implements RoleDao {
 
                     Set<Role> roles = new HashSet<Role>();
 
-                    logger.info(roles.toString());
-
                     while (rs.next()) {
                         roles.add(new Role(RoleName.valueOf(rs.getString("name"))));
-                        logger.info("adding roles");
                     }
-
-                    logger.info(roles.toString());
 
                     return roles;
                 });
