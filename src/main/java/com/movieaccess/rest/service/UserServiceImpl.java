@@ -30,8 +30,9 @@ public class UserServiceImpl implements UserDetailsService {
     private RoleDao roleDao;
 
     @Autowired
-    public UserServiceImpl(UserDao userDao) {
+    public UserServiceImpl(UserDao userDao, RoleDao roleDao) {
         this.userDao = userDao;
+        this.roleDao = roleDao;
     }
 
     @Override
@@ -55,13 +56,9 @@ public class UserServiceImpl implements UserDetailsService {
 
     @Transactional
     public void getRolesByUser(User user){
-        logger.info(user.toString());
-        //logger.info(this.roleDao.findRolesByUserId(1).toString());
-        Set<Role> roles = new HashSet<Role>();
-        roles.add(new Role(RoleName.ROLE_USER));
-
-        //this.roleDao.findRolesByUserId(user.getId());
-        logger.info(user.toString());
+        Set<Role> roles;
+        roles = this.roleDao.findRolesByUserId(user.getId());
         user.setRoles(roles);
+        logger.info(user.toString());
     }
 }

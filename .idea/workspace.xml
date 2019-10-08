@@ -2,41 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a7a3144-964a-4b5d-ba87-df272292eff3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/config/WebMvcConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/controller/AuthenticationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/dao/RoleDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/dao/RoleDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/dao/UserDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/dao/UserDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/exception/AppException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/exception/BadRequestException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/exception/ResourceNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/model/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/model/RoleName.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/payload/ApiResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/payload/JwtAuthenticationResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/payload/LoginRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/payload/SignUpRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/security/CurrentUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/security/JwtAuthenticationEntryPoint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/security/JwtAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/security/JwtTokenProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/security/UserPrincipal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4e69235a-6587-47f7-833f-60feb77fa316.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4e69235a-6587-47f7-833f-60feb77fa316.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4e69235a-6587-47f7-833f-60feb77fa316/storage_v2/_src_/database/movie_sharer.YvQjpw/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4e69235a-6587-47f7-833f-60feb77fa316/storage_v2/_src_/database/movie_sharer.YvQjpw/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moviesharer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/moviesharer.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/movieaccess/demo/DemoApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/movieaccess/demo/movie/Movie.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/movieaccess/demo/movie/MovieController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/movieaccess/demo/movie/MovieService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/movieaccess/demo/DemoApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/service/UserServiceImpl.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -243,7 +209,7 @@
       <workItem from="1569931867925" duration="6566000" />
       <workItem from="1570021157917" duration="211000" />
       <workItem from="1570057180733" duration="2505000" />
-      <workItem from="1570192053979" duration="44666000" />
+      <workItem from="1570192053979" duration="45226000" />
     </task>
     <servers />
   </component>
