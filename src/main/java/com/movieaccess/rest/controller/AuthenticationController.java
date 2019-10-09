@@ -12,6 +12,7 @@ import com.movieaccess.rest.payload.LoginRequest;
 import com.movieaccess.rest.payload.SignUpRequest;
 import com.movieaccess.rest.security.JwtAuthenticationFilter;
 import com.movieaccess.rest.security.JwtTokenProvider;
+import com.movieaccess.rest.service.UserServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,6 +42,9 @@ public class AuthenticationController {
 
     @Autowired
     UserDao userDao;
+
+    @Autowired
+    UserServiceImpl userService;
 
     @Autowired
     RoleDao roleDao;
@@ -99,7 +103,9 @@ public class AuthenticationController {
 
         user.setRoles(Collections.singleton(userRole));
 
-        User result = userDao.save(user);
+        logger.info(user.toString());
+
+        User result = userService.save(user);
 
         URI location = ServletUriComponentsBuilder
                 .fromCurrentContextPath().path("/api/users/{username}")

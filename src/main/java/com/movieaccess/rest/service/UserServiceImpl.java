@@ -15,9 +15,8 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.HashSet;
-import java.util.List;
-import java.util.Optional;
+
+import javax.activation.DataSource;
 import java.util.Set;
 
 @Service
@@ -60,5 +59,12 @@ public class UserServiceImpl implements UserDetailsService {
         roles = this.roleDao.findRolesByUserId(user.getId());
         user.setRoles(roles);
         logger.info(user.toString());
+    }
+
+    @Transactional
+    public User save(User user){
+        User newUser = userDao.save(user);
+        roleDao.saveRoles(user.getRoles(), newUser.getId());
+        return newUser;
     }
 }
