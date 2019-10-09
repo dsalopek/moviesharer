@@ -6,13 +6,13 @@ import com.movieaccess.rest.model.RoleName;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
 import org.springframework.stereotype.Repository;
 
-import java.util.HashSet;
-import java.util.List;
-import java.util.Optional;
-import java.util.Set;
+import java.sql.SQLException;
+import java.util.*;
 
 @Repository
 public class RoleDaoImpl implements RoleDao {
@@ -57,4 +57,21 @@ public class RoleDaoImpl implements RoleDao {
                     return roles;
                 });
     }
+
+    @Override
+    public void saveRoles(Set<Role> roles, int userId) {
+        try{
+            List<Object[]> batch = new ArrayList<Object[]>();
+            for(Role role : roles){
+                Object[] values = {userId, role.getId()};
+                batch.add(values);
+            }
+
+            jdbcTemplate.batchUpdate("insert into user_roles_map (userid, roleid) values (?, ?)", batch);
+        } catch (RuntimeException e){
+            logger.error("Error batch inserting roles", e);
+        }
+    }
+
+
 }

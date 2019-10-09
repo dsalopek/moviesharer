@@ -10,4 +10,5 @@ import java.util.Set;
 public interface RoleDao {
     Optional<Role> findByName(RoleName roleName);
     Set<Role> findRolesByUserId(long userId);
+    void saveRoles(Set<Role> roles, int userId);
 }
