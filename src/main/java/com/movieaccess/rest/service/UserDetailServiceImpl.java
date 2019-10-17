@@ -3,7 +3,6 @@ package com.movieaccess.rest.service;
 import com.movieaccess.rest.dao.RoleDao;
 import com.movieaccess.rest.dao.UserDao;
 import com.movieaccess.rest.model.Role;
-import com.movieaccess.rest.model.RoleName;
 import com.movieaccess.rest.model.User;
 import com.movieaccess.rest.security.UserPrincipal;
 import org.slf4j.Logger;
@@ -15,21 +14,19 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-
-import javax.activation.DataSource;
 import java.util.Set;
 
 @Service
-public class UserServiceImpl implements UserDetailsService {
+public class UserDetailServiceImpl implements UserDetailsService {
 
-    private static final Logger logger = LoggerFactory.getLogger(UserServiceImpl.class);
+    private static final Logger logger = LoggerFactory.getLogger(UserDetailServiceImpl.class);
 
 
     private UserDao userDao;
     private RoleDao roleDao;
 
     @Autowired
-    public UserServiceImpl(UserDao userDao, RoleDao roleDao) {
+    public UserDetailServiceImpl(UserDao userDao, RoleDao roleDao) {
         this.userDao = userDao;
         this.roleDao = roleDao;
     }
