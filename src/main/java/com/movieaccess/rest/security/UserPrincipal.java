@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.stream.Collectors;
 
 public class UserPrincipal implements UserDetails {
-    private int id;
+    private long id;
     private String username;
     private Collection<? extends GrantedAuthority> authorities;
     @JsonIgnore
@@ -20,15 +20,12 @@ public class UserPrincipal implements UserDetails {
     @JsonIgnore
     private String password;
 
-    public UserPrincipal() {
-    }
-
-    public UserPrincipal(int id, String username, Collection<? extends GrantedAuthority> authorities, String email, String password) {
+    public UserPrincipal(Long id, String username, String email, String password, Collection<? extends GrantedAuthority> authorities) {
         this.id = id;
         this.username = username;
-        this.authorities = authorities;
         this.email = email;
         this.password = password;
+        this.authorities = authorities;
     }
 
     public static UserPrincipal create(User user) {
@@ -39,13 +36,13 @@ public class UserPrincipal implements UserDetails {
         return new UserPrincipal(
                 user.getId(),
                 user.getUsername(),
-                authorities,
                 user.getEmail(),
-                user.getPassword()
+                user.getPassword(),
+                authorities
         );
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 

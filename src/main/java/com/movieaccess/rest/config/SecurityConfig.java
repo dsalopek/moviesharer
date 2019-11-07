@@ -2,7 +2,7 @@ package com.movieaccess.rest.config;
 
 import com.movieaccess.rest.security.JwtAuthenticationEntryPoint;
 import com.movieaccess.rest.security.JwtAuthenticationFilter;
-import com.movieaccess.rest.service.UserDetailServiceImpl;
+import com.movieaccess.rest.service.CustomUserDetailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -28,7 +28,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 )
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
-    UserDetailServiceImpl userService;
+    CustomUserDetailService userService;
 
     @Autowired
     private JwtAuthenticationEntryPoint unauthorizedHandler;
