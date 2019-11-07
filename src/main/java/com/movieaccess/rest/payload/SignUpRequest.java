@@ -3,18 +3,18 @@ package com.movieaccess.rest.payload;
 import javax.validation.constraints.*;
 
 public class SignUpRequest {
-    @NotBlank
-    @Size(min = 3, max = 15)
+    private String name;
     private String username;
-
-    @NotBlank
-    @Size(max = 40)
-    @Email
     private String email;
-
-    @NotBlank
-    @Size(min = 6, max = 20)
     private String password;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public String getUsername() {
         return username;

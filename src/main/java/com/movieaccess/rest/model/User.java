@@ -1,47 +1,42 @@
 package com.movieaccess.rest.model;
 
+import org.hibernate.annotations.Fetch;
+
+import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Set;
 
+@Entity
+@Table(name = "users")
 public class User {
-    private int id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private long id;
     private String username;
     private String email;
     private String password;
-    private Set<Role> role;
-    private boolean active;
+
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(name = "user_roles",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id"))
+    private Set<Role> roles = new HashSet<>();
 
     public User() {
     }
 
-    public User(String username, String email, String password, Set<Role> roles, boolean active) {
+    public User(String username, String email, String password, Set<Role> roles) {
         this.username = username;
         this.email = email;
         this.password = password;
-        this.role = roles;
-        this.active = active;
+        this.roles = roles;
     }
 
-    public User(int id, String username, String email, String password, Set<Role> roles, boolean active) {
-        this.id = id;
-        this.username = username;
-        this.email = email;
-        this.password = password;
-        this.role = roles;
-        this.active = active;
-    }
-
-    public User(String username, String email, String password, boolean active) {
-        this.username = username;
-        this.email = email;
-        this.password = password;
-        this.active = active;
-    }
-
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -61,22 +56,6 @@ public class User {
         this.email = email;
     }
 
-    public Set<Role> getRoles() {
-        return role;
-    }
-
-    public void setRoles(Set<Role> role) {
-        this.role = role;
-    }
-
-    public boolean isActive() {
-        return active;
-    }
-
-    public void setActive(boolean active) {
-        this.active = active;
-    }
-
     public String getPassword() {
         return password;
     }
@@ -85,15 +64,11 @@ public class User {
         this.password = password;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", username='" + username + '\'' +
-                ", email='" + email + '\'' +
-                ", password='" + password + '\'' +
-                ", roles=" + role +
-                ", active=" + active +
-                '}';
+    public Set<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
     }
 }

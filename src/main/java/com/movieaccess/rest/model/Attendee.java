@@ -1,34 +1,38 @@
 package com.movieaccess.rest.model;
+
 import javax.persistence.*;
 import java.time.Instant;
-import java.util.Date;
 
 @Entity
-@Table(name = "comment")
-public class Comment {
-
+@Table(name = "attendee")
+public class Attendee {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private long commentId;
+    private long attendeeId;
     private long postId;
-    private String content;
+    private long responseId;
+    private String username;
     private Instant createdDate;
     private String createdBy;
 
-    public Comment(long commentId, long postId, String content, Instant createdDate, String createdBy) {
-        this.commentId = commentId;
+    public Attendee() {
+    }
+
+    public Attendee(long attendeeId, long postId, long responseId, String username, Instant createdDate, String createdBy) {
+        this.attendeeId = attendeeId;
         this.postId = postId;
-        this.content = content;
+        this.responseId = responseId;
+        this.username = username;
         this.createdDate = createdDate;
         this.createdBy = createdBy;
     }
 
-    public long getCommentId() {
-        return commentId;
+    public long getAttendeeId() {
+        return attendeeId;
     }
 
-    public void setCommentId(long commentId) {
-        this.commentId = commentId;
+    public void setAttendeeId(long attendeeId) {
+        this.attendeeId = attendeeId;
     }
 
     public long getPostId() {
@@ -39,12 +43,20 @@ public class Comment {
         this.postId = postId;
     }
 
-    public String getContent() {
-        return content;
+    public long getResponseId() {
+        return responseId;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public void setResponseId(long responseId) {
+        this.responseId = responseId;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public Instant getCreatedDate() {

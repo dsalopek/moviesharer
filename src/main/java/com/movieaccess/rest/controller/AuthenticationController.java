@@ -1,7 +1,7 @@
 package com.movieaccess.rest.controller;
 
-import com.movieaccess.rest.dao.RoleDao;
-import com.movieaccess.rest.dao.UserDao;
+import com.movieaccess.rest.dao.RoleRepository;
+import com.movieaccess.rest.dao.UserRepository;
 import com.movieaccess.rest.exception.AppException;
 import com.movieaccess.rest.model.Role;
 import com.movieaccess.rest.model.RoleName;
@@ -11,7 +11,7 @@ import com.movieaccess.rest.payload.JwtAuthenticationResponse;
 import com.movieaccess.rest.payload.LoginRequest;
 import com.movieaccess.rest.payload.SignUpRequest;
 import com.movieaccess.rest.security.JwtTokenProvider;
-import com.movieaccess.rest.service.UserDetailServiceImpl;
+import com.movieaccess.rest.service.CustomUserDetailService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,13 +40,10 @@ public class AuthenticationController {
     AuthenticationManager authenticationManager;
 
     @Autowired
-    UserDao userDao;
+    UserRepository userRepository;
 
     @Autowired
-    UserDetailServiceImpl userDetailService;
-
-    @Autowired
-    RoleDao roleDao;
+    RoleRepository roleRepository;
 
     @Autowired
     PasswordEncoder passwordEncoder;
@@ -54,57 +51,46 @@ public class AuthenticationController {
     @Autowired
     JwtTokenProvider tokenProvider;
 
-    private static final Logger logger = LoggerFactory.getLogger(AuthenticationController.class);
-
     @PostMapping("/signin")
     public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest loginRequest) {
 
-        try{
-            Authentication authentication = authenticationManager.authenticate(
-                    new UsernamePasswordAuthenticationToken(
-                            loginRequest.getUsername(),
-                            loginRequest.getPassword()
-                    )
-            );
+        Authentication authentication = authenticationManager.authenticate(
+                new UsernamePasswordAuthenticationToken(
+                        loginRequest.getUsernameOrEmail(),
+                        loginRequest.getPassword()
+                )
+        );
 
-            SecurityContextHolder.getContext().setAuthentication(authentication);
+        SecurityContextHolder.getContext().setAuthentication(authentication);
 
-            String jwt = tokenProvider.generateToken(authentication);
-            return ResponseEntity.ok(new JwtAuthenticationResponse(jwt));
-
-        } catch (Exception e) {
-            logger.error("error", e);
-        }
-
-        return null;
+        String jwt = tokenProvider.generateToken(authentication);
+        return ResponseEntity.ok(new JwtAuthenticationResponse(jwt));
     }
 
     @PostMapping("/signup")
     public ResponseEntity<?> registerUser(@Valid @RequestBody SignUpRequest signUpRequest) {
-        if(userDao.existsByUsername(signUpRequest.getUsername())) {
+        if(userRepository.existsByUsername(signUpRequest.getUsername())) {
             return new ResponseEntity(new ApiResponse(false, "Username is already taken!"),
                     HttpStatus.BAD_REQUEST);
         }
-        //
-        //if(userDao.existsByEmail(signUpRequest.getEmail())) {
-        //    return new ResponseEntity(new ApiResponse(false, "Email Address already in use!"),
-        //            HttpStatus.BAD_REQUEST);
-        //}
+
+        if(userRepository.existsByEmail(signUpRequest.getEmail())) {
+            return new ResponseEntity(new ApiResponse(false, "Email Address already in use!"),
+                    HttpStatus.BAD_REQUEST);
+        }
 
         // Creating user's account
         User user = new User(signUpRequest.getUsername(),
-                signUpRequest.getEmail(), signUpRequest.getPassword(),true);
+                signUpRequest.getEmail(), signUpRequest.getPassword(), null);
 
         user.setPassword(passwordEncoder.encode(user.getPassword()));
 
-        Role userRole = roleDao.findByName(RoleName.ROLE_USER)
+        Role userRole = roleRepository.findByName(RoleName.ROLE_USER)
                 .orElseThrow(() -> new AppException("User Role not set."));
 
         user.setRoles(Collections.singleton(userRole));
 
-        logger.info(user.toString());
-
-        User result = userDetailService.save(user);
+        User result = userRepository.save(user);
 
         URI location = ServletUriComponentsBuilder
                 .fromCurrentContextPath().path("/api/users/{username}")
