@@ -1,41 +1,42 @@
 package com.movieaccess.rest.model;
+import javax.persistence.*;
+import java.time.Instant;
 import java.util.Date;
 
-public class Comment implements Comparable<Comment> {
+@Entity
+@Table(name = "comment")
+public class Comment {
 
-    private int id;
-    private int movieId;
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private long commentId;
+    private long postId;
     private String content;
-    private String addedBy;
-    private Date addedDate;
-    private boolean active;
+    private Instant createdDate;
+    private String createdBy;
 
-    public Comment() {
-    }
-
-    public Comment(int id, int movieId, String content, String addedBy, Date addedDate, boolean active) {
-        this.id = id;
-        this.movieId = movieId;
+    public Comment(long commentId, long postId, String content, Instant createdDate, String createdBy) {
+        this.commentId = commentId;
+        this.postId = postId;
         this.content = content;
-        this.addedBy = addedBy;
-        this.addedDate = addedDate;
-        this.active = active;
+        this.createdDate = createdDate;
+        this.createdBy = createdBy;
     }
 
-    public int getId() {
-        return id;
+    public long getCommentId() {
+        return commentId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setCommentId(long commentId) {
+        this.commentId = commentId;
     }
 
-    public int getMovieId() {
-        return movieId;
+    public long getPostId() {
+        return postId;
     }
 
-    public void setMovieId(int movieId) {
-        this.movieId = movieId;
+    public void setPostId(long postId) {
+        this.postId = postId;
     }
 
     public String getContent() {
@@ -46,44 +47,19 @@ public class Comment implements Comparable<Comment> {
         this.content = content;
     }
 
-    public String getAddedBy() {
-        return addedBy;
+    public Instant getCreatedDate() {
+        return createdDate;
     }
 
-    public void setAddedBy(String addedBy) {
-        this.addedBy = addedBy;
+    public void setCreatedDate(Instant createdDate) {
+        this.createdDate = createdDate;
     }
 
-    public Date getAddedDate() {
-        return addedDate;
+    public String getCreatedBy() {
+        return createdBy;
     }
 
-    public void setAddedDate(Date addedDate) {
-        this.addedDate = addedDate;
-    }
-
-    public boolean isActive() {
-        return active;
-    }
-
-    public void setActive(boolean active) {
-        this.active = active;
-    }
-
-    @Override
-    public int compareTo(Comment o) {
-        return o.getAddedDate().compareTo(this.getAddedDate());
-    }
-
-    @Override
-    public String toString() {
-        return "Comment{" +
-                "id=" + id +
-                ", movieId=" + movieId +
-                ", content='" + content + '\'' +
-                ", addedBy='" + addedBy + '\'' +
-                ", addedDate=" + addedDate +
-                ", active=" + active +
-                '}';
+    public void setCreatedBy(String createdBy) {
+        this.createdBy = createdBy;
     }
 }

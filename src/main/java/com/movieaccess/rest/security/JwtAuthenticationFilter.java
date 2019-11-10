@@ -1,6 +1,6 @@
 package com.movieaccess.rest.security;
 
-import com.movieaccess.rest.service.UserDetailServiceImpl;
+import com.movieaccess.rest.service.CustomUserDetailService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +22,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
     private JwtTokenProvider tokenProvider;
 
     @Autowired
-    private UserDetailServiceImpl userServiceImpl;
+    private CustomUserDetailService userServiceImpl;
 
     private static final Logger logger = LoggerFactory.getLogger(JwtAuthenticationFilter.class);
 

@@ -1,13 +1,26 @@
 package com.movieaccess.rest.service;
 
 import com.movieaccess.rest.model.Movie;
+import com.movieaccess.rest.repository.MovieRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-import java.util.List;
+import java.util.Optional;
 
-public interface MovieService {
-    List<Movie> getAllMovies();
-    Movie getMovieById(int id);
-    void createMovie(Movie movie);
-    void updateMovie(Movie movie);
-    void deleteMovie(int id);
+@Service
+public class MovieService {
+    private MovieRepository movieRepository;
+
+    @Autowired
+    public MovieService(MovieRepository movieRepository) {
+        this.movieRepository = movieRepository;
+    }
+
+    public Optional<Movie> getMovieByMovieId(long movieId){
+        return this.movieRepository.findMovieByMovieId(movieId);
+    }
+
+    public Optional<Movie> getMovieByImdbId(String imdbId){
+        return this.movieRepository.findMovieByImdbId(imdbId);
+    }
 }
