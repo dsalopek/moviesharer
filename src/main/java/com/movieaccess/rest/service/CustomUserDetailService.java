@@ -1,7 +1,6 @@
 package com.movieaccess.rest.service;
 
-import com.movieaccess.rest.dao.UserRepository;
-import com.movieaccess.rest.model.Role;
+import com.movieaccess.rest.repository.UserRepository;
 import com.movieaccess.rest.model.User;
 import com.movieaccess.rest.security.UserPrincipal;
 import org.slf4j.Logger;
@@ -11,8 +10,6 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import java.util.Set;
 
 @Service
 public class CustomUserDetailService implements UserDetailsService {

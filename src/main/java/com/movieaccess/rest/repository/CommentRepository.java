@@ -1,4 +1,4 @@
-package com.movieaccess.rest.dao;
+package com.movieaccess.rest.repository;
 
 import com.movieaccess.rest.model.Comment;
 import org.springframework.data.jpa.repository.JpaRepository;

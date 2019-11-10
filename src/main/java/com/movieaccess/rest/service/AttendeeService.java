@@ -1,6 +1,6 @@
 package com.movieaccess.rest.service;
 
-import com.movieaccess.rest.dao.AttendeeRepository;
+import com.movieaccess.rest.repository.AttendeeRepository;
 import com.movieaccess.rest.model.Attendee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -3,40 +3,37 @@ package com.movieaccess.rest.payload;
 import com.movieaccess.rest.model.Attendee;
 import com.movieaccess.rest.model.Location;
 import com.movieaccess.rest.model.Movie;
+import com.movieaccess.rest.model.Post;
 
 import java.time.Instant;
 import java.util.List;
 
 public class PostResponse {
-    private long postId;
-    private Instant proposedDate;
-    private String createdBy;
-    private List<Attendee> attendeeList;
+    private Post post;
     private Movie movie;
-    private Location location;
+    private List<Attendee> attendeeList;
 
-
-    public void setPostId(long postId) {
-        this.postId = postId;
-    }
-
-    public void setProposedDate(Instant proposedDate) {
-        this.proposedDate = proposedDate;
-    }
-
-    public void setCreatedBy(String createdBy) {
-        this.createdBy = createdBy;
+    public void setPost(Post post) {
+        this.post = post;
     }
 
     public void setAttendeeList(List<Attendee> attendeeList) {
         this.attendeeList = attendeeList;
     }
 
+    public Movie getMovie() {
+        return movie;
+    }
+
     public void setMovie(Movie movie) {
         this.movie = movie;
     }
 
-    public void setLocation(Location location) {
-        this.location = location;
+    public Post getPost() {
+        return post;
+    }
+
+    public List<Attendee> getAttendeeList() {
+        return attendeeList;
     }
 }
