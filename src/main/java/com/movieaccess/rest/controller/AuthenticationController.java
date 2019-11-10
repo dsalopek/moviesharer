@@ -1,7 +1,7 @@
 package com.movieaccess.rest.controller;
 
-import com.movieaccess.rest.dao.RoleRepository;
-import com.movieaccess.rest.dao.UserRepository;
+import com.movieaccess.rest.repository.RoleRepository;
+import com.movieaccess.rest.repository.UserRepository;
 import com.movieaccess.rest.exception.AppException;
 import com.movieaccess.rest.model.Role;
 import com.movieaccess.rest.model.RoleName;
@@ -11,9 +11,6 @@ import com.movieaccess.rest.payload.JwtAuthenticationResponse;
 import com.movieaccess.rest.payload.LoginRequest;
 import com.movieaccess.rest.payload.SignUpRequest;
 import com.movieaccess.rest.security.JwtTokenProvider;
-import com.movieaccess.rest.service.CustomUserDetailService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
