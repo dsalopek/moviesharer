@@ -18,27 +18,17 @@ public class CommentController {
 
     @GetMapping("/movies/{movieId}/comments")
     public List<Comment> getCommentsByMovie(@PathVariable int movieId) {
-        return this.commentService.getAllCommentsByMovieId(movieId);
+        return this.commentService.getAllCommentsByPostId(movieId);
     }
 
     @GetMapping("/movies/{movieId}/comments/{commentId}")
     public Comment getCommentById(@PathVariable int commentId) {
-        return this.commentService.getCommentById(commentId);
+        return this.commentService.getCommentByCommentId(commentId);
     }
 
     @PostMapping("/movies/{movieId}/comments")
     public void addComment(@RequestBody Comment comment,
                            @PathVariable int movieId) {
-        this.commentService.createComment(comment, movieId);
-    }
-
-    @PutMapping("/movies/{movieId}/comments")
-    public void updateComment(@RequestBody Comment comment) {
-        this.commentService.updateComment(comment);
-    }
-
-    @DeleteMapping("/movies/{movieId}/comments/{commentId}")
-    public void deleteComment(@PathVariable int commentId){
-        this.commentService.deleteComment(commentId);
+        this.commentService.saveComment(comment);
     }
 }
