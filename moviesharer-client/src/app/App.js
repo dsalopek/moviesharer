@@ -9,16 +9,16 @@ import {
 
 import { getCurrentUser } from '../util/APIUtils';
 import { ACCESS_TOKEN } from '../constants';
-import PostList from '../poll/PollList';
-import Login from '../user/login/Login';
-import NewPost from '../post/NewPost';
-import Profile from '../user/profile/Profile';
-import AppHeader from '../common/AppHeader';
-import NotFound from '../common/NotFound';
+import PostList from '../post/PostList';
+// import Login from '../user/login/Login';
+// import MoviePicker from '../post/MoviePicker';
+// import NewPost from '../post/NewPost';
+import MovieList from '../post/MovieList'
 import LoadingIndicator from '../common/LoadingIndicator';
-import PrivateRoute from '../common/PrivateRoute';
 
-import { Layout, Menu, Breadcrumb, notification, Icon } from 'antd';
+import { Layout, Menu, notification } from 'antd';
+// import MovieSearchBar from '../post/MoviePicker';
+// import NewPost from '../post/NewPost';
 const { Header, Content, Footer } = Layout;
 
 class App extends Component {
@@ -117,9 +117,14 @@ class App extends Component {
         </Header>
         <Content style={{ padding: '0 50px' }}>
           <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>
-            <Route exact path="/" component = {PostList}></Route>
-            <Route path="/post/new" component={NewPost}></Route>
+            <Switch>
+              <Route exact path="/" component={PostList}></Route>
+              {/* <Route path="/post/new" component={MovieSearchBar}></Route> */}
+            </Switch>
+            <MovieList/>
           </div>
+          {/* <Login/> */}
+        
         </Content>
         <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
       </Layout>

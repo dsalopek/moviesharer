@@ -1,83 +1,61 @@
 import React, { Component } from 'react';
-import 'antd/dist/antd.css';
-// import './index.css';
-import './NewPost.css';
-import { queryMovies } from '../util/APIUtils';
-import { Select, Icon } from 'antd';
-// import jsonp from 'fetch-jsonp';
-// import querystring from 'querystring';
+import { Form, Input, Button } from 'antd';
+import MoviePicker from './MoviePicker';
 
-const { Option } = Select;
-
-let timeout;
-let currentValue;
-
-function fetch(value, callback) {
-  if (timeout) {
-    clearTimeout(timeout);
-    timeout = null;
-  }
-  currentValue = value;
-
-  function fake() {
-      queryMovies(currentValue)
-      .then(response => {
-        if (currentValue === value) {
-          const { results } = response;
-          const data = [];
-          results.forEach(r => {
-            data.push({
-              value: r['id'],
-              text: r['title'],
-            });
-          });
-          callback(data);
-        }
-      });
-  }
-
-  timeout = setTimeout(fake, 300);
+class NewPost extends Component {
+    render() {
+        const LoginForm = Form.create()(NewPostForm)
+        return (
+            <div className="login-container">
+                {/* <h1 className="page-title">Login</h1> */}
+                <div className="login-content">
+                    <LoginForm />
+                </div>
+            </div>
+        )
+    }
 }
 
-class NewPost extends React.Component {
-  state = {
-    data: [],
-    value: undefined,
-  };
+class NewPostForm extends Component {
+    // constructor(props) {
+    //     super(props);
+    // }
+    handleSubmit = e => {
+        e.preventDefault();
+        this.props.form.validateFields((err, values) => {
+            if (!err) {
+                console.log('Received values of form: ', values);
+            }
+        });
+    };
 
-  handleSearch = value => {
-    if (value) {
-      fetch(value, data => this.setState({ data }));
-    } else {
-      this.setState({ data: [] });
+
+    render() {
+        const { getFieldDecorator } = this.props.form;
+        return (
+            <Form onSubmit={this.handleSubmit}>
+                <Form.Item label="Movie">
+                <MoviePicker />
+                </Form.Item>
+                <Form.Item>
+                    {getFieldDecorator('password', {})(
+                        <Input
+                            size="large"
+                            name="password"
+                            type="password"
+                            placeholder=""
+                        ></Input>
+                    )}
+                </Form.Item>
+                <Form.Item>
+                    <Button type="primary" htmlType="submit">
+                        Log in
+          </Button>
+                </Form.Item>
+            </Form>
+        )
     }
-  };
+}
 
-  handleChange = value => {
-    this.setState({ value });
-  };
-
-  render() {
-    const options = this.state.data.map(d => <Option key={d.value}>{d.text}</Option>);
-    console.log(this.state.value);
-    return (
-      <Select
-        showSearch
-        showArrow
-        value={this.state.value}
-        placeholder={'Begin typing a movie title'}
-        style={this.props.style}
-        defaultActiveFirstOption={false}
-        showArrow={false}
-        filterOption={false}
-        onSearch={this.handleSearch}
-        onChange={this.handleChange}
-        notFoundContent={null}
-      >
-        {options}
-      </Select>
-    );
-  }
-}          
 
 export default NewPost;

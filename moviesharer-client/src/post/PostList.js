@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
 import { getAllPosts } from '../util/APIUtils';
-import Poll from './Poll';
-import { castVote } from '../util/APIUtils';
-import LoadingIndicator from '../common/LoadingIndicator';
 import { Card, Icon, notification } from 'antd';
 import { POLL_LIST_SIZE } from '../constants';
 import { withRouter } from 'react-router-dom';
-import './PollList.css';
+import './PostList.css';
 
 class PostList extends Component {
     constructor(props) {
