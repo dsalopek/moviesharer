@@ -3,12 +3,12 @@ import { getAllPosts } from '../util/APIUtils';
 import Poll from './Poll';
 import { castVote } from '../util/APIUtils';
 import LoadingIndicator from '../common/LoadingIndicator';
-import { Button, Icon, notification } from 'antd';
+import { Card, Icon, notification } from 'antd';
 import { POLL_LIST_SIZE } from '../constants';
 import { withRouter } from 'react-router-dom';
 import './PollList.css';
 
-class PollList extends Component {
+class PostList extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -85,7 +85,28 @@ class PollList extends Component {
         return (
             <div>
                 {data.map(function (d, idx) {
-                    return (<li key={idx}>{d.postId}</li>)
+                    return (
+
+                        <div style={{ background: '#ECECEC', padding: '30px' }}>
+                            <Card title={d.post.postId} bordered={false} style={{ width: 300 }}>
+                                <img src={ 'https://image.tmdb.org/t/p/w500/rGE9sOt1jOtKtb3bARi33Eg1xfK.jpg' } />
+                                <p>Attendees</p>
+                                <ul>
+                            {d.attendeeList.map(function (d, idx) {
+                                    return (<li key = {idx}>{d.username}</li>)
+                                })}
+                                </ul>
+                            </Card>
+                        </div>
+                        // <li key={idx}>
+                        //     {d.post.postId}
+                        //     <ul>
+                        //         {d.attendeeList.map(function (d, idx) {
+                        //             return (<li key = {idx}>{d.username}</li>)
+                        //         })}
+                        //     </ul>
+                        // </li>
+                    )
                 })}
             </div>
             // <div className="polls-container">
@@ -114,4 +135,4 @@ class PollList extends Component {
     }
 }
 
-export default withRouter(PollList);
+export default withRouter(PostList);

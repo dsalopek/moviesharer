@@ -2,75 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a7a3144-964a-4b5d-ba87-df272292eff3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/moviesharer-client/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviesharer-client/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviesharer-client/config-overrides.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviesharer-client/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviesharer-client/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviesharer-client/public/favicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviesharer-client/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviesharer-client/public/logo192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviesharer-client/public/logo512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviesharer-client/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviesharer-client/public/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviesharer-client/src/app/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviesharer-client/src/app/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviesharer-client/src/common/AppHeader.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviesharer-client/src/common/AppHeader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviesharer-client/src/common/LoadingIndicator.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviesharer-client/src/common/NotFound.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviesharer-client/src/common/NotFound.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviesharer-client/src/common/PrivateRoute.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviesharer-client/src/common/ServerError.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviesharer-client/src/common/ServerError.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviesharer-client/src/constants/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviesharer-client/src/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviesharer-client/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviesharer-client/src/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviesharer-client/src/poll.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviesharer-client/src/poll/NewPoll.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviesharer-client/src/poll/NewPoll.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviesharer-client/src/poll/Poll.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviesharer-client/src/poll/Poll.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviesharer-client/src/poll/PollList.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviesharer-client/src/poll/PollList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviesharer-client/src/post/Post.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviesharer-client/src/registerServiceWorker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviesharer-client/src/user/login/Login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviesharer-client/src/user/login/Login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviesharer-client/src/user/profile/Profile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviesharer-client/src/user/profile/Profile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviesharer-client/src/user/signup/Signup.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviesharer-client/src/user/signup/Signup.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviesharer-client/src/util/APIUtils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviesharer-client/src/util/Colors.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviesharer-client/src/util/Helpers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviesharer-client/yarn.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/model/UserSummary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/payload/AttendeeRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/payload/MovieRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/payload/PostRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/repository/MovieRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/service/MovieService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moviesharer-client/src/post/NewPost.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moviesharer-client/src/post/NewPost.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/controller/AuthenticationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/controller/PostController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/dao/AttendeeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/repository/AttendeeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/dao/CommentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/repository/CommentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/dao/LocationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/repository/LocationRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/dao/PostRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/repository/PostRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/dao/ResponseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/repository/ResponseRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/dao/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/repository/RoleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/dao/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/model/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/model/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/payload/PostResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/payload/PostResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/service/AttendeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/service/AttendeeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/service/CommentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/service/CustomUserDetailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/service/CustomUserDetailService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/service/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/service/PostService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/util/PostMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/util/PostMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moviesharer-client/src/app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/moviesharer-client/src/app/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moviesharer-client/src/poll/Poll.js" beforeDir="false" afterPath="$PROJECT_DIR$/moviesharer-client/src/poll/Poll.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moviesharer-client/src/poll/PollList.js" beforeDir="false" afterPath="$PROJECT_DIR$/moviesharer-client/src/poll/PollList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moviesharer-client/src/util/APIUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/moviesharer-client/src/util/APIUtils.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -230,6 +168,8 @@
       <workItem from="1573085824078" duration="9615000" />
       <workItem from="1573164943662" duration="9636000" />
       <workItem from="1573258351731" duration="125000" />
+      <workItem from="1573512316226" duration="1576000" />
+      <workItem from="1573599627734" duration="890000" />
     </task>
     <servers />
   </component>
