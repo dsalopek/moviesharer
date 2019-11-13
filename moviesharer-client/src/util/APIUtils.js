@@ -115,6 +115,13 @@ export function getAllPosts() {
     })
 }
 
+export function queryMovies(queryString) {
+    return request({
+        url: 'https://api.themoviedb.org/3/search/movie?api_key=dac1a556b543c18f8675c768457e5777&query='+queryString+'&page=1',
+        method: 'GET'
+    })
+}
+
 export function getUserVotedPolls(username, page, size) {
     page = page || 0;
     size = size || POLL_LIST_SIZE;

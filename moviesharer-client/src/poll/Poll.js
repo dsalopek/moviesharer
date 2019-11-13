@@ -8,7 +8,7 @@ import { formatDateTime } from '../util/Helpers';
 import { Radio, Button } from 'antd';
 const RadioGroup = Radio.Group;
 
-class Poll extends Component {
+class Post extends Component {
     calculatePercentage = (choice) => {
         if(this.props.poll.totalVotes === 0) {
             return 0;
@@ -150,4 +150,4 @@ function CompletedOrVotedPollChoice(props) {
 }
 
 
-export default Poll;
+export default Post;

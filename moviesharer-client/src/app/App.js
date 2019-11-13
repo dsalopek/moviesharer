@@ -3,21 +3,22 @@ import './App.css';
 import {
   Route,
   withRouter,
-  Switch
+  Switch,
+  Link
 } from 'react-router-dom';
 
 import { getCurrentUser } from '../util/APIUtils';
 import { ACCESS_TOKEN } from '../constants';
-import PollList from '../poll/PollList';
+import PostList from '../poll/PollList';
 import Login from '../user/login/Login';
-import Signup from '../user/signup/Signup';
+import NewPost from '../post/NewPost';
 import Profile from '../user/profile/Profile';
 import AppHeader from '../common/AppHeader';
 import NotFound from '../common/NotFound';
 import LoadingIndicator from '../common/LoadingIndicator';
 import PrivateRoute from '../common/PrivateRoute';
 
-import { Layout, Menu, Breadcrumb, notification } from 'antd';
+import { Layout, Menu, Breadcrumb, notification, Icon } from 'antd';
 const { Header, Content, Footer } = Layout;
 
 class App extends Component {
@@ -102,18 +103,23 @@ class App extends Component {
             defaultSelectedKeys={['2']}
             style={{ lineHeight: '64px' }}
           >
-            <Menu.Item key="1">nav 1</Menu.Item>
-            <Menu.Item key="2">nav 2</Menu.Item>
-            <Menu.Item key="3">nav 3</Menu.Item>
+            <Menu.Item key="/">
+              <Link to="/">
+                Test
+              </Link>
+            </Menu.Item>
+            <Menu.Item key="/newPost">
+              <Link to="/post/new">
+                New Post!
+              </Link>
+            </Menu.Item>
           </Menu>
         </Header>
         <Content style={{ padding: '0 50px' }}>
-          <Breadcrumb style={{ margin: '16px 0' }}>
-            <Breadcrumb.Item>Home</Breadcrumb.Item>
-            <Breadcrumb.Item>List</Breadcrumb.Item>
-            <Breadcrumb.Item>App</Breadcrumb.Item>
-          </Breadcrumb>
-          <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>Content</div>
+          <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>
+            <Route exact path="/" component = {PostList}></Route>
+            <Route path="/post/new" component={NewPost}></Route>
+          </div>
         </Content>
         <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
       </Layout>
