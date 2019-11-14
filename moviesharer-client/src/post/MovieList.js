@@ -39,9 +39,31 @@ class MovieList extends Component {
     };
 
     render() {
+
+        const results = this.state.data.map(
+            (row) => <tr>
+                <td>{row.id}</td>
+                <td>{row.title}</td>
+                <td>{row.release_date.split('-')[0]}</td>
+                <td>{row.overview}</td>
+            </tr>);
+
         return (
-            <MovieSearchBar onSearch={this.handleSearch} onChange={this.handleChange} data={this.state.data} />
-            // todo: add in result list below
+            <div>
+                <MovieSearchBar onSearch={this.handleSearch} onChange={this.handleChange} data={this.state.data} />
+                {/* // todo: add in result list below */}
+                <table>
+                    <thead>
+                        <th>Id</th>
+                        <th>Title</th>
+                        <th>Year</th>
+                        <th>Description</th>
+                    </thead>
+                    <tbody>
+                        {results}
+                    </tbody>
+                </table>
+            </div>
         );
     }
 }
