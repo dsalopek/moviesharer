@@ -10,7 +10,7 @@ import java.util.List;
 
 @Repository
 public interface AttendeeRepository extends JpaRepository<Attendee, Long> {
-    @Query(value = "select * from Attendee a where a.postId = :postId", nativeQuery = true)
+    @Query(value = "select * from Attendee a where a.post_id = :postId", nativeQuery = true)
     List<Attendee> findAllByPostId(@Param("postId") Long postId);
     @Query(value = "select * from Attendee a", nativeQuery = true)
     List<Attendee> findAll();

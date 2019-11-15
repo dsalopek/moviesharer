@@ -1,16 +1,34 @@
 package com.movieaccess.rest.payload;
 
 public class MovieRequest {
-    private String imdbId;
+    private String tmdbId;
     private String title;
     private String overview;
+    private String posterURL;
+    private String backdropURL;
 
-    public String getImdbId() {
-        return imdbId;
+    public String getTmdbId() {
+        return tmdbId;
     }
 
-    public void setImdbId(String imdbId) {
-        this.imdbId = imdbId;
+    public void setTmdbId(String tmdbId) {
+        this.tmdbId = tmdbId;
+    }
+
+    public String getPosterURL() {
+        return posterURL;
+    }
+
+    public void setPosterURL(String posterURL) {
+        this.posterURL = posterURL;
+    }
+
+    public String getBackdropURL() {
+        return backdropURL;
+    }
+
+    public void setBackdropURL(String backdropURL) {
+        this.backdropURL = backdropURL;
     }
 
     public String getTitle() {
