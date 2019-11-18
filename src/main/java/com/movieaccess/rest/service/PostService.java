@@ -1,6 +1,7 @@
 package com.movieaccess.rest.service;
 
 import com.movieaccess.rest.model.Movie;
+import com.movieaccess.rest.payload.AttendeeResponseRequest;
 import com.movieaccess.rest.payload.MovieRequest;
 import com.movieaccess.rest.repository.AttendeeRepository;
 import com.movieaccess.rest.repository.MovieRepository;
@@ -71,12 +72,12 @@ public class PostService {
     public PostResponse getPostById(Long id) {
         Post post = this.postRepository.findByPostId(id)
                 .orElseThrow(() ->
-                    new NoSuchElementException("Post with id: "+id+" does not exist!")
+                        new NoSuchElementException("Post with id: " + id + " does not exist!")
                 );
 
         Movie movie = this.movieRepository.findMovieByMovieId(post.getMovieId())
-                .orElseThrow(()->
-                    new NoSuchElementException("Movie with id: "+post.getMovieId()+" does not exist!")
+                .orElseThrow(() ->
+                        new NoSuchElementException("Movie with id: " + post.getMovieId() + " does not exist!")
                 );
 
         List<Attendee> attendeeList = this.attendeeRepository.findAllByPostId(post.getPostId());
@@ -130,6 +131,12 @@ public class PostService {
         postResponse.setMovie(movie);
 
         return postResponse;
+    }
+
+    public boolean respondToInvite(long postId, AttendeeResponseRequest attendeeResponse) {
+        return this.attendeeRepository
+                .udpateResponse(postId, attendeeResponse.getResponseId(), attendeeResponse.getUsername())
+                .isPresent();
     }
 }
 
