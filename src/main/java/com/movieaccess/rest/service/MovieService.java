@@ -21,6 +21,6 @@ public class MovieService {
     }
 
     public Optional<Movie> getMovieByImdbId(String imdbId){
-        return this.movieRepository.findMovieByImdbId(imdbId);
+        return this.movieRepository.findMovieByTmdbId(imdbId);
     }
 }
