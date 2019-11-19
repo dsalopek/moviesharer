@@ -105,7 +105,7 @@ public class PostService {
                 });
 
         Post post = new Post();
-        post.setProposedDate(postRequest.getProposedDate());
+        post.setProposedDate(Instant.ofEpochSecond(postRequest.getProposedDate()));
         post.setCreatedBy(userPrincipal.getUsername());
         post.setCreatedDate(Instant.now());
         post.setMovieId(movie.getMovieId());
@@ -133,10 +133,10 @@ public class PostService {
         return postResponse;
     }
 
-    public boolean respondToInvite(long postId, AttendeeResponseRequest attendeeResponse) {
-        return this.attendeeRepository
-                .udpateResponse(postId, attendeeResponse.getResponseId(), attendeeResponse.getUsername())
-                .isPresent();
+    public Attendee respondToInvite(long postId, long attendeeId, AttendeeResponseRequest attendeeResponse) {
+        Attendee attendee = this.attendeeRepository.getOne(attendeeId);
+        attendee.setResponseId(attendeeResponse.getResponseId());
+        return this.attendeeRepository.save(attendee);
     }
 }
 

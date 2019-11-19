@@ -1,5 +1,6 @@
 package com.movieaccess.rest.controller;
 
+import com.movieaccess.rest.model.Attendee;
 import com.movieaccess.rest.model.Post;
 import com.movieaccess.rest.payload.AttendeeResponseRequest;
 import com.movieaccess.rest.payload.PostRequest;
@@ -41,8 +42,9 @@ public class PostController {
         return this.postService.getPostById(postId);
     }
 
-    @PostMapping("/{postId}")
-    public boolean respondToInvite(@PathVariable("postId") long postId, @RequestBody AttendeeResponseRequest body) {
-        return this.postService.respondToInvite(postId, body);
+    @PostMapping("/{postId}/attendee/{attendeeId}")
+    public Attendee respondToInvite(
+            @PathVariable("postId") long postId, @PathVariable("attendeeId") long attendeeId, @RequestBody AttendeeResponseRequest body) {
+        return this.postService.respondToInvite(postId, attendeeId, body);
     }
 }
