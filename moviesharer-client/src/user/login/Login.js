@@ -58,8 +58,9 @@ class LoginForm extends Component {
         const { getFieldDecorator } = this.props.form;
         return (
             <Form onSubmit={this.handleSubmit} className="login-form">
-                <FormItem>
+                <FormItem label={"hello"}>
                     {getFieldDecorator('usernameOrEmail', {
+                        initialValue: "teste",
                         rules: [{ required: true, message: 'Please input your username or email!' }],
                     })(
                     <Input 
