@@ -5,14 +5,14 @@ import java.util.List;
 
 public class PostRequest {
     private MovieRequest movie;
-    private Instant proposedDate;
+    private long proposedDate;
     private List<AttendeeRequest> attendeeList;
 
     public MovieRequest getMovie() {
         return movie;
     }
 
-    public Instant getProposedDate() {
+    public long getProposedDate() {
         return proposedDate;
     }
 

@@ -1,13 +1,13 @@
 package com.movieaccess.rest.payload;
 
 public class AttendeeRequest {
-    private String username;
+    private long userId;
 
-    public String getUsername() {
-        return username;
+    public long getUserId() {
+        return userId;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUserId(long userId) {
+        this.userId = userId;
     }
 }
