@@ -11,14 +11,14 @@ import java.util.Optional;
 
 @Repository
 public interface MovieRepository extends JpaRepository<Movie, Long> {
-    boolean existsByImdbId(String imdbId);
+    boolean existsByTmdbId(String tmdbId);
 
-    @Query(value = "select * from Movie m where m.imdbId = :imdbId", nativeQuery = true)
-    Optional<Movie> findMovieByImdbId(@Param("imdbId") String imdbId);
+    @Query(value = "select * from movie m where m.tmdb_id = :tmdbId", nativeQuery = true)
+    Optional<Movie> findMovieByTmdbId(@Param("tmdbId") String tmdb);
 
-    @Query(value = "select * from Movie m where m.movieId = :imdbId", nativeQuery = true)
-    Optional<Movie> findMovieByMovieId(@Param("imdbId") long movieId);
+    @Query(value = "select * from movie m where m.movie_id = :movieId", nativeQuery = true)
+    Optional<Movie> findMovieByMovieId(@Param("movieId") long movieId);
 
-    @Query(value = "select * from Movie m", nativeQuery = true)
+    @Query(value = "select * from movie m", nativeQuery = true)
     List<Movie> findAll();
 }

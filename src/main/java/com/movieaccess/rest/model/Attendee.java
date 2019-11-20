@@ -11,18 +11,17 @@ public class Attendee {
     private long attendeeId;
     private long postId;
     private long responseId;
-    private String username;
+    private long userId;
     private Instant createdDate;
     private String createdBy;
 
     public Attendee() {
     }
 
-    public Attendee(long attendeeId, long postId, long responseId, String username, Instant createdDate, String createdBy) {
-        this.attendeeId = attendeeId;
+    public Attendee(long postId, long responseId, long userId, Instant createdDate, String createdBy) {
         this.postId = postId;
         this.responseId = responseId;
-        this.username = username;
+        this.userId = userId;
         this.createdDate = createdDate;
         this.createdBy = createdBy;
     }
@@ -51,12 +50,12 @@ public class Attendee {
         this.responseId = responseId;
     }
 
-    public String getUsername() {
-        return username;
+    public long getUserId() {
+        return userId;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUserId(long userId) {
+        this.userId = userId;
     }
 
     public Instant getCreatedDate() {
