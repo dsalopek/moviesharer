@@ -1,5 +1,12 @@
 import React, { Component } from 'react';
-import MovieSearchBar from './MoviePicker';
+import {
+    Route,
+    withRouter,
+    Switch,
+    Link
+  } from 'react-router-dom';
+import MovieSearchBar from './MovieSeach';
+import './MovieList.css';
 import { queryMovies } from '../util/APIUtils';
 
 function fetch(value, callback) {
@@ -39,31 +46,18 @@ class MovieList extends Component {
     };
 
     render() {
-
         const results = this.state.data.map(
-            (row) => <tr>
-                <td>{row.id}</td>
-                <td>{row.title}</td>
-                <td>{row.release_date.split('-')[0]}</td>
-                <td>{row.overview}</td>
-            </tr>);
+            (row) => <div class="card">
+                        <img src={'https://image.tmdb.org/t/p/w185/'+row.poster_path}/>
+                        <div class="container">
+                            <h4><b>{row.title}</b></h4>
+                            <p>{row.overview}</p>
+                        </div>
+                    </div>);
 
-        return (
-            <div>
-                <MovieSearchBar onSearch={this.handleSearch} onChange={this.handleChange} data={this.state.data} />
-                {/* // todo: add in result list below */}
-                <table>
-                    <thead>
-                        <th>Id</th>
-                        <th>Title</th>
-                        <th>Year</th>
-                        <th>Description</th>
-                    </thead>
-                    <tbody>
-                        {results}
-                    </tbody>
-                </table>
-            </div>
+        return (<div>
+            <MovieSearchBar onSearch={this.handleSearch} onChange={this.handleChange} data={this.state.data} />
+            {results}</div>
         );
     }
 }

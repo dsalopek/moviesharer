@@ -10,16 +10,8 @@ import {
 import { getCurrentUser } from '../util/APIUtils';
 import { ACCESS_TOKEN } from '../constants';
 import PostList from '../post/PostList';
-// import Login from '../user/login/Login';
-// import MoviePicker from '../post/MoviePicker';
-// import NewPost from '../post/NewPost';
 import MovieList from '../post/MovieList'
 import LoadingIndicator from '../common/LoadingIndicator';
-
-import { Layout, Menu, notification } from 'antd';
-// import MovieSearchBar from '../post/MoviePicker';
-// import NewPost from '../post/NewPost';
-const { Header, Content, Footer } = Layout;
 
 class App extends Component {
   constructor(props) {
@@ -32,12 +24,6 @@ class App extends Component {
     this.handleLogout = this.handleLogout.bind(this);
     this.loadCurrentUser = this.loadCurrentUser.bind(this);
     this.handleLogin = this.handleLogin.bind(this);
-
-    notification.config({
-      placement: 'topRight',
-      top: 70,
-      duration: 3,
-    });
   }
 
   loadCurrentUser() {
@@ -71,20 +57,9 @@ class App extends Component {
     });
 
     this.props.history.push(redirectTo);
-
-    notification[notificationType]({
-      message: 'Polling App',
-      description: description,
-    });
   }
 
   handleLogin() {
-    notification.success({
-      message: 'Polling App',
-      description: "You're successfully logged in.",
-    });
-    console.log(this);
-
     this.loadCurrentUser();
     this.props.history.push("/");
   }
@@ -94,40 +69,7 @@ class App extends Component {
       return <LoadingIndicator />
     }
     return (
-      <Layout className="layout">
-        <Header>
-          <div className="logo" />
-          <Menu
-            theme="dark"
-            mode="horizontal"
-            defaultSelectedKeys={['2']}
-            style={{ lineHeight: '64px' }}
-          >
-            <Menu.Item key="/">
-              <Link to="/">
-                Test
-              </Link>
-            </Menu.Item>
-            <Menu.Item key="/newPost">
-              <Link to="/post/new">
-                New Post!
-              </Link>
-            </Menu.Item>
-          </Menu>
-        </Header>
-        <Content style={{ padding: '0 50px' }}>
-          <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>
-            <Switch>
-              <Route exact path="/" component={PostList}></Route>
-              {/* <Route path="/post/new" component={MovieSearchBar}></Route> */}
-            </Switch>
-            <MovieList/>
-          </div>
-          {/* <Login/> */}
-        
-        </Content>
-        <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
-      </Layout>
+      <MovieList/>
     );
   }
 }
