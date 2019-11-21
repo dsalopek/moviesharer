@@ -48,16 +48,18 @@ class MovieList extends Component {
     render() {
         const results = this.state.data.map(
             (row) => <div class="card">
-                        <img src={'https://image.tmdb.org/t/p/w185/'+row.poster_path}/>
+                        <img src={'https://image.tmdb.org/t/p/w342/'+row.poster_path}/>
                         <div class="container">
-                            <h4><b>{row.title}</b></h4>
-                            <p>{row.overview}</p>
+                            {/* <h4><b>{row.title}</b></h4>
+                            <p>{row.overview}</p> */}
                         </div>
                     </div>);
 
-        return (<div>
+        return (
+            <div>
             <MovieSearchBar onSearch={this.handleSearch} onChange={this.handleChange} data={this.state.data} />
-            {results}</div>
+            <div class="movie-cards">{results}</div>
+            </div>
         );
     }
 }
