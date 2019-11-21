@@ -19,6 +19,9 @@ public interface MovieRepository extends JpaRepository<Movie, Long> {
     @Query(value = "select * from movie m where m.movie_id = :movieId", nativeQuery = true)
     Optional<Movie> findMovieByMovieId(@Param("movieId") long movieId);
 
+    @Query(value = "select * from movie m where m.movie_id in :movieIds", nativeQuery = true)
+    Optional<List<Movie>> findAllByMovieIdIn(@Param("movieIds") List<Long> movieIds);
+
     @Query(value = "select * from movie m", nativeQuery = true)
     List<Movie> findAll();
 }

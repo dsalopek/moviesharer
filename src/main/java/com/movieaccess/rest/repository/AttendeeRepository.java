@@ -14,8 +14,13 @@ import java.util.Optional;
 public interface AttendeeRepository extends JpaRepository<Attendee, Long> {
     @Query(value = "select * from Attendee a where a.post_id = :postId", nativeQuery = true)
     List<Attendee> findAllByPostId(@Param("postId") Long postId);
+
     @Query(value = "select * from Attendee a", nativeQuery = true)
     List<Attendee> findAll();
+
+    @Query(value = "select * from Attendee a where a.post_id in :postIds", nativeQuery = true)
+    List<Attendee> findAllByPostIdIn(@Param("postIds") List<Long> postIds);
+
     @Modifying
     @Query(value = "UPDATE Attendee a SET a.response_id = :responseId WHERE a.post_id = :postId AND a.attendee_id = :attendeeId", nativeQuery = true)
     Optional<Attendee> updateResponse(@Param("postId") long postId, @Param("attendeeId") long attendeeId, @Param("responseId") long responseId);

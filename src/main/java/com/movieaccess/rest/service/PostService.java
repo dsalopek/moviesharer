@@ -41,6 +41,21 @@ public class PostService {
         List<Movie> movies = this.movieRepository.findAll();
         List<Attendee> attendeeList = this.attendeeRepository.findAll();
 
+        return buildMultiplePostResponse(posts, movies, attendeeList);
+    }
+
+    public List<PostResponse> getPostFeedForUser(String username) {
+        List<Post> posts = this.postRepository.findAllByCreatedByOrAttendee(username);
+        List<Long> postIds = posts.stream().map(Post::getPostId).collect(Collectors.toList());
+        List<Long> movieIds = posts.stream().map(Post::getMovieId).collect(Collectors.toList());
+        List<Movie> movies = this.movieRepository.findAllByMovieIdIn(movieIds)
+                .orElseThrow(()->new NoSuchElementException("Movies now found with post ids: " + movieIds + "!"));
+        List<Attendee> attendeeList = this.attendeeRepository.findAllByPostIdIn(postIds);
+
+        return buildMultiplePostResponse(posts, movies, attendeeList);
+    }
+
+    private List<PostResponse> buildMultiplePostResponse(List<Post> posts, List<Movie> movies, List<Attendee> attendeeList) {
         Map<Long, List<Attendee>> attendeeMap = new HashMap<>();
         for (Attendee a : attendeeList) {
             if (attendeeMap.containsKey(a.getPostId())) {
@@ -56,8 +71,6 @@ public class PostService {
         for (Movie m : movies) {
             movieMap.put(m.getMovieId(), m);
         }
-
-        //logger.info("--- end queries ---");
 
         return posts.stream().map(p -> {
             PostResponse ps = new PostResponse();
@@ -81,11 +94,15 @@ public class PostService {
                 );
 
         List<Attendee> attendeeList = this.attendeeRepository.findAllByPostId(post.getPostId());
+
+        return buildSinglePostResponse(post, movie, attendeeList);
+    }
+
+    private PostResponse buildSinglePostResponse(Post post, Movie movie, List<Attendee> attendeeList) {
         PostResponse postResponse = new PostResponse();
         postResponse.setPost(post);
         postResponse.setMovie(movie);
         postResponse.setAttendeeList(attendeeList);
-
         return postResponse;
     }
 
@@ -125,12 +142,7 @@ public class PostService {
 
         attendeeList = this.attendeeRepository.saveAll(attendeeList);
 
-        PostResponse postResponse = new PostResponse();
-        postResponse.setPost(post);
-        postResponse.setAttendeeList(attendeeList);
-        postResponse.setMovie(movie);
-
-        return postResponse;
+        return buildSinglePostResponse(post, movie, attendeeList);
     }
 
     public Attendee respondToInvite(long postId, long attendeeId, AttendeeResponseRequest attendeeResponse) {
