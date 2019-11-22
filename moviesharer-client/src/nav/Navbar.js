@@ -7,22 +7,15 @@ import NewPost from '../post/NewPost';
 class Navbar extends Component {
     constructor(props) {
         super(props);
-
     }
 
     render() {
         return (
             <Router>
                 <ul>
-                    <li>
-                        <Link to="/feed">Feed</Link>
-                    </li>
-                    <li>
-                        <Link to="/newpost">New Post</Link>
-                    </li>
-                    <li class="menu-right">
-                        <Link to="/login">Login</Link>
-                    </li>
+                    <li><Link to="/feed">Feed</Link></li>
+                    <li><Link to="/newpost">New Post</Link></li>
+                    <li className='menu-right'><Link to="/login">Login</Link></li>
                 </ul>
                 <Switch>
                     <Route path="/feed">
@@ -32,8 +25,7 @@ class Navbar extends Component {
                         <NewPost/>
                     </Route>
                     <Route path="/login">
-                        {/* <Home /> */}
-                        <Login/>
+                        <Login onLogin={this.props.handleLogin}/>
                     </Route>
                 </Switch>
             </Router>

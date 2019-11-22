@@ -50,9 +50,9 @@ class App extends Component {
     this.loadCurrentUser();
   }
 
-  handleLogin() {
+  handleLogin = () => {
     this.loadCurrentUser();
-    this.props.history.push("/");
+    this.props.history.push("/feed");
   }
 
   render() {
@@ -61,8 +61,8 @@ class App extends Component {
     }
     return (
       <div>
-        <Navbar/>
-        <MovieList/>
+        <Navbar handleLogin={this.handleLogin}/>
+        {/* <MovieList/> */}
       </div>
     );
   }
