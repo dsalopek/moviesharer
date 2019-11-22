@@ -7,6 +7,8 @@ import {
   Link
 } from 'react-router-dom';
 
+import Navbar from '../nav/Navbar'
+
 import { getCurrentUser } from '../util/APIUtils';
 import { ACCESS_TOKEN } from '../constants';
 import PostList from '../post/PostList';
@@ -21,7 +23,7 @@ class App extends Component {
       isAuthenticated: false,
       isLoading: false
     }
-    this.handleLogout = this.handleLogout.bind(this);
+    // this.handleLogout = this.handleLogout.bind(this);
     this.loadCurrentUser = this.loadCurrentUser.bind(this);
     this.handleLogin = this.handleLogin.bind(this);
   }
@@ -48,17 +50,6 @@ class App extends Component {
     this.loadCurrentUser();
   }
 
-  handleLogout(redirectTo = "/", notificationType = "success", description = "You're successfully logged out.") {
-    localStorage.removeItem(ACCESS_TOKEN);
-
-    this.setState({
-      currentUser: null,
-      isAuthenticated: false
-    });
-
-    this.props.history.push(redirectTo);
-  }
-
   handleLogin() {
     this.loadCurrentUser();
     this.props.history.push("/");
@@ -69,7 +60,10 @@ class App extends Component {
       return <LoadingIndicator />
     }
     return (
-      <MovieList/>
+      <div>
+        <Navbar/>
+        <MovieList/>
+      </div>
     );
   }
 }

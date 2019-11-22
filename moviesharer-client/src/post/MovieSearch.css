@@ -1,3 +1,29 @@
-/* .ant-select-selection {
-    width: 200px;
-} */
+.search-container {
+    margin: 30px;
+    text-align: center;
+}
+
+.search-bar {
+    height: 50px;
+    width: 40%;
+    border-radius: 10px 0 0 10px;
+    font-size: 1.875em;
+    vertical-align: middle;
+    border: 0;
+    padding: 15px;
+}
+
+.search-button {
+    border-radius: 0 10px 10px 0;
+    height: 50px;
+    vertical-align: middle;
+    padding: 10px;
+    background-color: darkgreen;
+    color: whitesmoke;
+    border: 0;
+    font-size: 1.45em;
+}
+
+::placeholder {
+    color: lightgray;
+}

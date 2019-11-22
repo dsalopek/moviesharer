@@ -27,7 +27,7 @@ class LoginForm extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    handleSubmit(event) {
+    handleSubmit = event => {
         event.preventDefault();   
         this.props.form.validateFields((err, values) => {
             if (!err) {
@@ -37,18 +37,6 @@ class LoginForm extends Component {
                     console.log(response);
                     localStorage.setItem(ACCESS_TOKEN, response.accessToken);
                     this.props.onLogin();
-                }).catch(error => {
-                    if(error.status === 401) {
-                        notification.error({
-                            message: 'Polling App',
-                            description: 'Your Username or Password is incorrect. Please try again!'
-                        });                    
-                    } else {
-                        notification.error({
-                            message: 'Polling App',
-                            description: error.message || 'Sorry! Something went wrong. Please try again!'
-                        });                                            
-                    }
                 });
             }
         });

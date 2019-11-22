@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Form, Input, Button } from 'antd';
-import MoviePicker from './MoviePicker';
+// import MoviePicker from './MoviePicker';
 
 class NewPost extends Component {
     render() {
@@ -33,26 +33,29 @@ class NewPostForm extends Component {
     render() {
         const { getFieldDecorator } = this.props.form;
         return (
-            <Form onSubmit={this.handleSubmit}>
-                <Form.Item label="Movie">
-                <MoviePicker />
-                </Form.Item>
-                <Form.Item>
-                    {getFieldDecorator('password', {})(
-                        <Input
-                            size="large"
-                            name="password"
-                            type="password"
-                            placeholder=""
-                        ></Input>
-                    )}
-                </Form.Item>
-                <Form.Item>
-                    <Button type="primary" htmlType="submit">
-                        Log in
-          </Button>
-                </Form.Item>
-            </Form>
+        //     <Form onSubmit={this.handleSubmit}>
+        //         <Form.Item label="Movie">
+        //         <MoviePicker />
+        //         </Form.Item>
+        //         <Form.Item>
+        //             {getFieldDecorator('password', {})(
+        //                 <Input
+        //                     size="large"
+        //                     name="password"
+        //                     type="password"
+        //                     placeholder=""
+        //                 ></Input>
+        //             )}
+        //         </Form.Item>
+        //         <Form.Item>
+        //             <Button type="primary" htmlType="submit">
+        //                 Log in
+        //   </Button>
+        //         </Form.Item>
+        //     </Form>
+        <h1>
+            New Post here
+        </h1>
         )
     }
 }
