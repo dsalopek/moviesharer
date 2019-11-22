@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a7a3144-964a-4b5d-ba87-df272292eff3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moviesharer-client/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/moviesharer-client/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moviesharer-client/src/app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/moviesharer-client/src/app/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moviesharer-client/src/nav/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/moviesharer-client/src/nav/Navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moviesharer-client/src/user/login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/moviesharer-client/src/user/login/Login.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -175,6 +178,7 @@
       <workItem from="1573258351731" duration="125000" />
       <workItem from="1573512316226" duration="1576000" />
       <workItem from="1574301333032" duration="4188000" />
+      <workItem from="1574425854153" duration="39000" />
     </task>
     <servers />
   </component>
