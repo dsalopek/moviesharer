@@ -2,10 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a7a3144-964a-4b5d-ba87-df272292eff3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/moviesharer-client/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/moviesharer-client/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moviesharer-client/src/post/MovieModal.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moviesharer-client/src/post/MovieModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moviesharer-client/scratch.html" beforeDir="false" afterPath="$PROJECT_DIR$/moviesharer-client/scratch.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/moviesharer-client/src/app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/moviesharer-client/src/app/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/moviesharer-client/src/nav/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/moviesharer-client/src/nav/Navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moviesharer-client/src/post/MovieList.css" beforeDir="false" afterPath="$PROJECT_DIR$/moviesharer-client/src/post/MovieList.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moviesharer-client/src/post/MovieList.js" beforeDir="false" afterPath="$PROJECT_DIR$/moviesharer-client/src/post/MovieList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moviesharer-client/src/post/MovieSeach.js" beforeDir="false" afterPath="$PROJECT_DIR$/moviesharer-client/src/post/MovieSeach.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moviesharer-client/src/post/NewPost.js" beforeDir="false" afterPath="$PROJECT_DIR$/moviesharer-client/src/post/NewPost.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/moviesharer-client/src/user/login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/moviesharer-client/src/user/login/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moviesharer-client/src/util/APIUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/moviesharer-client/src/util/APIUtils.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -179,6 +187,7 @@
       <workItem from="1573512316226" duration="1576000" />
       <workItem from="1574301333032" duration="4188000" />
       <workItem from="1574425854153" duration="39000" />
+      <workItem from="1574426798165" duration="1292000" />
     </task>
     <servers />
   </component>
@@ -199,6 +208,21 @@
               <option name="BEK_SORT_TYPE" value="1" />
               <option name="COLUMN_ORDER" />
             </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="master" />
+                </option>
+              </RecentGroup>
+            </list>
           </value>
         </entry>
       </map>

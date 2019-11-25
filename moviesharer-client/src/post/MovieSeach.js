@@ -12,10 +12,21 @@ class MovieSearchBar extends Component {
 	}
 	render() {
 		return (
-			<div class="search-container">
+			<div className="search-container">
 				<span>
-					<input class="search-bar" type="text" placeholder={"Lord of the Rings"} value={this.props.value} onChange={this.props.onChange}/>
-					<input class="search-button" type="button" value="Search" onClick={this.props.onSearch}/>
+					<input 
+						className="search-bar" 
+						type="text" placeholder={"Lord of the Rings"} 
+						value={this.props.value}
+						onKeyPress={this.props.onKeyPress}
+						onChange={this.props.onChange}
+					/>
+					<input 
+						className="search-button" 
+						type="button" 
+						value="Search" 
+						onClick={this.props.onSearch}
+					/>
 				</span>
 			</div>
 		);
