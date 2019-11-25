@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import './Navbar.css';
-import {BrowserRouter as Router, Link, Route, Switch} from 'react-router-dom';
-import Login from '../user/login/Login';
-import NewPost from '../post/NewPost';
+import {BrowserRouter as Router, Link, withRouter, Switch} from 'react-router-dom';
+
 
 class Navbar extends Component {
     constructor(props) {
@@ -10,27 +9,26 @@ class Navbar extends Component {
     }
 
     render() {
+
+        let navBarItems;
+
+        navBarItems = [
+            <li key='feed' ><Link to="/feed">Feed</Link></li>,
+            <li key='newpost'><Link to="/newpost">New Post</Link></li>
+        ];
+
+        if(this.props.currentUser) {
+            navBarItems.push(<li className='menu-right' key='profile'><Link to="/profile">{this.props.currentUser.email}</Link></li>);
+        } else {
+            navBarItems.push(<li className='menu-right' key='login'><Link to="/login">Login</Link></li>);
+        }
+
         return (
-            <Router>
-                <ul>
-                    <li><Link to="/feed">Feed</Link></li>
-                    <li><Link to="/newpost">New Post</Link></li>
-                    <li className='menu-right'><Link to="/login">Login</Link></li>
-                </ul>
-                <Switch>
-                    <Route path="/feed">
-                        {/* <About /> */}
-                    </Route>
-                    <Route path="/newpost">
-                        <NewPost/>
-                    </Route>
-                    <Route path="/login">
-                        <Login onLogin={this.props.handleLogin}/>
-                    </Route>
-                </Switch>
-            </Router>
+            <ul>
+                {navBarItems}
+            </ul>
         )
     }
 }
 
-export default Navbar;
+export default withRouter(Navbar);

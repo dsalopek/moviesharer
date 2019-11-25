@@ -1,4 +1,4 @@
-import { API_BASE_URL, POLL_LIST_SIZE, ACCESS_TOKEN } from '../constants';
+import { API_BASE_URL, ACCESS_TOKEN } from '../constants';
 
 const request = (options) => {
     const headers = new Headers({
@@ -22,32 +22,6 @@ const request = (options) => {
         })
     );
 };
-
-export function getAllPolls(page, size) {
-    page = page || 0;
-    size = size || POLL_LIST_SIZE;
-
-    return request({
-        url: API_BASE_URL + "/polls?page=" + page + "&size=" + size,
-        method: 'GET'
-    });
-}
-
-export function createPoll(pollData) {
-    return request({
-        url: API_BASE_URL + "/polls",
-        method: 'POST',
-        body: JSON.stringify(pollData)         
-    });
-}
-
-export function castVote(voteData) {
-    return request({
-        url: API_BASE_URL + "/polls/" + voteData.pollId + "/votes",
-        method: 'POST',
-        body: JSON.stringify(voteData)
-    });
-}
 
 export function login(loginRequest) {
     return request({
@@ -98,15 +72,15 @@ export function getUserProfile(username) {
     });
 }
 
-export function getUserCreatedPolls(username, page, size) {
-    page = page || 0;
-    size = size || POLL_LIST_SIZE;
+// export function getUserCreatedPolls(username, page, size) {
+//     page = page || 0;
+//     size = size || POLL_LIST_SIZE;
 
-    return request({
-        url: API_BASE_URL + "/users/" + username + "/polls?page=" + page + "&size=" + size,
-        method: 'GET'
-    });
-}
+//     return request({
+//         url: API_BASE_URL + "/users/" + username + "/polls?page=" + page + "&size=" + size,
+//         method: 'GET'
+//     });
+// }
 
 export function getAllPosts() {
     return request({
@@ -122,12 +96,9 @@ export function queryMovies(queryString) {
     })
 }
 
-export function getUserVotedPolls(username, page, size) {
-    page = page || 0;
-    size = size || POLL_LIST_SIZE;
-
+export function getMovieDetails(movieId) {
     return request({
-        url: API_BASE_URL + "/users/" + username + "/votes?page=" + page + "&size=" + size,
+        url: 'https://api.themoviedb.org/3/movie/'+movieId+'?api_key=dac1a556b543c18f8675c768457e5777',
         method: 'GET'
-    });
+    })
 }
