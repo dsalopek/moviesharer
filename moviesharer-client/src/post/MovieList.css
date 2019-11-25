@@ -1,27 +1,31 @@
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+.movie-cards {
+    text-align: center;
+    width: 100%;
+}
+
+.movie-card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
   transition: 0.3s;
   margin: 10px 5px 5px 10px;
-  border-radius: 5px; /* 5px rounded corners */
-  float: left;
-  height: 300px;
-  width: calc(50% - 20px);
+  border-radius: 5px;
+  height: 513px;
+  width: 342px;
+  display: inline-block;
 }
 
 /* Add rounded corners to the top left and the top right corner of the image */
-img {
-  border-radius: 5px 0px 0px 5px;
+.movie-poster {
+  border-radius: 5px;
+  float: middle;
   height: 100%;
-  float: left;
-  padding-right: 15px;
+  width: 100%; 
+  object-fit: cover;
+  overflow: hidden;
 }
 
 /* On mouse-over, add a deeper shadow */
 .card:hover {
-  box-shadow: 0 18px 30px 0 rgba(0,0,0,0.4);
+  box-shadow: 0 0 6px 6px rgba(72, 72, 72, 0.7);
 }
 
 /* Add some padding inside the card container */
-.container {
-  padding: 15px;
-}

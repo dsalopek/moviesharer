@@ -12,9 +12,22 @@ class MovieSearchBar extends Component {
 	}
 	render() {
 		return (
-			<div class="flex-container">
-				<input class="fill-width" type="text" value={this.props.value} onChange={this.props.onChange}/>
-				<input type="button" value="Submit" onClick={this.props.onSearch} />
+			<div className="search-container">
+				<span>
+					<input 
+						className="search-bar" 
+						type="text" placeholder={"Lord of the Rings"} 
+						value={this.props.value}
+						onKeyPress={this.props.onKeyPress}
+						onChange={this.props.onChange}
+					/>
+					<input 
+						className="search-button" 
+						type="button" 
+						value="Search" 
+						onClick={this.props.onSearch}
+					/>
+				</span>
 			</div>
 		);
 	}
