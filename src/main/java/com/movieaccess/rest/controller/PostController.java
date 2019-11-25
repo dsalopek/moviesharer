@@ -31,6 +31,11 @@ public class PostController {
         return postService.getAllPosts();
     }
 
+    @GetMapping("/feed")
+    public List<PostResponse> getUserFeed(@CurrentUser UserPrincipal userPrincipal) {
+        return this.postService.getPostFeedForUser(userPrincipal.getUsername());
+    }
+
     @PreAuthorize("hasRole('USER')")
     @PostMapping("/")
     public PostResponse createPost(@CurrentUser UserPrincipal userPrincipal, @RequestBody PostRequest postRequest) {

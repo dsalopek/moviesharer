@@ -7,11 +7,15 @@ import {
   Link
 } from 'react-router-dom';
 
+import Navbar from '../nav/Navbar'
+
 import { getCurrentUser } from '../util/APIUtils';
 import { ACCESS_TOKEN } from '../constants';
-import PostList from '../post/PostList';
-import MovieList from '../post/MovieList'
 import LoadingIndicator from '../common/LoadingIndicator';
+
+import Login from '../user/login/Login';
+import NewPost from '../post/NewPost';
+import ServerError from '../common/ServerError'
 
 class App extends Component {
   constructor(props) {
@@ -21,12 +25,11 @@ class App extends Component {
       isAuthenticated: false,
       isLoading: false
     }
-    this.handleLogout = this.handleLogout.bind(this);
-    this.loadCurrentUser = this.loadCurrentUser.bind(this);
-    this.handleLogin = this.handleLogin.bind(this);
+    // this.handleLogin = this.handleLogin.bind(this);
+    // this.loadCurrentUser = this.loadCurrentUser.bind(this);
   }
 
-  loadCurrentUser() {
+  loadCurrentUser = () => {
     this.setState({
       isLoading: true
     });
@@ -48,20 +51,9 @@ class App extends Component {
     this.loadCurrentUser();
   }
 
-  handleLogout(redirectTo = "/", notificationType = "success", description = "You're successfully logged out.") {
-    localStorage.removeItem(ACCESS_TOKEN);
-
-    this.setState({
-      currentUser: null,
-      isAuthenticated: false
-    });
-
-    this.props.history.push(redirectTo);
-  }
-
-  handleLogin() {
+  handleLogin = () => {
     this.loadCurrentUser();
-    this.props.history.push("/");
+    this.props.history.push("/feed");
   }
 
   render() {
@@ -69,7 +61,22 @@ class App extends Component {
       return <LoadingIndicator />
     }
     return (
-      <MovieList/>
+      <div>
+        <Navbar currentUser={this.state.currentUser}/>
+        <Switch>
+          <Route exact path="/feed">
+              <ServerError/>
+          </Route>
+          <Route exact path="/newpost">
+              <NewPost/>
+          </Route>
+          <Route exact path="/login">
+              <Login onLogin={this.handleLogin}/>
+          </Route>
+          <Route exact path="/profile">
+          </Route>
+        </Switch>
+      </div>
     );
   }
 }
