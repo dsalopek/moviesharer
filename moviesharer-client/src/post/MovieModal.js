@@ -16,10 +16,19 @@ function MovieModal(props) {
             <div className="movie-modal">
                 <div className="modal-content">
                     <span className="close" onClick={props.closeModal}>&times;</span>
-                    <h2>{props.movieDetails.title}</h2>
-                    <p>{props.movieDetails.overview}</p>
-                    <p>{props.movieDetails.release_date.split("-")[0]}</p>
+                    <div className="movie-header">
+                        <div className="movie-title">
+                            {props.movieDetails.title}
+                        </div>
+                        <div className="release-year">
+                            {props.movieDetails.release_date.split("-")[0]}
+                        </div>
+                    </div>
+                    <p className="movie-overview">{props.movieDetails.overview}</p>
+                    {props.movieDetails.genres.map(
+                        function (g, idx) { return (<p className="movie-genre-tag">{g.name}</p>)})}
                     <p>{displayRuntime(props.movieDetails.runtime)}</p>
+                    <input type="button" className="select-button" value ="Select this movie"></input>
                 </div>
             </div>
         );
