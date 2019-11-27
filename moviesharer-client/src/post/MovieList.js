@@ -1,10 +1,4 @@
 import React, { Component } from 'react';
-import {
-    Route,
-    withRouter,
-    Switch,
-    Link
-  } from 'react-router-dom';
 import MovieSearchBar from './MovieSeach';
 import MovieModal from './MovieModal';
 import './MovieList.css';
