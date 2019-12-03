@@ -102,3 +102,10 @@ export function getMovieDetails(movieId) {
         method: 'GET'
     })
 }
+
+export function getAllUsers() {
+    return request({
+        url: API_BASE_URL + "/user/",
+        method: 'GET'
+    })
+}

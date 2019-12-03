@@ -2,15 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a7a3144-964a-4b5d-ba87-df272292eff3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/moviesharer-client/src/post/Feed.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviesharer-client/src/post/Feed.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/payload/UserResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moviesharer-client/src/app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/moviesharer-client/src/app/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/moviesharer-client/src/post/MovieList.js" beforeDir="false" afterPath="$PROJECT_DIR$/moviesharer-client/src/post/MovieList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moviesharer-client/src/post/PostList.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moviesharer-client/src/post/PostList.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moviesharer-client/src/post/MovieModal.css" beforeDir="false" afterPath="$PROJECT_DIR$/moviesharer-client/src/post/MovieModal.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moviesharer-client/src/post/MovieModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/moviesharer-client/src/post/MovieModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moviesharer-client/src/post/NewPost.js" beforeDir="false" afterPath="$PROJECT_DIR$/moviesharer-client/src/post/NewPost.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moviesharer-client/src/util/APIUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/moviesharer-client/src/util/APIUtils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movieaccess/rest/repository/UserRepository.java" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,6 +85,9 @@
     </expand>
     <select />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="demo" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -103,9 +111,16 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="postgresql" />
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -117,48 +132,65 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="demo" />
+  <component name="RunManager" selected="Spring Boot.Application (1)">
+    <configuration name="Application (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="moviesharer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.movieaccess.rest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.movieaccess.rest.Application" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.movieaccess.rest.Application" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8.0_232" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.Application (1)" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
-    <option name="allServicesViewState">
-      <serviceView>
-        <treeState>
-          <expand>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@fe8c7560" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@fe8c7560" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@16007a8e" type="9fbbdea:ServiceModel$ServiceNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@cd51eec1" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-          </expand>
-          <select />
-        </treeState>
-      </serviceView>
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Not Started" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
     </option>
   </component>
   <component name="SvnConfiguration">
@@ -183,6 +215,8 @@
       <workItem from="1574301333032" duration="4188000" />
       <workItem from="1574425854153" duration="39000" />
       <workItem from="1574426798165" duration="1299000" />
+      <workItem from="1575326401490" duration="38000" />
+      <workItem from="1575326514996" duration="2322000" />
     </task>
     <servers />
   </component>
@@ -225,5 +259,63 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="901" y="320" key="#Application" timestamp="1575326644230">
+      <screen x="0" y="23" width="2560" height="1350" />
+    </state>
+    <state x="901" y="320" key="#Application/0.23.2560.1350/-1440.682.1440.877@0.23.2560.1350" timestamp="1575326644230" />
+    <state x="1067" y="410" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1575326617406">
+      <screen x="0" y="23" width="2560" height="1350" />
+    </state>
+    <state x="1067" y="410" key="#com.intellij.ide.macro.MacrosDialog/0.23.2560.1350/-1440.682.1440.877@0.23.2560.1350" timestamp="1575326617406" />
+    <state x="1093" y="421" key="#com.intellij.ide.util.MemberChooser" timestamp="1575328533327">
+      <screen x="0" y="23" width="2560" height="1350" />
+    </state>
+    <state x="1093" y="421" key="#com.intellij.ide.util.MemberChooser/0.23.2560.1350/-1440.682.1440.877@0.23.2560.1350" timestamp="1575328533327" />
+    <state width="958" height="379" key="GridCell.Tab.0.bottom" timestamp="1575335900916">
+      <screen x="0" y="23" width="1440" height="810" />
+    </state>
+    <state width="958" height="379" key="GridCell.Tab.0.bottom/0.23.1440.810@0.23.1440.810" timestamp="1575335900916" />
+    <state width="1742" height="379" key="GridCell.Tab.0.bottom/0.23.2560.1350/-1440.682.1440.877@0.23.2560.1350" timestamp="1575328539818" />
+    <state width="958" height="379" key="GridCell.Tab.0.center" timestamp="1575335900915">
+      <screen x="0" y="23" width="1440" height="810" />
+    </state>
+    <state width="958" height="379" key="GridCell.Tab.0.center/0.23.1440.810@0.23.1440.810" timestamp="1575335900915" />
+    <state width="1742" height="379" key="GridCell.Tab.0.center/0.23.2560.1350/-1440.682.1440.877@0.23.2560.1350" timestamp="1575328539817" />
+    <state width="958" height="379" key="GridCell.Tab.0.left" timestamp="1575335900915">
+      <screen x="0" y="23" width="1440" height="810" />
+    </state>
+    <state width="958" height="379" key="GridCell.Tab.0.left/0.23.1440.810@0.23.1440.810" timestamp="1575335900915" />
+    <state width="1742" height="379" key="GridCell.Tab.0.left/0.23.2560.1350/-1440.682.1440.877@0.23.2560.1350" timestamp="1575328539817" />
+    <state width="958" height="379" key="GridCell.Tab.0.right" timestamp="1575335900916">
+      <screen x="0" y="23" width="1440" height="810" />
+    </state>
+    <state width="958" height="379" key="GridCell.Tab.0.right/0.23.1440.810@0.23.1440.810" timestamp="1575335900916" />
+    <state width="1742" height="379" key="GridCell.Tab.0.right/0.23.2560.1350/-1440.682.1440.877@0.23.2560.1350" timestamp="1575328539818" />
+    <state width="958" height="379" key="GridCell.Tab.1.bottom" timestamp="1575335900916">
+      <screen x="0" y="23" width="1440" height="810" />
+    </state>
+    <state width="958" height="379" key="GridCell.Tab.1.bottom/0.23.1440.810@0.23.1440.810" timestamp="1575335900916" />
+    <state width="1742" height="379" key="GridCell.Tab.1.bottom/0.23.2560.1350/-1440.682.1440.877@0.23.2560.1350" timestamp="1575328539820" />
+    <state width="958" height="379" key="GridCell.Tab.1.center" timestamp="1575335900916">
+      <screen x="0" y="23" width="1440" height="810" />
+    </state>
+    <state width="958" height="379" key="GridCell.Tab.1.center/0.23.1440.810@0.23.1440.810" timestamp="1575335900916" />
+    <state width="1742" height="379" key="GridCell.Tab.1.center/0.23.2560.1350/-1440.682.1440.877@0.23.2560.1350" timestamp="1575328539819" />
+    <state width="958" height="379" key="GridCell.Tab.1.left" timestamp="1575335900916">
+      <screen x="0" y="23" width="1440" height="810" />
+    </state>
+    <state width="958" height="379" key="GridCell.Tab.1.left/0.23.1440.810@0.23.1440.810" timestamp="1575335900916" />
+    <state width="1742" height="379" key="GridCell.Tab.1.left/0.23.2560.1350/-1440.682.1440.877@0.23.2560.1350" timestamp="1575328539819" />
+    <state width="958" height="379" key="GridCell.Tab.1.right" timestamp="1575335900916">
+      <screen x="0" y="23" width="1440" height="810" />
+    </state>
+    <state width="958" height="379" key="GridCell.Tab.1.right/0.23.1440.810@0.23.1440.810" timestamp="1575335900916" />
+    <state width="1742" height="379" key="GridCell.Tab.1.right/0.23.2560.1350/-1440.682.1440.877@0.23.2560.1350" timestamp="1575328539820" />
+    <state x="957" y="530" key="com.intellij.ide.util.TipDialog" timestamp="1575326515334">
+      <screen x="0" y="23" width="2560" height="1350" />
+    </state>
+    <state x="957" y="530" key="com.intellij.ide.util.TipDialog/0.23.2560.1350/-1440.682.1440.877@0.23.2560.1350" timestamp="1575326515334" />
   </component>
 </project>
