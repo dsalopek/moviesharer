@@ -73,7 +73,7 @@ class MovieList extends Component {
     render() {
         const results = this.state.data.map(
             (row) => <div key={row.id} className="movie-card" onClick={() => this.handleSelect(row.id)}>
-                        <img className="movie-poster"  src={'https://image.tmdb.org/t/p/w342/'+row.poster_path}/>
+                        <a><img className="movie-poster"  src={'https://image.tmdb.org/t/p/w342/'+row.poster_path}/></a>
                     </div>);
 
         return (

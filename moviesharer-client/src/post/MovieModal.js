@@ -15,13 +15,16 @@ function MovieModal(props) {
         return ( 
             <div className="movie-modal">
                 <div className="modal-content">
-                    <span className="close" onClick={props.closeModal}>&times;</span>
                     <div className="movie-header">
                         <div className="movie-title">
                             {props.movieDetails.title}
                         </div>
                         <div className="release-year">
                             {props.movieDetails.release_date.split("-")[0]}
+                        </div>
+                        <div className="close" 
+                            onClick={props.closeModal}>
+                            &times;
                         </div>
                     </div>
                     <p className="movie-overview">{props.movieDetails.overview}</p>
