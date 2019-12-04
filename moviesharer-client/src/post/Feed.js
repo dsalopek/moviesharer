@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { getAllPosts } from '../util/APIUtils';
-import { Card, Icon, notification } from 'antd';
 import { POLL_LIST_SIZE } from '../constants';
 import { withRouter } from 'react-router-dom';
 import './Feed.css';
@@ -64,7 +63,7 @@ class Feed extends Component {
             <div className="post-cards">
                 {data.map(function (d, idx) {
                     return (
-                        <div className="post-card">
+                        <div key={idx} className="post-card">
                             <img className="movie-poster" src={'https://image.tmdb.org/t/p/w342/'+'5VTN0pR8gcqV3EPUHHfMGnJYN9L.jpg'} />
                             {/* { <div title={'https://image.tmdb.org/t/p/w342/'+d.post.postId} bordered={false} style={{ width: 300 }}> */}
                                 {/* <img src={'https://image.tmdb.org/t/p/w500/rGE9sOt1jOtKtb3bARi33Eg1xfK.jpg'} />

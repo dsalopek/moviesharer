@@ -11,6 +11,17 @@ function MovieModal(props) {
         return hours + ' hrs ' + minutes + ' minutes';
     }
 
+    function createObject() {
+        var movieDetails = {
+            id : props.movieDetails.id,
+            title : props.movieDetails.title,
+            overview : props.movieDetails.overview,
+            posterURL : props.movieDetails.poster_path,
+            backdropURL : props.movieDetails.backdrop_path
+        };
+        return movieDetails;
+    }
+
     if(props.movieDetails) {        
         return ( 
             <div className="movie-modal">
@@ -29,9 +40,9 @@ function MovieModal(props) {
                     </div>
                     <p className="movie-overview">{props.movieDetails.overview}</p>
                     {props.movieDetails.genres.map(
-                        function (g, idx) { return (<p className="movie-genre-tag">{g.name}</p>)})}
+                        function (g, idx) { return (<p key={idx} className="movie-genre-tag">{g.name}</p>)})}
                     <p>{displayRuntime(props.movieDetails.runtime)}</p>
-                    <input type="button" className="select-button" value ="Select this movie"></input>
+                    <input type="button" className="select-button" value ="Select this movie" onClick={()=>props.onSelectMovie(createObject())}></input>
                 </div>
             </div>
         );
