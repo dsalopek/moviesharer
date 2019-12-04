@@ -49,14 +49,12 @@ class MovieList extends Component {
     }
 
     handleSelect = (rowId) => {
-        console.log(rowId);
         this.setState({
             selectedMovieId: rowId
         })
 
         getMovieDetails(rowId)
             .then(response => {
-                console.log(response);
                 this.setState({
                     movieDetails: response
                 })
@@ -86,6 +84,7 @@ class MovieList extends Component {
                 />
                 <div className="movie-cards">{results}</div>
                 <MovieModal 
+                    onSelectMovie={this.props.onSelectMovie}
                     movieDetails={this.state.movieDetails}
                     closeModal={this.closeModal}
                 />

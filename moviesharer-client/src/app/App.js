@@ -15,6 +15,7 @@ import LoadingIndicator from '../common/LoadingIndicator';
 
 import Login from '../user/login/Login';
 import NewPost from '../post/NewPost';
+import MovieSearchMaster from '../post/MovieSearchMaster';
 import Feed from '../post/Feed';
 import ServerError from '../common/ServerError'
 
@@ -69,7 +70,7 @@ class App extends Component {
               <Feed/>
           </Route>
           <Route exact path="/newpost">
-              <NewPost/>
+              <MovieSearchMaster/>
           </Route>
           <Route exact path="/login">
               <Login onLogin={this.handleLogin}/>
