@@ -1,8 +1,6 @@
 package com.movieaccess.rest.controller;
 
-import com.movieaccess.rest.model.User;
-import com.movieaccess.rest.model.UserSummary;
-import com.movieaccess.rest.payload.UserResponse;
+import com.movieaccess.rest.payload.response.UserResponse;
 import com.movieaccess.rest.security.CurrentUser;
 import com.movieaccess.rest.security.UserPrincipal;
 import com.movieaccess.rest.service.UserService;
@@ -26,8 +24,8 @@ public class UserController {
 
     @GetMapping("/user/me")
     @PreAuthorize("hasRole('USER')")
-    public UserSummary getCurrentUser(@CurrentUser UserPrincipal currentUser) {
-        return new UserSummary(currentUser.getId(), currentUser.getUsername());
+    public UserResponse getCurrentUser(@CurrentUser UserPrincipal currentUser) {
+        return this.userService.getUserByUserId(currentUser.getId());
     }
 
     @GetMapping("/user")

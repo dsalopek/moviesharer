@@ -1,24 +1,21 @@
-package com.movieaccess.rest.payload;
+package com.movieaccess.rest.payload.response;
 
-import com.movieaccess.rest.model.Attendee;
-import com.movieaccess.rest.model.Location;
 import com.movieaccess.rest.model.Movie;
 import com.movieaccess.rest.model.Post;
 
-import java.time.Instant;
 import java.util.List;
 
 public class PostResponse {
     private Post post;
     private Movie movie;
-    private List<Attendee> attendeeList;
+    private List<AttendeeResponse> attendeeResponses;
 
     public void setPost(Post post) {
         this.post = post;
     }
 
-    public void setAttendeeList(List<Attendee> attendeeList) {
-        this.attendeeList = attendeeList;
+    public void setAttendeeResponses(List<AttendeeResponse> attendeeResponses) {
+        this.attendeeResponses = attendeeResponses;
     }
 
     public Movie getMovie() {
@@ -33,7 +30,7 @@ public class PostResponse {
         return post;
     }
 
-    public List<Attendee> getAttendeeList() {
-        return attendeeList;
+    public List<AttendeeResponse> getAttendeeResponses() {
+        return attendeeResponses;
     }
 }

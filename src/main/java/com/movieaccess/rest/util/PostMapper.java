@@ -4,7 +4,7 @@
 //import com.movieaccess.rest.model.Location;
 //import com.movieaccess.rest.model.Movie;
 //import com.movieaccess.rest.model.Post;
-//import com.movieaccess.rest.payload.PostResponse;
+//import com.movieaccess.rest.payload.response.PostResponse;
 //
 //import java.util.List;
 //

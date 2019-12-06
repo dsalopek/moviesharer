@@ -5,7 +5,7 @@ import java.time.Instant;
 
 @Entity
 @Table(name = "attendee")
-public class Attendee {
+public class AttendeeReply {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private long attendeeId;
@@ -15,10 +15,10 @@ public class Attendee {
     private Instant createdDate;
     private String createdBy;
 
-    public Attendee() {
+    public AttendeeReply() {
     }
 
-    public Attendee(long postId, long responseId, long userId, Instant createdDate, String createdBy) {
+    public AttendeeReply(long postId, long responseId, long userId, Instant createdDate, String createdBy) {
         this.postId = postId;
         this.responseId = responseId;
         this.userId = userId;
