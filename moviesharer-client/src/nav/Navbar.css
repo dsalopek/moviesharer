@@ -19,7 +19,7 @@ li a {
 }
 
 li a:hover:not(.active) {
-    background-color: #111;
+    background-color: rgb(47, 87, 49);
     color: whitesmoke;
 }
 

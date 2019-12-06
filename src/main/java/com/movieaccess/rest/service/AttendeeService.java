@@ -1,7 +1,7 @@
 package com.movieaccess.rest.service;
 
 import com.movieaccess.rest.repository.AttendeeRepository;
-import com.movieaccess.rest.model.Attendee;
+import com.movieaccess.rest.model.AttendeeReply;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,7 +16,7 @@ public class AttendeeService {
         this.attendeeRepository = attendeeRepository;
     }
 
-    public List<Attendee> getAllAttendeesByPostId(long postId){
+    public List<AttendeeReply> getAllAttendeesByPostId(long postId){
         return attendeeRepository.findAllByPostId(postId);
     }
 }

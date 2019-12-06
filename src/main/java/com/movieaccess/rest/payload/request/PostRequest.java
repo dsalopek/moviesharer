@@ -1,6 +1,5 @@
-package com.movieaccess.rest.payload;
+package com.movieaccess.rest.payload.request;
 
-import java.time.Instant;
 import java.util.List;
 
 public class PostRequest {

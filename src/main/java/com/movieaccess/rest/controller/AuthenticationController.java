@@ -6,10 +6,10 @@ import com.movieaccess.rest.exception.AppException;
 import com.movieaccess.rest.model.Role;
 import com.movieaccess.rest.model.RoleName;
 import com.movieaccess.rest.model.User;
-import com.movieaccess.rest.payload.ApiResponse;
-import com.movieaccess.rest.payload.JwtAuthenticationResponse;
-import com.movieaccess.rest.payload.LoginRequest;
-import com.movieaccess.rest.payload.SignUpRequest;
+import com.movieaccess.rest.payload.response.ApiResponse;
+import com.movieaccess.rest.payload.response.JwtAuthenticationResponse;
+import com.movieaccess.rest.payload.request.LoginRequest;
+import com.movieaccess.rest.payload.request.SignUpRequest;
 import com.movieaccess.rest.security.JwtTokenProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -77,8 +77,15 @@ public class AuthenticationController {
         }
 
         // Creating user's account
-        User user = new User(signUpRequest.getUsername(),
-                signUpRequest.getEmail(), signUpRequest.getPassword(), null);
+        User user = new User(
+                ' ',
+                signUpRequest.getUsername(),
+                signUpRequest.getFirstName(),
+                signUpRequest.getLastName(),
+                null,
+                signUpRequest.getEmail(),
+                signUpRequest.getPassword(),
+                null);
 
         user.setPassword(passwordEncoder.encode(user.getPassword()));
 

@@ -1,4 +1,4 @@
-package com.movieaccess.rest.payload;
+package com.movieaccess.rest.payload.request;
 
 public class AttendeeRequest {
     private long userId;

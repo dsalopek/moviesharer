@@ -1,6 +1,9 @@
 .movie-cards {
     text-align: center;
     width: 100%;
+    flex: 1;
+    overflow: auto;
+    margin-bottom: 70px;
 }
 
 .movie-card {
@@ -13,7 +16,6 @@
   display: inline-block;
 }
 
-/* Add rounded corners to the top left and the top right corner of the image */
 .movie-poster {
   border-radius: 5px;
   float: middle;
@@ -23,9 +25,20 @@
   overflow: hidden;
 }
 
+.movie-card.selected-card {
+  filter: sepia(100%) saturate(300%) brightness(70%) hue-rotate(180deg);
+}
+
 /* On mouse-over, add a deeper shadow */
-.card:hover {
+.movie-card:hover {
   box-shadow: 0 0 6px 6px rgba(72, 72, 72, 0.7);
+}
+
+.searching-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: auto;
 }
 
 /* Add some padding inside the card container */

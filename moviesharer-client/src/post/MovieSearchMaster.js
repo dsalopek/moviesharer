@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import MovieList from "./MovieList";
-import NewPost from "./NewPost";
+// import MovieList from "./MovieList";
+import {NewPost} from "./NewPost";
 
 class MovieSearchMaster extends Component {
     constructor(props){
@@ -17,10 +17,10 @@ class MovieSearchMaster extends Component {
     render() {
         return (
             <div>
-                {!this.state.movieDetails ? 
+                {/* {!this.state.movieDetails ? 
                     (<MovieList onSelectMovie={this.selectedMovie}/>)
                     : (<NewPost/>)
-                }
+                } */}
             </div>
         )
     }

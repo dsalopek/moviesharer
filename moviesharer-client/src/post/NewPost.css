@@ -1,0 +1,55 @@
+.wizard-buttons {
+    border-top: 1px darkgray solid;
+    background-color: whitesmoke;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+}
+
+.wizard-button {
+    border-radius: 10px;
+    height: 50px;
+    padding: 10px;
+    margin: 10px;
+    vertical-align: middle;
+    background-color: darkgreen;
+    color: whitesmoke;
+    border: 0;
+    font-size: 1.45em;
+}
+
+.button-next {
+    float: right;
+}
+
+.button-prev {
+    float: left;
+}
+
+.form-container {
+    max-width: 620px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.form-input {
+    height: 50px;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 1.75em;
+    vertical-align: middle;
+    border: 0;
+    padding: 0 10px;
+}
+
+textarea {
+    margin-top: 20px;
+    resize: none;
+}
+
+.form-text-area {
+    padding-top: 10px;
+    resize: none;
+    height: 100px;
+}

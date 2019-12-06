@@ -1,4 +1,4 @@
-package com.movieaccess.rest.payload;
+package com.movieaccess.rest.payload.request;
 
 
 import javax.validation.constraints.NotBlank;
