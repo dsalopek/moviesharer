@@ -34,6 +34,7 @@ public class PostController {
         return this.postService.getPostFeedForUser(userPrincipal.getUsername());
     }
 
+
     @PreAuthorize("hasRole('USER')")
     @PostMapping("/")
     public PostResponse createPost(@CurrentUser UserPrincipal userPrincipal, @RequestBody PostRequest postRequest) {

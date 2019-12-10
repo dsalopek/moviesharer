@@ -19,14 +19,14 @@ class Navbar extends Component {
         const { activeItem } = this.state;
 
         navBarItems = [
-            <li key='feed' ><NavLink to="/feed" activeClassName="active">Feed</NavLink></li>,
-            <li key='newpost'><NavLink to="/newpost" activeClassName="active">New Post</NavLink></li>
+            <li className="navbar-item" key='feed' ><NavLink to="/feed" activeClassName="active">Feed</NavLink></li>,
+            <li className="navbar-item" key='newpost'><NavLink to="/newpost" activeClassName="active">New Post</NavLink></li>
         ];
 
         if (this.props.currentUser) {
-            navBarItems.push(<li className='menu-right' key='profile'><NavLink to="/profile" activeClassName="active">{this.props.currentUser.email}</NavLink></li>);
+            navBarItems.push(<li className='navbar-item menu-right' key='profile'><NavLink to="/profile" activeClassName="active">{this.props.currentUser.email}</NavLink></li>);
         } else {
-            navBarItems.push(<li className='menu-right' key='login'><NavLink to="/login" activeClassName="active">Login</NavLink></li>);
+            navBarItems.push(<li className='navbar-item menu-right' key='login'><NavLink to="/login" activeClassName="active">Login</NavLink></li>);
         }
 
         return (

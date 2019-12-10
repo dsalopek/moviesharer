@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import MovieSearchResultList from './MovieSearchResultList';
 import './NewPost.css';
 import { now } from '../../../../../../../Users/andrewsalopek/Library/Caches/typescript/3.6/node_modules/moment/moment';
-import { getAllUsers } from '../util/APIUtils';
 import { func } from 'prop-types';
+import { getAllUsers } from '../util/APIUtils';
+import { NewPostDetails } from './NewPostDetails';
 
 
 export class NewPost extends Component {
@@ -13,7 +14,9 @@ export class NewPost extends Component {
             currentStep: 1,
             movieId: null,
             proposedDate: null,
-            attendees: []
+            attendees: [],
+            friendFilter: '',
+            friendList: []
         }
     }
 
@@ -39,6 +42,35 @@ export class NewPost extends Component {
         }
     }
 
+    componentDidMount() {
+        getAllUsers()
+            .then(response => {
+                this.setState({
+                    friendList: response
+                });
+            });
+    }
+
+    handleSelectFriend = (friend) => {
+        let list = this.state.attendees;
+        if(!list.includes(friend)){
+            list.push(friend);
+        }
+        this.setState({
+            attendees: list,
+            friendFilter: ''
+        });
+    }
+
+    handleRemoveFriend = (friend) => {
+        let list = this.state.attendees;
+        list.splice(list.indexOf(friend), 1);
+        this.setState({
+            attendees: list,
+            friendFilter: ''
+        })
+    }
+
     currentStep() {
         switch(this.state.currentStep) {
             case 1:
@@ -52,26 +84,17 @@ export class NewPost extends Component {
                 )
             case 2:
                 return(
-                    <form>
-                        <div className="form-container">
-                            <label>Address</label>
-                            <input type="text" list="data" className="form-input"/>
-                            <datalist id="data">
-                                <option key={1} value="4905 Snow Rd, Las Cruces" about="hello"/>
-                            </datalist>
-                            <br/>
-                            <textarea className={`form-input form-text-area`}/>
-                        </div>
-                    </form>
+                    <NewPostDetails 
+                        friendList={this.state.friendList}
+                        handleSelectFriend={this.handleSelectFriend}
+                        handleRemoveFriend={this.handleRemoveFriend}
+                        selectedFriends={this.state.attendees}
+                    />
                 )
         }
     }
 
     render() {
-        const names = this.state.attendees.map(r => 
-            <p>{r.username}</p>
-        );
-
         const previousButton = this.state.currentStep > 1 ? (<input className={`button-prev wizard-button`} type="button" value="Back" onClick={this.prev}/>) : (null);
         const nextButton = this.state.currentStep < states.length ? (<input className={`button-next wizard-button`} type="button" value="Next" onClick={this.next}/>) : (null);
         return (
@@ -90,12 +113,3 @@ export const states = ["Movie", "Location & Time", "Attendees", "Review"];
 
 
 
-// getAllUsers()
-//             .then(response => {
-//                 if(this._isMounted) {
-//                     this.setState({
-//                         attendees: response
-//                     });
-//                 }
-//                 console.log(this.state.attendees);
-//             });
