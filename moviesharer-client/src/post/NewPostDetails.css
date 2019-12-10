@@ -1,0 +1,80 @@
+.selected-friends {
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+
+.selected-friend {
+    border-radius: 5px;
+    /* overflow: hidden; */
+    vertical-align: top;
+    margin-right: 5px;
+    background-color: #333;
+    display: inline-block;
+}
+
+.selected-name {
+    float: left;
+    margin: auto;
+    color: white;
+    margin: 10px;
+}
+
+.remove-friend {
+    float: right;
+    color: coral;
+    cursor: pointer;
+    margin: 10px;
+    font-weight: bold;
+}
+
+.remove-friend:hover {
+    color: red;
+}
+
+.friend-select {
+    /* display: inline-block; */
+    float: left;
+    width: 100%;
+    margin: 0;
+    padding: 5px;
+    background-color: white;
+    border-radius: 10px;
+    margin: auto;
+    /* vertical-align: top; */
+}
+
+.friend-search {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.friend-search-bar {
+    float: left;
+    outline: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    /* border-radius: 10px; */
+    font-size: 1.75em;
+    /* vertical-align: middle; */
+    border: 0;
+}
+.friend-results {
+    margin: 0;
+    padding: 0;
+    border-radius: 0 0 5px 5px;
+    z-index: 1;
+}
+.friend-result a {
+    display: block;
+    color: white;
+    background-color: #333;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.friend-result a:hover {
+    background-color: rgb(77, 77, 77);
+    cursor: pointer;
+}
