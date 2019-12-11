@@ -9,6 +9,14 @@ export class NewPostDetails extends Component {
             friendList: [],
             nameFilter: ''
         }
+        this.setTextInputRef = element => {
+            this.textInput = element;
+          };
+      
+          this.focusTextInput = () => {
+            // Focus the text input using the raw DOM API
+            if (this.textInput) this.textInput.focus();
+          };
     }
 
     filterFriends = (event) => {
@@ -36,6 +44,10 @@ export class NewPostDetails extends Component {
         event.preventDefault();
     }
 
+    componentDidMount() {
+        this.focusTextInput();
+    }
+
     render() {
         const results = this.getFriends().map(result => {
                 return (
@@ -51,7 +63,7 @@ export class NewPostDetails extends Component {
         
         const selectedFriends = this.props.selectedFriends.map(friend => {
             return (
-                <div className="selected-friend">
+                <div className="selected-friend select-item">
                     <div className="selected-name">
                         {friend.firstName + " " + friend.lastName}
                     </div>
@@ -66,16 +78,25 @@ export class NewPostDetails extends Component {
         return (
             <form onSubmit={this.submitForm}>
                 <div className="form-container">
-                    <div className="friend-select">
-                        {selectedFriends} 
-                        <div className="friend-search">
-                            <input className="friend-search-bar" type="text" onChange={this.filterFriends} value={this.state.nameFilter}/>
-                            <ul className="friend-results">
+                    <label className="form-label">
+                        Date &amp; Time
+                        <input className="date-time" type="datetime-local"/>
+                    </label>
+                    <label className="form-label">
+                        Attendees
+                        <div className="friend-select select-item" onClick={this.focusTextInput}>
+                            {selectedFriends}
+                            <input className="friend-search-bar" 
+                                type="text" 
+                                onChange={this.filterFriends} 
+                                value={this.state.nameFilter}
+                                ref={this.setTextInputRef}
+                            />
+                        </div>
+                        <ul className="friend-results">
                                 {results}
                             </ul>
-                        </div>
-                    </div>
-                    
+                    </label>
                 </div>
             </form>
         )
