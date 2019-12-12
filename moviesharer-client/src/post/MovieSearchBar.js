@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './MovieSearch.css'; 
+import './MovieSearchBar.css'; 
 
 class MovieSearchBar extends Component {
 	constructor(props) {

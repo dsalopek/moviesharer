@@ -1,4 +1,4 @@
-package com.movieaccess.rest.payload;
+package com.movieaccess.rest.payload.response;
 
 public class JwtAuthenticationResponse {
     private String accessToken;

@@ -1,16 +1,21 @@
-ul {
+.navbar {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    display: block;
 }
 
-li {
+.navbar-item {
     float: left;
 }
 
-li a {
+.navbar-item a {
     display: block;
     color: white;
     text-align: center;
@@ -18,8 +23,8 @@ li a {
     text-decoration: none;
 }
 
-li a:hover:not(.active) {
-    background-color: #111;
+.navbar-item a:hover:not(.active) {
+    background-color: rgb(47, 87, 49);
     color: whitesmoke;
 }
 

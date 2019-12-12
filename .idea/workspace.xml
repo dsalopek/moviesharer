@@ -2,20 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a7a3144-964a-4b5d-ba87-df272292eff3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/moviesharer-client/src/post/MovieModal.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviesharer-client/src/post/MovieModal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moviesharer-client/scratch.html" beforeDir="false" afterPath="$PROJECT_DIR$/moviesharer-client/scratch.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moviesharer-client/src/app/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/moviesharer-client/src/app/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/moviesharer-client/src/app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/moviesharer-client/src/app/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moviesharer-client/src/nav/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/moviesharer-client/src/nav/Navbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moviesharer-client/src/post/MovieList.css" beforeDir="false" afterPath="$PROJECT_DIR$/moviesharer-client/src/post/MovieList.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moviesharer-client/src/post/MovieList.js" beforeDir="false" afterPath="$PROJECT_DIR$/moviesharer-client/src/post/MovieList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moviesharer-client/src/post/MovieSeach.js" beforeDir="false" afterPath="$PROJECT_DIR$/moviesharer-client/src/post/MovieSeach.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moviesharer-client/src/nav/Navbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/moviesharer-client/src/nav/Navbar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moviesharer-client/src/post/MovieSearchResultList.css" beforeDir="false" afterPath="$PROJECT_DIR$/moviesharer-client/src/post/MovieSearchResultList.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moviesharer-client/src/post/NewPost.css" beforeDir="false" afterPath="$PROJECT_DIR$/moviesharer-client/src/post/NewPost.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/moviesharer-client/src/post/NewPost.js" beforeDir="false" afterPath="$PROJECT_DIR$/moviesharer-client/src/post/NewPost.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moviesharer-client/src/user/login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/moviesharer-client/src/user/login/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moviesharer-client/src/util/APIUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/moviesharer-client/src/util/APIUtils.js" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -85,11 +79,15 @@
     </expand>
     <select />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="demo" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -108,62 +106,116 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="postgresql" />
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.movieaccess.rest.controller" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
   </component>
   <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="demo" />
+  <component name="RunManager" selected="Spring Boot.Application (1)">
+    <configuration name="JUnitControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="moviesharer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.movieaccess.rest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.movieaccess.rest" />
+      <option name="MAIN_CLASS_NAME" value="com.movieaccess.rest.JUnitControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="moviesharer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.movieaccess.rest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.movieaccess.rest.Application" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.movieaccess.rest.Application" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8.0_232" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.Application (1)" />
+        <item itemvalue="JUnit.JUnitControllerTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
-    <option name="allServicesViewState">
-      <serviceView>
-        <treeState>
-          <expand>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@fe8c7560" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@fe8c7560" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@16007a8e" type="9fbbdea:ServiceModel$ServiceNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@cd51eec1" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-          </expand>
-          <select />
-        </treeState>
-      </serviceView>
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Not Started" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
     </option>
   </component>
   <component name="SvnConfiguration">
@@ -187,7 +239,21 @@
       <workItem from="1573512316226" duration="1576000" />
       <workItem from="1574301333032" duration="4188000" />
       <workItem from="1574425854153" duration="39000" />
-      <workItem from="1574426798165" duration="1292000" />
+      <workItem from="1574426798165" duration="1299000" />
+      <workItem from="1575326401490" duration="38000" />
+      <workItem from="1575326514996" duration="2322000" />
+      <workItem from="1575412889575" duration="1053000" />
+      <workItem from="1575427232581" duration="165000" />
+      <workItem from="1575461601477" duration="34000" />
+      <workItem from="1575502374630" duration="1470000" />
+      <workItem from="1575597088207" duration="50000" />
+      <workItem from="1575597148336" duration="335000" />
+      <workItem from="1575597507252" duration="7519000" />
+      <workItem from="1575606045887" duration="19000" />
+      <workItem from="1575635578363" duration="3000" />
+      <workItem from="1575842493619" duration="1223000" />
+      <workItem from="1576016510342" duration="489000" />
+      <workItem from="1576103017679" duration="325000" />
     </task>
     <servers />
   </component>
@@ -230,5 +296,126 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="901" y="320" key="#Application" timestamp="1575326644230">
+      <screen x="0" y="23" width="2560" height="1350" />
+    </state>
+    <state x="901" y="320" key="#Application/0.23.2560.1350/-1440.682.1440.877@0.23.2560.1350" timestamp="1575326644230" />
+    <state x="1067" y="410" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1575326617406">
+      <screen x="0" y="23" width="2560" height="1350" />
+    </state>
+    <state x="1067" y="410" key="#com.intellij.ide.macro.MacrosDialog/0.23.2560.1350/-1440.682.1440.877@0.23.2560.1350" timestamp="1575326617406" />
+    <state x="1093" y="421" key="#com.intellij.ide.util.MemberChooser" timestamp="1575600196290">
+      <screen x="0" y="23" width="2560" height="1350" />
+    </state>
+    <state x="1093" y="421" key="#com.intellij.ide.util.MemberChooser/0.23.2560.1350/-1440.416.1440.877@0.23.2560.1350" timestamp="1575600196290" />
+    <state x="1093" y="421" key="#com.intellij.ide.util.MemberChooser/0.23.2560.1350/-1440.682.1440.877@0.23.2560.1350" timestamp="1575328533327" />
+    <state x="968" y="433" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1575412924834">
+      <screen x="0" y="23" width="2560" height="1350" />
+    </state>
+    <state x="968" y="433" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.2560.1350/-1440.682.1440.877@0.23.2560.1350" timestamp="1575412924834" />
+    <state x="680" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1575600663552">
+      <screen x="0" y="23" width="2560" height="1350" />
+    </state>
+    <state x="680" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.2560.1350/-1440.416.1440.877@0.23.2560.1350" timestamp="1575600663551" />
+    <state width="1742" height="907" key="GridCell.Tab.0.bottom" timestamp="1576103093557">
+      <screen x="0" y="23" width="2560" height="1350" />
+    </state>
+    <state width="1742" height="907" key="GridCell.Tab.0.bottom/-1440.357.1440.877/0.23.2560.1350@0.23.2560.1350" timestamp="1576017483108" />
+    <state width="1742" height="907" key="GridCell.Tab.0.bottom/0.23.1440.810@0.23.1440.810" timestamp="1576070324865" />
+    <state width="1742" height="907" key="GridCell.Tab.0.bottom/0.23.2560.1350/-1440.357.1440.877@0.23.2560.1350" timestamp="1576103093557" />
+    <state width="2518" height="1136" key="GridCell.Tab.0.bottom/0.23.2560.1350/-1440.416.1440.877@0.23.2560.1350" timestamp="1575606017396" />
+    <state width="1742" height="695" key="GridCell.Tab.0.bottom/0.23.2560.1350/-1440.682.1440.877@0.23.2560.1350" timestamp="1575412987414" />
+    <state width="1742" height="498" key="GridCell.Tab.0.bottom/0.23.2560.1417/-1440.416.1440.810@0.23.2560.1417" timestamp="1575602965317" />
+    <state width="1742" height="907" key="GridCell.Tab.0.center" timestamp="1576103093556">
+      <screen x="0" y="23" width="2560" height="1350" />
+    </state>
+    <state width="1742" height="907" key="GridCell.Tab.0.center/-1440.357.1440.877/0.23.2560.1350@0.23.2560.1350" timestamp="1576017483107" />
+    <state width="1742" height="907" key="GridCell.Tab.0.center/0.23.1440.810@0.23.1440.810" timestamp="1576070324864" />
+    <state width="1742" height="907" key="GridCell.Tab.0.center/0.23.2560.1350/-1440.357.1440.877@0.23.2560.1350" timestamp="1576103093556" />
+    <state width="2518" height="1136" key="GridCell.Tab.0.center/0.23.2560.1350/-1440.416.1440.877@0.23.2560.1350" timestamp="1575606017395" />
+    <state width="1742" height="695" key="GridCell.Tab.0.center/0.23.2560.1350/-1440.682.1440.877@0.23.2560.1350" timestamp="1575412987413" />
+    <state width="1742" height="498" key="GridCell.Tab.0.center/0.23.2560.1417/-1440.416.1440.810@0.23.2560.1417" timestamp="1575602965317" />
+    <state width="1742" height="907" key="GridCell.Tab.0.left" timestamp="1576103093555">
+      <screen x="0" y="23" width="2560" height="1350" />
+    </state>
+    <state width="1742" height="907" key="GridCell.Tab.0.left/-1440.357.1440.877/0.23.2560.1350@0.23.2560.1350" timestamp="1576017483106" />
+    <state width="1742" height="907" key="GridCell.Tab.0.left/0.23.1440.810@0.23.1440.810" timestamp="1576070324864" />
+    <state width="1742" height="907" key="GridCell.Tab.0.left/0.23.2560.1350/-1440.357.1440.877@0.23.2560.1350" timestamp="1576103093555" />
+    <state width="2518" height="1136" key="GridCell.Tab.0.left/0.23.2560.1350/-1440.416.1440.877@0.23.2560.1350" timestamp="1575606017395" />
+    <state width="1742" height="695" key="GridCell.Tab.0.left/0.23.2560.1350/-1440.682.1440.877@0.23.2560.1350" timestamp="1575412987412" />
+    <state width="1742" height="498" key="GridCell.Tab.0.left/0.23.2560.1417/-1440.416.1440.810@0.23.2560.1417" timestamp="1575602965316" />
+    <state width="1742" height="907" key="GridCell.Tab.0.right" timestamp="1576103093556">
+      <screen x="0" y="23" width="2560" height="1350" />
+    </state>
+    <state width="1742" height="907" key="GridCell.Tab.0.right/-1440.357.1440.877/0.23.2560.1350@0.23.2560.1350" timestamp="1576017483107" />
+    <state width="1742" height="907" key="GridCell.Tab.0.right/0.23.1440.810@0.23.1440.810" timestamp="1576070324864" />
+    <state width="1742" height="907" key="GridCell.Tab.0.right/0.23.2560.1350/-1440.357.1440.877@0.23.2560.1350" timestamp="1576103093556" />
+    <state width="2518" height="1136" key="GridCell.Tab.0.right/0.23.2560.1350/-1440.416.1440.877@0.23.2560.1350" timestamp="1575606017395" />
+    <state width="1742" height="695" key="GridCell.Tab.0.right/0.23.2560.1350/-1440.682.1440.877@0.23.2560.1350" timestamp="1575412987414" />
+    <state width="1742" height="498" key="GridCell.Tab.0.right/0.23.2560.1417/-1440.416.1440.810@0.23.2560.1417" timestamp="1575602965317" />
+    <state width="1742" height="907" key="GridCell.Tab.1.bottom" timestamp="1576103093560">
+      <screen x="0" y="23" width="2560" height="1350" />
+    </state>
+    <state width="1742" height="907" key="GridCell.Tab.1.bottom/-1440.357.1440.877/0.23.2560.1350@0.23.2560.1350" timestamp="1576017483109" />
+    <state width="1742" height="907" key="GridCell.Tab.1.bottom/0.23.1440.810@0.23.1440.810" timestamp="1576070324866" />
+    <state width="1742" height="907" key="GridCell.Tab.1.bottom/0.23.2560.1350/-1440.357.1440.877@0.23.2560.1350" timestamp="1576103093560" />
+    <state width="1742" height="498" key="GridCell.Tab.1.bottom/0.23.2560.1350/-1440.416.1440.877@0.23.2560.1350" timestamp="1575606017392" />
+    <state width="1742" height="695" key="GridCell.Tab.1.bottom/0.23.2560.1350/-1440.682.1440.877@0.23.2560.1350" timestamp="1575412987416" />
+    <state width="1742" height="498" key="GridCell.Tab.1.bottom/0.23.2560.1417/-1440.416.1440.810@0.23.2560.1417" timestamp="1575602965319" />
+    <state width="1742" height="907" key="GridCell.Tab.1.center" timestamp="1576103093558">
+      <screen x="0" y="23" width="2560" height="1350" />
+    </state>
+    <state width="1742" height="907" key="GridCell.Tab.1.center/-1440.357.1440.877/0.23.2560.1350@0.23.2560.1350" timestamp="1576017483109" />
+    <state width="1742" height="907" key="GridCell.Tab.1.center/0.23.1440.810@0.23.1440.810" timestamp="1576070324866" />
+    <state width="1742" height="907" key="GridCell.Tab.1.center/0.23.2560.1350/-1440.357.1440.877@0.23.2560.1350" timestamp="1576103093558" />
+    <state width="1742" height="498" key="GridCell.Tab.1.center/0.23.2560.1350/-1440.416.1440.877@0.23.2560.1350" timestamp="1575606017392" />
+    <state width="1742" height="695" key="GridCell.Tab.1.center/0.23.2560.1350/-1440.682.1440.877@0.23.2560.1350" timestamp="1575412987415" />
+    <state width="1742" height="498" key="GridCell.Tab.1.center/0.23.2560.1417/-1440.416.1440.810@0.23.2560.1417" timestamp="1575602965318" />
+    <state width="1742" height="907" key="GridCell.Tab.1.left" timestamp="1576103093558">
+      <screen x="0" y="23" width="2560" height="1350" />
+    </state>
+    <state width="1742" height="907" key="GridCell.Tab.1.left/-1440.357.1440.877/0.23.2560.1350@0.23.2560.1350" timestamp="1576017483108" />
+    <state width="1742" height="907" key="GridCell.Tab.1.left/0.23.1440.810@0.23.1440.810" timestamp="1576070324865" />
+    <state width="1742" height="907" key="GridCell.Tab.1.left/0.23.2560.1350/-1440.357.1440.877@0.23.2560.1350" timestamp="1576103093558" />
+    <state width="1742" height="498" key="GridCell.Tab.1.left/0.23.2560.1350/-1440.416.1440.877@0.23.2560.1350" timestamp="1575606017392" />
+    <state width="1742" height="695" key="GridCell.Tab.1.left/0.23.2560.1350/-1440.682.1440.877@0.23.2560.1350" timestamp="1575412987415" />
+    <state width="1742" height="498" key="GridCell.Tab.1.left/0.23.2560.1417/-1440.416.1440.810@0.23.2560.1417" timestamp="1575602965318" />
+    <state width="1742" height="907" key="GridCell.Tab.1.right" timestamp="1576103093559">
+      <screen x="0" y="23" width="2560" height="1350" />
+    </state>
+    <state width="1742" height="907" key="GridCell.Tab.1.right/-1440.357.1440.877/0.23.2560.1350@0.23.2560.1350" timestamp="1576017483109" />
+    <state width="1742" height="907" key="GridCell.Tab.1.right/0.23.1440.810@0.23.1440.810" timestamp="1576070324866" />
+    <state width="1742" height="907" key="GridCell.Tab.1.right/0.23.2560.1350/-1440.357.1440.877@0.23.2560.1350" timestamp="1576103093559" />
+    <state width="1742" height="498" key="GridCell.Tab.1.right/0.23.2560.1350/-1440.416.1440.877@0.23.2560.1350" timestamp="1575606017392" />
+    <state width="1742" height="695" key="GridCell.Tab.1.right/0.23.2560.1350/-1440.682.1440.877@0.23.2560.1350" timestamp="1575412987415" />
+    <state width="1742" height="498" key="GridCell.Tab.1.right/0.23.2560.1417/-1440.416.1440.810@0.23.2560.1417" timestamp="1575602965318" />
+    <state x="1085" y="623" key="ReplaceDuplicatesPrompt" timestamp="1575601445294">
+      <screen x="0" y="23" width="2560" height="1350" />
+    </state>
+    <state x="1085" y="623" key="ReplaceDuplicatesPrompt/0.23.2560.1350/-1440.416.1440.877@0.23.2560.1350" timestamp="1575601445294" />
+    <state x="768" y="279" key="SettingsEditor" timestamp="1575597891339">
+      <screen x="0" y="23" width="2560" height="1350" />
+    </state>
+    <state x="768" y="279" key="SettingsEditor/0.23.2560.1350/-1440.416.1440.877@0.23.2560.1350" timestamp="1575597891339" />
+    <state x="538" y="327" width="646" height="323" key="com.intellij.ide.util.TipDialog" timestamp="1575635578567">
+      <screen x="0" y="23" width="1440" height="810" />
+    </state>
+    <state x="538" y="327" key="com.intellij.ide.util.TipDialog/0.23.1440.810@0.23.1440.810" timestamp="1575635578567" />
+    <state x="950" y="527" width="646" height="323" key="com.intellij.ide.util.TipDialog/0.23.2560.1350/-1440.416.1440.877@0.23.2560.1350" timestamp="1575606046452" />
+    <state x="957" y="530" key="com.intellij.ide.util.TipDialog/0.23.2560.1350/-1440.682.1440.877@0.23.2560.1350" timestamp="1575412890218" />
+    <state x="1027" y="432" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1575605697831">
+      <screen x="0" y="23" width="2560" height="1350" />
+    </state>
+    <state x="1027" y="432" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.23.2560.1350/-1440.416.1440.877@0.23.2560.1350" timestamp="1575605697831" />
+    <state x="1018" y="458" width="528" height="484" key="extract.method.dialog" timestamp="1575601440535">
+      <screen x="0" y="23" width="2560" height="1350" />
+    </state>
+    <state x="1018" y="458" width="528" height="484" key="extract.method.dialog/0.23.2560.1350/-1440.416.1440.877@0.23.2560.1350" timestamp="1575601440535" />
+    <state x="945" y="331" width="670" height="676" key="search.everywhere.popup" timestamp="1575602200846">
+      <screen x="0" y="23" width="2560" height="1350" />
+    </state>
+    <state x="945" y="331" width="670" height="676" key="search.everywhere.popup/0.23.2560.1350/-1440.416.1440.877@0.23.2560.1350" timestamp="1575602200846" />
   </component>
 </project>

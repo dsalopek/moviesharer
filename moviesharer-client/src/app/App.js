@@ -14,7 +14,9 @@ import { ACCESS_TOKEN } from '../constants';
 import LoadingIndicator from '../common/LoadingIndicator';
 
 import Login from '../user/login/Login';
-import NewPost from '../post/NewPost';
+import {NewPost} from '../post/NewPost';
+import MovieSearchMaster from '../post/MovieSearchMaster';
+import Feed from '../post/Feed';
 import ServerError from '../common/ServerError'
 
 class App extends Component {
@@ -64,17 +66,19 @@ class App extends Component {
       <div>
         <Navbar currentUser={this.state.currentUser}/>
         <Switch>
-          <Route exact path="/feed">
-              <ServerError/>
-          </Route>
-          <Route exact path="/newpost">
-              <NewPost/>
-          </Route>
-          <Route exact path="/login">
-              <Login onLogin={this.handleLogin}/>
-          </Route>
-          <Route exact path="/profile">
-          </Route>
+          <div className="page-content">
+            <Route exact path="/feed">
+                <Feed/>
+            </Route>
+            <Route exact path="/newpost">
+                <NewPost/>
+            </Route>
+            <Route exact path="/login">
+                <Login onLogin={this.handleLogin}/>
+            </Route>
+            <Route exact path="/profile">
+            </Route>
+          </div>
         </Switch>
       </div>
     );

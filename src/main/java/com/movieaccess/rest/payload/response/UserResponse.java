@@ -1,43 +1,23 @@
-package com.movieaccess.rest.model;
+package com.movieaccess.rest.payload.response;
 
-import org.hibernate.annotations.Fetch;
-
-import javax.persistence.*;
-import java.util.HashSet;
-import java.util.Set;
-
-@Entity
-@Table(name = "users")
-public class User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private long id;
+public class UserResponse {
+    long id;
     private String username;
     private String firstName;
     private String lastName;
     private String avatarPath;
     private String email;
-    private String password;
 
-    @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(name = "user_roles",
-            joinColumns = @JoinColumn(name = "user_id"),
-            inverseJoinColumns = @JoinColumn(name = "role_id"))
-    private Set<Role> roles = new HashSet<>();
-
-    public User() {
+    public UserResponse() {
     }
 
-
-    public User(long id, String username, String firstName, String lastName, String avatarPath, String email, String password, Set<Role> roles) {
+    public UserResponse(long id, String username, String firstName, String lastName, String avatarPath, String email) {
         this.id = id;
         this.username = username;
         this.firstName = firstName;
         this.lastName = lastName;
         this.avatarPath = avatarPath;
         this.email = email;
-        this.password = password;
-        this.roles = roles;
     }
 
     public long getId() {
@@ -86,21 +66,5 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public Set<Role> getRoles() {
-        return roles;
-    }
-
-    public void setRoles(Set<Role> roles) {
-        this.roles = roles;
     }
 }
