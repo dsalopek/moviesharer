@@ -1,0 +1,41 @@
+.no-polls-found {
+    font-size: 20px;
+    text-align: center;
+    padding: 20px;    
+}
+
+.load-more-polls {
+    text-align: center;
+    margin-bottom: 40px;    
+}
+
+
+
+.post-cards {
+    text-align: center;
+    width: 100%;
+}
+
+.post-card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+  transition: 0.3s;
+  margin: 10px 5px 5px 10px;
+  border-radius: 5px;
+  height: 513px;
+  width: 75%;
+  display: inline-block;
+}
+
+/* Add rounded corners to the top left and the top right corner of the image */
+.movie-poster {
+  border-radius: 5px;
+  width: 342px;
+  float: left;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 0 6px 6px rgba(72, 72, 72, 0.7);
+}
+
+/* Add some padding inside the card container */

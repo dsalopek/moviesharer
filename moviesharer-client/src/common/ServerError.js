@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './ServerError.css';
 import { Link } from 'react-router-dom';
-import { Button } from 'antd';
 
 class ServerError extends Component {
     render() {
@@ -13,7 +12,7 @@ class ServerError extends Component {
                 <div className="server-error-desc">
                     Oops! Something went wrong at our Server. Why don't you go back?
                 </div>
-                <Link to="/"><Button className="server-error-go-back-btn" type="primary" size="large">Go Back</Button></Link>
+                <Link to="/"></Link>
             </div>
         );
     }

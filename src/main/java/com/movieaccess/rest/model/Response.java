@@ -9,6 +9,10 @@ public class Response {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private long responseId;
     private String displayValue;
+    private String test;
+
+    public Response() {
+    }
 
     public Response(long responseId, String displayValue) {
         this.responseId = responseId;

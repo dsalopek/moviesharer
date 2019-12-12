@@ -7,10 +7,10 @@
     height: 50px;
     width: 40%;
     border-radius: 10px 0 0 10px;
-    font-size: 1.875em;
+    font-size: 1.75em;
     vertical-align: middle;
     border: 0;
-    padding: 15px;
+    padding-left: 10px;
 }
 
 .search-button {

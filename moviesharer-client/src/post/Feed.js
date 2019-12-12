@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import { getAllPosts } from '../util/APIUtils';
-import { Card, Icon, notification } from 'antd';
 import { POLL_LIST_SIZE } from '../constants';
 import { withRouter } from 'react-router-dom';
-import './PostList.css';
+import './Feed.css';
 
-class PostList extends Component {
+class Feed extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -61,19 +60,20 @@ class PostList extends Component {
         console.log(this.state);
         const data = this.state.posts;
         return (
-            <div>
+            <div className="post-cards">
                 {data.map(function (d, idx) {
                     return (
-                        <div style={{ background: '#ECECEC', padding: '30px' }}>
-                            <Card title={d.post.postId} bordered={false} style={{ width: 300 }}>
-                                <img src={ 'https://image.tmdb.org/t/p/w500/rGE9sOt1jOtKtb3bARi33Eg1xfK.jpg' } />
+                        <div key={idx} className="post-card">
+                            <img className="movie-poster" src={'https://image.tmdb.org/t/p/w342/'+'5VTN0pR8gcqV3EPUHHfMGnJYN9L.jpg'} />
+                            {/* { <div title={'https://image.tmdb.org/t/p/w342/'+d.post.postId} bordered={false} style={{ width: 300 }}> */}
+                                {/* <img src={'https://image.tmdb.org/t/p/w500/rGE9sOt1jOtKtb3bARi33Eg1xfK.jpg'} />
                                 <p>Attendees</p>
                                 <ul>
-                                {d.attendeeList.map(function (d, idx) {
-                                    return (<li key = {idx}>{d.username}</li>)
-                                })}
+                                    {d.attendeeList.map(function (d, idx) {
+                                        return (<li key={idx}>{d.username}</li>)
+                                    })}
                                 </ul>
-                            </Card>
+                            </div> */}
                         </div>
                     )
                 })}
@@ -82,4 +82,4 @@ class PostList extends Component {
     }
 }
 
-export default withRouter(PostList);
+export default withRouter(Feed);

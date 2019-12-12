@@ -1,15 +1,13 @@
 package com.movieaccess.rest.controller;
 
-import com.movieaccess.rest.model.Attendee;
-import com.movieaccess.rest.model.Post;
-import com.movieaccess.rest.payload.AttendeeResponseRequest;
-import com.movieaccess.rest.payload.PostRequest;
-import com.movieaccess.rest.payload.PostResponse;
+import com.movieaccess.rest.model.AttendeeReply;
+import com.movieaccess.rest.payload.request.AttendeeResponseRequest;
+import com.movieaccess.rest.payload.request.PostRequest;
+import com.movieaccess.rest.payload.response.PostResponse;
 import com.movieaccess.rest.security.CurrentUser;
 import com.movieaccess.rest.security.UserPrincipal;
 import com.movieaccess.rest.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.repository.query.Param;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
@@ -36,6 +34,7 @@ public class PostController {
         return this.postService.getPostFeedForUser(userPrincipal.getUsername());
     }
 
+
     @PreAuthorize("hasRole('USER')")
     @PostMapping("/")
     public PostResponse createPost(@CurrentUser UserPrincipal userPrincipal, @RequestBody PostRequest postRequest) {
@@ -48,7 +47,7 @@ public class PostController {
     }
 
     @PostMapping("/{postId}/attendee/{attendeeId}")
-    public Attendee respondToInvite(
+    public AttendeeReply respondToInvite(
             @PathVariable("postId") long postId, @PathVariable("attendeeId") long attendeeId, @RequestBody AttendeeResponseRequest body) {
         return this.postService.respondToInvite(postId, attendeeId, body);
     }

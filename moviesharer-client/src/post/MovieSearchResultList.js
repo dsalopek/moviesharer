@@ -1,13 +1,7 @@
 import React, { Component } from 'react';
-import {
-    Route,
-    withRouter,
-    Switch,
-    Link
-  } from 'react-router-dom';
-import MovieSearchBar from './MovieSeach';
+import MovieSearchBar from './MovieSearchBar';
 import MovieModal from './MovieModal';
-import './MovieList.css';
+import './MovieSearchResultList.css';
 import { queryMovies, getMovieDetails } from '../util/APIUtils';
 
 function fetch(value, callback) {
@@ -24,14 +18,15 @@ function fetch(value, callback) {
         });
 }
 
-class MovieList extends Component {
+class MovieSearchResultList extends Component {
     constructor(props) {
         super(props);
         this.state = {
             data: [],
             value: '',
             selectedMovieId: undefined,
-            movieDetails: undefined
+            movieDetails: undefined,
+            showModal: false
         };
     }
 
@@ -54,36 +49,44 @@ class MovieList extends Component {
         }
     }
 
-    handleSelect = (rowId) => {
-        console.log(rowId);
+    handleClick = (rowId) => {
         this.setState({
             selectedMovieId: rowId
         })
 
         getMovieDetails(rowId)
             .then(response => {
-                console.log(response);
                 this.setState({
-                    movieDetails: response
+                    movieDetails: response,
+                    showModal: true
                 })
+
             });
+    }
+
+    handleSelect = () => {
+        this.setState({
+            showModal: false,
+            movieDetails: null
+        })
     }
 
     closeModal = () => {
         this.setState({
             selectedMovieId: undefined,
-            movieDetails: undefined
+            movieDetails: undefined,
+            showModal: false
         })
     }
 
     render() {
         const results = this.state.data.map(
-            (row) => <div key={row.id} className="movie-card" onClick={() => this.handleSelect(row.id)}>
-                        <img className="movie-poster"  src={'https://image.tmdb.org/t/p/w342/'+row.poster_path}/>
+            (row) => <div key={row.id} className={`movie-card ${this.props.chosenMovieId == row.id ? "selected-card" : ""}`} onClick={() => this.handleClick(row.id)}>
+                            <a><img className="movie-poster" src={'https://image.tmdb.org/t/p/w342/'+row.poster_path}/></a>
                     </div>);
 
         return (
-            <div>      
+            <div className="searching-container">      
                 <MovieSearchBar 
                     onSearch={this.handleSearch} 
                     onChange={this.handleChange}
@@ -92,6 +95,9 @@ class MovieList extends Component {
                 />
                 <div className="movie-cards">{results}</div>
                 <MovieModal 
+                    showModal={this.state.showModal}
+                    handleSelect={this.handleSelect}
+                    onSelectMovie={this.props.onSelectMovie}
                     movieDetails={this.state.movieDetails}
                     closeModal={this.closeModal}
                 />
@@ -100,4 +106,4 @@ class MovieList extends Component {
     }
 }
 
-export default MovieList;
+export default MovieSearchResultList;
