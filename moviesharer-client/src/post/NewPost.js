@@ -8,7 +8,7 @@ import { NewPostDetails } from './NewPostDetails';
 
 
 export class NewPost extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
             currentStep: 1,
@@ -27,21 +27,6 @@ export class NewPost extends Component {
         });
     }
 
-    next = () => {
-        if(this.state.currentStep < states.length) {
-            this.setState({currentStep: this.state.currentStep+1})
-        } else {
-            this.setState({currentStep: this.state.currentStep})
-        }
-    }
-    prev = () => {
-        if(this.state.currentStep > 1) {
-            this.setState({currentStep: this.state.currentStep-1})
-        } else {
-            this.setState({currentStep: this.state.currentStep})
-        }
-    }
-
     componentDidMount() {
         getAllUsers()
             .then(response => {
@@ -53,7 +38,7 @@ export class NewPost extends Component {
 
     handleSelectFriend = (friend) => {
         let list = this.state.attendees;
-        if(!list.includes(friend)){
+        if (!list.includes(friend)) {
             list.push(friend);
         }
         this.setState({
@@ -71,38 +56,24 @@ export class NewPost extends Component {
         })
     }
 
-    currentStep() {
-        switch(this.state.currentStep) {
-            case 1:
-                return(
+    render() {
+        return (
+            <div>
+                <div className="left-pane">
                     <MovieSearchResultList
                         chosenMovieId={this.state.movieId}
                         onSelectMovie={this.selectedMovie}
                         next={this.next}
                         prev={this.prev}
                     />
-                )
-            case 2:
-                return(
-                    <NewPostDetails 
+                </div>
+                <div className="right-pane">
+                    <NewPostDetails
                         friendList={this.state.friendList}
                         handleSelectFriend={this.handleSelectFriend}
                         handleRemoveFriend={this.handleRemoveFriend}
                         selectedFriends={this.state.attendees}
                     />
-                )
-        }
-    }
-
-    render() {
-        const previousButton = this.state.currentStep > 1 ? (<input className={`button-prev wizard-button`} type="button" value="Back" onClick={this.prev}/>) : (null);
-        const nextButton = this.state.currentStep < states.length ? (<input className={`button-next wizard-button`} type="button" value="Next" onClick={this.next}/>) : (null);
-        return (
-            <div>
-                {this.currentStep()}
-                <div className="wizard-buttons">
-                    {previousButton}
-                    {nextButton}
                 </div>
             </div>
         )

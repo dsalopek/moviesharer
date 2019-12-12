@@ -66,17 +66,19 @@ class App extends Component {
       <div>
         <Navbar currentUser={this.state.currentUser}/>
         <Switch>
-          <Route exact path="/feed">
-              <Feed/>
-          </Route>
-          <Route exact path="/newpost">
-              <NewPost/>
-          </Route>
-          <Route exact path="/login">
-              <Login onLogin={this.handleLogin}/>
-          </Route>
-          <Route exact path="/profile">
-          </Route>
+          <div className="page-content">
+            <Route exact path="/feed">
+                <Feed/>
+            </Route>
+            <Route exact path="/newpost">
+                <NewPost/>
+            </Route>
+            <Route exact path="/login">
+                <Login onLogin={this.handleLogin}/>
+            </Route>
+            <Route exact path="/profile">
+            </Route>
+          </div>
         </Switch>
       </div>
     );

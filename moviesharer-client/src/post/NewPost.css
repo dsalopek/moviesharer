@@ -53,3 +53,25 @@ textarea {
     resize: none;
     height: 100px;
 }
+
+.left-pane {
+    left: 0;
+    right: 350px;
+    position: absolute;
+    overflow-y: auto;
+    width: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.right-pane {
+    right: 0;
+    top: 0;
+    width: 280px;
+    height: 100%;
+    padding: 20px;
+    border-left: 1px solid #333;
+    /* bottom: 0; */
+    position: fixed;
+    display: block;
+}
