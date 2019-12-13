@@ -63,23 +63,27 @@ class App extends Component {
       return <LoadingIndicator />
     }
     return (
-      <div>
-        <Navbar currentUser={this.state.currentUser}/>
-        <Switch>
-          <div className="page-content">
+      <div className="page-container">
+        <div className="page-header">
+          <Navbar currentUser={this.state.currentUser}/>
+        </div>
+        <div className="page-content">
+          <Switch>
+            <div className="page-content">
             <Route exact path="/feed">
-                <Feed/>
-            </Route>
-            <Route exact path="/newpost">
-                <NewPost/>
-            </Route>
-            <Route exact path="/login">
-                <Login onLogin={this.handleLogin}/>
-            </Route>
-            <Route exact path="/profile">
-            </Route>
-          </div>
-        </Switch>
+                  <Feed/>
+              </Route>
+              <Route exact path="/newpost">
+                  <NewPost/>
+              </Route>
+              <Route exact path="/login">
+                  <Login onLogin={this.handleLogin}/>
+              </Route>
+              <Route exact path="/profile">
+              </Route>
+            </div>
+          </Switch>
+        </div>
       </div>
     );
   }

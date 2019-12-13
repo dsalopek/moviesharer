@@ -6,21 +6,25 @@
 .search-bar {
     height: 50px;
     width: 40%;
-    border-radius: 10px 0 0 10px;
     font-size: 1.75em;
-    vertical-align: middle;
+    vertical-align: bottom;
+    outline: none;
+    color: darkgreen;
     border: 0;
+    border-bottom: 2pt solid darkgreen;
     padding-left: 10px;
 }
 
 .search-button {
-    border-radius: 0 10px 10px 0;
     height: 50px;
     vertical-align: middle;
     padding: 10px;
-    background-color: darkgreen;
-    color: whitesmoke;
+    vertical-align: bottom;
+    outline: none;
+    cursor: pointer;
+    color: darkgreen;
     border: 0;
+    border-bottom: 2pt solid darkgreen;
     font-size: 1.45em;
 }
 

@@ -58,22 +58,26 @@ export class NewPost extends Component {
 
     render() {
         return (
-            <div>
-                <div className="left-pane">
-                    <MovieSearchResultList
-                        chosenMovieId={this.state.movieId}
-                        onSelectMovie={this.selectedMovie}
-                        next={this.next}
-                        prev={this.prev}
-                    />
+            <div className="post-content">
+                <div className="main-content">
+                    <div className="pane-contents">
+                        <MovieSearchResultList
+                            chosenMovieId={this.state.movieId}
+                            onSelectMovie={this.selectedMovie}
+                            next={this.next}
+                            prev={this.prev}
+                        />
+                    </div>
                 </div>
-                <div className="right-pane">
-                    <NewPostDetails
-                        friendList={this.state.friendList}
-                        handleSelectFriend={this.handleSelectFriend}
-                        handleRemoveFriend={this.handleRemoveFriend}
-                        selectedFriends={this.state.attendees}
-                    />
+                <div className="sidebar-content">
+                    <div className="pane-contents">
+                        <NewPostDetails
+                            friendList={this.state.friendList}
+                            handleSelectFriend={this.handleSelectFriend}
+                            handleRemoveFriend={this.handleRemoveFriend}
+                            selectedFriends={this.state.attendees}
+                        />
+                    </div>
                 </div>
             </div>
         )
