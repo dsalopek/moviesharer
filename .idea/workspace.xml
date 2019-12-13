@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1a7a3144-964a-4b5d-ba87-df272292eff3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moviesharer-client/src/app/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/moviesharer-client/src/app/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moviesharer-client/src/app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/moviesharer-client/src/app/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moviesharer-client/src/nav/Navbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/moviesharer-client/src/nav/Navbar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moviesharer-client/src/post/NewPost.css" beforeDir="false" afterPath="$PROJECT_DIR$/moviesharer-client/src/post/NewPost.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moviesharer-client/src/post/NewPost.js" beforeDir="false" afterPath="$PROJECT_DIR$/moviesharer-client/src/post/NewPost.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moviesharer-client/src/post/NewPostDetails.css" beforeDir="false" afterPath="$PROJECT_DIR$/moviesharer-client/src/post/NewPostDetails.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moviesharer-client/src/post/NewPostDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/moviesharer-client/src/post/NewPostDetails.js" afterDir="false" />
-    </list>
+    <list default="true" id="1a7a3144-964a-4b5d-ba87-df272292eff3" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

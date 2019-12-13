@@ -1,13 +1,24 @@
-.form-container {
-    display: flex;
-    flex-direction: column;
+.date {
+    width: auto;
 }
+
+.form-label {
+    width: fit-content;
+}
+
+.friend-picker {
+    overflow: auto;
+    overflow-y: scroll;
+}
+
+.submit {
+    height: 50px;
+}
+
 .selected-friend {
-    border-radius: 5px;
     overflow: hidden;
-    width: max-content;
-    margin: 5px;
-    background-color: black;
+    margin: 5px 0px 5px 0px;
+    background-color: darkgreen;
 }
 
 .selected-name {
@@ -18,7 +29,7 @@
 
 .remove-friend {
     float: right;
-    color: coral;
+    color: white;
     cursor: pointer;
     margin: 10px;
     font-weight: bold;
@@ -28,36 +39,15 @@
     color: red;
 }
 
-.friend-select {
-    width: 100%;
-    margin: 0;
-    background-color: white;
-    border-radius: 10px;
-    overflow: hidden;
-    cursor: text;
-    align-items: center;
-    display: flex;
-}
-
-.friend-search-bar {
-    height: 42px;
-    width: fit-content;
-    outline: none;
-    border-radius: 10px;
-    padding: 0;
-    font-size: 1.5em;
-    border: 0;
-}
 .friend-results {
     margin: 0;
     padding: 0;
-    border-radius: 10px;
     list-style-type: none;
 }
+
 .friend-result a {
     display: block;
-    width: 100%;
-    padding: 12px 0 10px 10px;
+    padding: 10px 0;
     list-style-type: none;
 }
 
@@ -72,19 +62,36 @@
     height: 50px;
     font-size: 1.5em;
     font-family: sans-serif;
-    width: 100%;
-    border-radius: 10px;
+    color: darkgreen;
     outline: 0;
     border: 0;
-}
-
-.select-item {
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
+    padding: 0;
 }
 
 .submit-button {
-    margin: auto;
     display: flex;
     align-self: flex-end;
+}
+
+.friend-search-bar {
+    height: 42px;
+    font-size: 1.5em;
+    vertical-align: bottom;
+    outline: none;
+    color: darkgreen;
+    border: 0;
+    padding: 0;
+    border-bottom: 2pt solid darkgreen;
+}
+
+.submit-button {
+    height: 50px;
+    padding: 10px;
+    vertical-align: bottom;
+    outline: none;
+    cursor: pointer;
+    color: darkgreen;
+    border: 0;
+    border-bottom: 2pt solid darkgreen;
+    font-size: 1.45em;
 }
