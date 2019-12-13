@@ -1,4 +1,7 @@
-
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
 .selected-friend {
     border-radius: 5px;
     overflow: hidden;
@@ -32,7 +35,6 @@
     border-radius: 10px;
     overflow: hidden;
     cursor: text;
-    /* display: inline-flex; */
     align-items: center;
     display: flex;
 }
@@ -78,5 +80,11 @@
 
 .select-item {
     -webkit-flex-wrap: wrap;
-    lex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.submit-button {
+    margin: auto;
+    display: flex;
+    align-self: flex-end;
 }

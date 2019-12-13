@@ -97,6 +97,7 @@ export class NewPostDetails extends Component {
                                 {results}
                             </ul>
                     </label>
+                    <input type="button" value="Submit" className="submit-button"/>
                 </div>
             </form>
         )
