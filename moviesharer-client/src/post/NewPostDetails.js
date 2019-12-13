@@ -63,7 +63,7 @@ export class NewPostDetails extends Component {
         
         const selectedFriends = this.props.selectedFriends.map(friend => {
             return (
-                <div className="selected-friend select-item">
+                <div className="selected-friend">
                     <div className="selected-name">
                         {friend.firstName + " " + friend.lastName}
                     </div>
@@ -78,26 +78,33 @@ export class NewPostDetails extends Component {
         return (
             <form onSubmit={this.submitForm}>
                 <div className="form-container">
-                    <label className="form-label">
-                        Date &amp; Time
-                        <input className="date-time" type="datetime-local"/>
-                    </label>
-                    <label className="form-label">
-                        Attendees
-                        <div className="friend-select select-item" onClick={this.focusTextInput}>
-                            {selectedFriends}
-                            <input className="friend-search-bar" 
-                                type="text" 
-                                onChange={this.filterFriends} 
-                                value={this.state.nameFilter}
-                                ref={this.setTextInputRef}
-                            />
-                        </div>
-                        <ul className="friend-results">
+                    <div className="date">
+                        <label className="form-label">
+                            Date &amp; Time
+                            <input className="date-time" type="datetime-local"/>
+                        </label>
+                    </div>
+                    <div className="friend-picker">
+                        <label className="form-label">
+                            Attendees
+                            <div className="friend-select">
+                                {selectedFriends}
+                                <input className="friend-search-bar" 
+                                    type="text" 
+                                    onChange={this.filterFriends} 
+                                    value={this.state.nameFilter}
+                                    ref={this.setTextInputRef}
+                                    placeholder="John Doe"
+                                />
+                            </div>
+                            <ul className="friend-results">
                                 {results}
                             </ul>
-                    </label>
-                    <input type="button" value="Submit" className="submit-button"/>
+                        </label>
+                    </div>
+                    <div className="submit">
+                        <input type="button" value="Submit" className="submit-button"/>
+                    </div>
                 </div>
             </form>
         )
