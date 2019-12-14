@@ -1,6 +1,7 @@
 .search-container {
-    margin: 30px;
+    /* margin: 30px; */
     text-align: center;
+    margin-bottom: 10px;
 }
 
 .search-bar {
@@ -12,13 +13,14 @@
     color: darkgreen;
     border: 0;
     border-bottom: 2pt solid darkgreen;
-    padding-left: 10px;
+    /* padding-left: 10px; */
 }
 
 .search-button {
     height: 50px;
     vertical-align: middle;
-    padding: 10px;
+    /* padding: 10px; */
+    padding: 0;
     vertical-align: bottom;
     outline: none;
     cursor: pointer;

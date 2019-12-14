@@ -81,7 +81,7 @@ export class NewPostDetails extends Component {
                     <div className="date">
                         <label className="form-label">
                             Date &amp; Time
-                            <input className="date-time" type="datetime-local"/>
+                            <input className="date-time" type="datetime-local" />
                         </label>
                     </div>
                     <div className="friend-picker">
@@ -94,7 +94,7 @@ export class NewPostDetails extends Component {
                                     onChange={this.filterFriends} 
                                     value={this.state.nameFilter}
                                     ref={this.setTextInputRef}
-                                    placeholder="John Doe"
+                                    placeholder="Search for a friend"
                                 />
                             </div>
                             <ul className="friend-results">

@@ -69,19 +69,17 @@ class App extends Component {
         </div>
         <div className="page-content">
           <Switch>
-            <div className="page-content">
             <Route exact path="/feed">
-                  <Feed/>
-              </Route>
-              <Route exact path="/newpost">
-                  <NewPost/>
-              </Route>
-              <Route exact path="/login">
-                  <Login onLogin={this.handleLogin}/>
-              </Route>
-              <Route exact path="/profile">
-              </Route>
-            </div>
+              <Feed/>
+            </Route>
+            <Route exact path="/newpost">
+              <NewPost/>
+            </Route>
+            <Route exact path="/login">
+              <Login onLogin={this.handleLogin}/>
+            </Route>
+            <Route exact path="/profile">
+            </Route>
           </Switch>
         </div>
       </div>
