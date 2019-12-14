@@ -1,9 +1,9 @@
 .movie-cards {
-    text-align: center;
-    width: 100%;
-    flex: 1;
-    overflow: hidden;
-    display: block;
+  text-align: center;
+  width: 100%;
+  flex: 1;
+  overflow: hidden;
+  display: block;
 }
 
 .movie-card {
@@ -40,6 +40,5 @@
 
 .searching-container {
   display: block;
-  flex-direction: column;
-  height: 100%;
+  min-height: 100%;
 }
