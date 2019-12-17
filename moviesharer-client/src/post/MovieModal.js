@@ -14,7 +14,7 @@ function MovieModal(props) {
     function createObject() {
         props.handleSelect();
         var movieDetails = {
-            id : props.movieDetails.id,
+            tmdbId : props.movieDetails.id,
             title : props.movieDetails.title,
             overview : props.movieDetails.overview,
             posterURL : props.movieDetails.poster_path,

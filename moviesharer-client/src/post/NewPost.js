@@ -13,7 +13,8 @@ export class NewPost extends Component {
         this.state = {
             currentStep: 1,
             movieId: null,
-            proposedDate: null,
+            proposedDate: Date.now(),
+            movieDetails: {},
             attendees: [],
             friendFilter: '',
             friendList: []
@@ -28,6 +29,7 @@ export class NewPost extends Component {
     }
 
     componentDidMount() {
+        console.log(Date.now())
         getAllUsers()
             .then(response => {
                 this.setState({
@@ -56,6 +58,24 @@ export class NewPost extends Component {
         })
     }
 
+    handleFormSubmit = () => {
+        console.log("hello");
+        var postRequest = {
+            movie: this.state.movieDetails,
+            proposedDate: this.state.proposedDate,
+            attendeeList: this.state.attendees
+        };
+        console.log(postRequest);
+    }
+
+    handleChangeDate = (event) => {
+        let value = event.target.value;
+        console.log(value);
+        this.setState({
+            proposedDate: value
+        })
+    }
+
     render() {
         return (
             <div className="post-content">
@@ -75,7 +95,10 @@ export class NewPost extends Component {
                             friendList={this.state.friendList}
                             handleSelectFriend={this.handleSelectFriend}
                             handleRemoveFriend={this.handleRemoveFriend}
+                            handleChangeDate={this.handleChangeDate}
+                            proposedDate={this.state.proposedDate}
                             selectedFriends={this.state.attendees}
+                            handleFormSubmit={this.handleFormSubmit}
                         />
                     </div>
                 </div>
