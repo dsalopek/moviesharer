@@ -42,10 +42,21 @@ export class NewPostDetails extends Component {
 
     submitForm = (event) => {
         event.preventDefault();
+        this.props.handleFormSubmit();
     }
 
     componentDidMount() {
         this.focusTextInput();
+    }
+
+    formatDate = (value) => {
+        var dateobj = new Date('October 15, 1996 05:35:32'); 
+  
+            // Contents of above date object is converted 
+            // into a string using toISOString() function. 
+            var B = dateobj.toISOString(); 
+            console.log(B);
+        return B;
     }
 
     render() {
@@ -81,7 +92,7 @@ export class NewPostDetails extends Component {
                     <div className="date">
                         <label className="form-label">
                             Date &amp; Time
-                            <input className="date-time" type="datetime-local" />
+                            <input className="date-time" type="datetime-local" value={this.formatDate(this.props.proposedTime)} onChange={() => this.props.handleChangeDate()}/>
                         </label>
                     </div>
                     <div className="friend-picker">
@@ -103,7 +114,7 @@ export class NewPostDetails extends Component {
                         </label>
                     </div>
                     <div className="submit">
-                        <input type="button" value="Submit" className="submit-button"/>
+                        <input value="Submit" className="submit-button" type="submit"/>
                     </div>
                 </div>
             </form>
