@@ -9,10 +9,12 @@
     margin-bottom: 40px;    
 }
 
-
-
 .post-cards {
-    text-align: center;
+    /* text-align: center; */
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    justify-content: center;
     width: 100%;
 }
 
@@ -22,15 +24,21 @@
   margin: 10px 5px 5px 10px;
   border-radius: 5px;
   height: 513px;
-  width: 75%;
-  display: inline-block;
+  width: 60%;
+  /* overflow: hidden; */
+  display: flex;
 }
 
 /* Add rounded corners to the top left and the top right corner of the image */
 .movie-poster {
   border-radius: 5px;
   width: 342px;
-  float: left;
+  /* flex: 1; */
+}
+
+.movie-details {
+  padding: 10px;
+  flex: 1;
 }
 
 /* On mouse-over, add a deeper shadow */
@@ -38,4 +46,19 @@
   box-shadow: 0 0 6px 6px rgba(72, 72, 72, 0.7);
 }
 
-/* Add some padding inside the card container */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  /* margin: 10px;
+  padding: 10px; */
+  text-align: justify;
+}
+
+
+.post-attendee {
+  background-color: orange;
+}
