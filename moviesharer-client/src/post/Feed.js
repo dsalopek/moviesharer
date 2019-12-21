@@ -57,23 +57,28 @@ class Feed extends Component {
     }
 
     render() {
-        console.log(this.state);
+        // console.log(this.state);
         const data = this.state.posts;
         return (
             <div className="post-cards">
                 {data.map(function (d, idx) {
                     return (
                         <div key={idx} className="post-card">
-                            <img className="movie-poster" src={'https://image.tmdb.org/t/p/w342/'+'5VTN0pR8gcqV3EPUHHfMGnJYN9L.jpg'} />
-                            {/* { <div title={'https://image.tmdb.org/t/p/w342/'+d.post.postId} bordered={false} style={{ width: 300 }}> */}
-                                {/* <img src={'https://image.tmdb.org/t/p/w500/rGE9sOt1jOtKtb3bARi33Eg1xfK.jpg'} />
-                                <p>Attendees</p>
-                                <ul>
-                                    {d.attendeeList.map(function (d, idx) {
-                                        return (<li key={idx}>{d.username}</li>)
-                                    })}
-                                </ul>
-                            </div> */}
+                            <img className="movie-poster" src={'https://image.tmdb.org/t/p/w342/'+d.movie.posterURL} />
+                            <div className="movie-details">
+                                <h2>{d.movie.title}</h2>
+                                <p>{d.movie.overview}</p>
+                                <p>{d.post.proposedDate}</p>
+                                <h3>Attendees</h3>
+                                    <ul>
+                                        {
+                                            d.attendeeResponses ? 
+                                            (d.attendeeResponses.map(function (d1, idx) {
+                                                return (<li key={idx} className="post-attendee">{d1.firstName+' '+d1.lastName}</li>)
+                                            })) : null}
+                                    </ul>
+                            </div>
+                            
                         </div>
                     )
                 })}

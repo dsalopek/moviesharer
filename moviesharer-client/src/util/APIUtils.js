@@ -96,6 +96,14 @@ export function queryMovies(queryString) {
     })
 }
 
+export function createPost(postRequest) {
+    return request({
+        url: API_BASE_URL + "/post/",
+        method: 'POST',
+        body: JSON.stringify(postRequest)
+    })
+}
+
 export function getMovieDetails(movieId) {
     return request({
         url: 'https://api.themoviedb.org/3/movie/'+movieId+'?api_key=dac1a556b543c18f8675c768457e5777',

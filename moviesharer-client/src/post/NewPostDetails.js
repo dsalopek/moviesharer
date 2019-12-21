@@ -50,13 +50,9 @@ export class NewPostDetails extends Component {
     }
 
     formatDate = (value) => {
-        var dateobj = new Date('October 15, 1996 05:35:32'); 
-  
-            // Contents of above date object is converted 
-            // into a string using toISOString() function. 
-            var B = dateobj.toISOString(); 
-            console.log(B);
-        return B;
+        var dateobj = new Date(value);
+        var final = "".concat(dateobj.getFullYear(), '-', dateobj.getMonth(), '-', dateobj.getDate(), 'T', ('0'+dateobj.getHours()).slice(-2), ':', ('0'+dateobj.getMinutes()).slice(-2));
+        return final;
     }
 
     render() {
@@ -72,9 +68,9 @@ export class NewPostDetails extends Component {
                 )
             });        
         
-        const selectedFriends = this.props.selectedFriends.map(friend => {
+        const selectedFriends = this.props.selectedFriends.map((friend, idx) => {
             return (
-                <div className="selected-friend">
+                <div className="selected-friend" key={idx}>
                     <div className="selected-name">
                         {friend.firstName + " " + friend.lastName}
                     </div>
@@ -92,7 +88,7 @@ export class NewPostDetails extends Component {
                     <div className="date">
                         <label className="form-label">
                             Date &amp; Time
-                            <input className="date-time" type="datetime-local" value={this.formatDate(this.props.proposedTime)} onChange={() => this.props.handleChangeDate()}/>
+                            <input className="date-time" type="datetime-local" value={this.formatDate(this.props.proposedDate)} onChange={() => this.props.handleChangeDate()}/>
                         </label>
                     </div>
                     <div className="friend-picker">

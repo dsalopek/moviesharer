@@ -3,7 +3,7 @@ import MovieSearchResultList from './MovieSearchResultList';
 import './NewPost.css';
 import { now } from '../../../../../../../Users/andrewsalopek/Library/Caches/typescript/3.6/node_modules/moment/moment';
 import { func } from 'prop-types';
-import { getAllUsers } from '../util/APIUtils';
+import { getAllUsers, createPost } from '../util/APIUtils';
 import { NewPostDetails } from './NewPostDetails';
 
 
@@ -29,7 +29,6 @@ export class NewPost extends Component {
     }
 
     componentDidMount() {
-        console.log(Date.now())
         getAllUsers()
             .then(response => {
                 this.setState({
@@ -59,18 +58,17 @@ export class NewPost extends Component {
     }
 
     handleFormSubmit = () => {
-        console.log("hello");
         var postRequest = {
             movie: this.state.movieDetails,
-            proposedDate: this.state.proposedDate,
+            proposedDate: Math.floor(this.state.proposedDate/1000),
             attendeeList: this.state.attendees
         };
         console.log(postRequest);
+        createPost(postRequest);
     }
 
     handleChangeDate = (event) => {
         let value = event.target.value;
-        console.log(value);
         this.setState({
             proposedDate: value
         })
