@@ -24,6 +24,7 @@
   margin: 10px 5px 5px 10px;
   border-radius: 5px;
   height: 513px;
+  background-color: white;
   width: 60%;
   /* overflow: hidden; */
   display: flex;
@@ -53,12 +54,31 @@ ul {
 }
 
 p {
-  /* margin: 10px;
-  padding: 10px; */
   text-align: justify;
 }
 
+.post-attendees {
+  display: inline-block;
+  /* flex-wrap: wrap;
+  flex-direction: row; */
+}
 
 .post-attendee {
-  background-color: orange;
+  /* background-color: orange; */
+  border: 1pt solid rgb(54, 54, 135);
+  border-radius: 3px;
+  color: rgb(54, 54, 135);
+  width: auto;
+  /* flex: 1; */
+  float: left;
+  margin: 0 5px 0 0;
+  padding: 3px 5px;
+}
+
+h1, h2, h3, p {
+  margin: 5px 0;
+}
+
+h1, h2, h3 {
+  color: #333;
 }

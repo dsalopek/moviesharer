@@ -70,13 +70,13 @@ class Feed extends Component {
                                 <p>{d.movie.overview}</p>
                                 <p>{d.post.proposedDate}</p>
                                 <h3>Attendees</h3>
-                                    <ul>
+                                    <div className="post-attendees">
                                         {
                                             d.attendeeResponses ? 
                                             (d.attendeeResponses.map(function (d1, idx) {
-                                                return (<li key={idx} className="post-attendee">{d1.firstName+' '+d1.lastName}</li>)
+                                                return (<div key={idx} className="post-attendee">{d1.firstName+' '+d1.lastName}</div>)
                                             })) : null}
-                                    </ul>
+                                    </div>
                             </div>
                             
                         </div>
