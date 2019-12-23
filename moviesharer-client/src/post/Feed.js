@@ -60,28 +60,30 @@ class Feed extends Component {
         // console.log(this.state);
         const data = this.state.posts;
         return (
-            <div className="post-cards">
-                {data.map(function (d, idx) {
-                    return (
-                        <div key={idx} className="post-card">
-                            <img className="movie-poster" src={'https://image.tmdb.org/t/p/w342/'+d.movie.posterURL} />
-                            <div className="movie-details">
-                                <h2>{d.movie.title}</h2>
-                                <p>{d.movie.overview}</p>
-                                <p>{d.post.proposedDate}</p>
-                                <h3>Attendees</h3>
-                                    <div className="post-attendees">
-                                        {
-                                            d.attendeeResponses ? 
-                                            (d.attendeeResponses.map(function (d1, idx) {
-                                                return (<div key={idx} className="post-attendee">{d1.firstName+' '+d1.lastName}</div>)
-                                            })) : null}
-                                    </div>
+            <div className="post-container">
+                <div className="post-cards">
+                    {data.map(function (d, idx) {
+                        return (
+                            <div key={idx} className="post-card">
+                                <img className="movie-poster" src={'https://image.tmdb.org/t/p/w342/'+d.movie.posterURL} />
+                                <div className="movie-details">
+                                    <h2>{d.movie.title}</h2>
+                                    <p>{d.movie.overview}</p>
+                                    <p>{d.post.proposedDate}</p>
+                                    <h3>Attendees</h3>
+                                        <div className="post-attendees">
+                                            {
+                                                d.attendeeResponses ? 
+                                                (d.attendeeResponses.map(function (d1, idx) {
+                                                    return (<div key={idx} className="post-attendee">{d1.firstName+' '+d1.lastName}</div>)
+                                                })) : null}
+                                        </div>
+                                </div>
+                                
                             </div>
-                            
-                        </div>
-                    )
-                })}
+                        )
+                    })}
+                </div>
             </div>
         );
     }

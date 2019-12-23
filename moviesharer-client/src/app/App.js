@@ -18,6 +18,7 @@ import {NewPost} from '../post/NewPost';
 import MovieSearchMaster from '../post/MovieSearchMaster';
 import Feed from '../post/Feed';
 import ServerError from '../common/ServerError'
+import Profile from '../user/profile/Profile';
 
 class App extends Component {
   constructor(props) {
@@ -79,6 +80,7 @@ class App extends Component {
               <Login onLogin={this.handleLogin}/>
             </Route>
             <Route exact path="/profile">
+              <Profile/>
             </Route>
           </Switch>
         </div>
