@@ -10,31 +10,31 @@
 }
 
 .post-cards {
-    /* text-align: center; */
-    display: flex;
-    flex-wrap: wrap;
-    /* flex-direction: column; */
-    justify-content: center;
-    width: 100%;
+  overflow-y: scroll;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  background-color: white;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  min-height: 100%;
 }
 
 .post-card {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
   transition: 0.3s;
   margin: 10px 5px 5px 10px;
-  border-radius: 5px;
-  height: 513px;
   background-color: white;
   width: 60%;
-  /* overflow: hidden; */
   display: flex;
 }
 
-/* Add rounded corners to the top left and the top right corner of the image */
 .movie-poster {
-  border-radius: 5px;
-  width: 342px;
-  /* flex: 1; */
+  border-radius: 0;
+  width: 171px;
 }
 
 .movie-details {
@@ -42,7 +42,6 @@
   flex: 1;
 }
 
-/* On mouse-over, add a deeper shadow */
 .card:hover {
   box-shadow: 0 0 6px 6px rgba(72, 72, 72, 0.7);
 }
@@ -57,8 +56,20 @@ p {
   text-align: justify;
 }
 
+.post-container {
+  display: grid;
+  grid-template-areas: "main-content";
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  overflow: auto;
+  grid-gap: 10px;
+  max-height: 100%;
+  padding: 10px;
+}
+
 .post-attendees {
   display: inline-block;
+  
   /* flex-wrap: wrap;
   flex-direction: row; */
 }
