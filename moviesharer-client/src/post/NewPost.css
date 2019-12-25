@@ -1,77 +1,28 @@
-.wizard-buttons {
-    border-top: 1px darkgray solid;
-    background-color: whitesmoke;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    text-align: center;
-}
-
-.wizard-button {
-    border-radius: 10px;
-    height: 50px;
-    padding: 10px;
-    margin: 10px;
-    vertical-align: middle;
-    background-color: darkgreen;
-    color: whitesmoke;
-    border: 0;
-    font-size: 1.45em;
-}
-
-.button-next {
-    float: right;
-}
-
-.button-prev {
-    float: left;
-}
-
-.form-container {
-    max-width: 620px;
-    margin: 0 auto;
-    margin-top: 40px;
-}
-
-.form-input {
-    height: 50px;
-    width: 100%;
-    border-radius: 10px;
-    font-size: 1.75em;
-    vertical-align: middle;
-    border: 0;
-    padding: 0 10px;
-}
-
-textarea {
-    margin-top: 20px;
-    resize: none;
-}
-
-.form-text-area {
-    padding-top: 10px;
-    resize: none;
-    height: 100px;
-}
-
-.left-pane {
-    left: 0;
-    right: 350px;
-    position: absolute;
-    overflow-y: auto;
-    width: auto;
+.pane-contents {
+    background-color: white;
     margin: 0;
-    padding: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    min-height: 100%;
 }
 
-.right-pane {
-    right: 0;
-    top: 0;
-    width: 280px;
-    height: 100%;
-    padding: 20px;
-    border-left: 1px solid #333;
-    /* bottom: 0; */
-    position: fixed;
-    display: block;
+.post-content {
+    display: grid;
+    grid-template-areas: "main-content sidebar";
+    grid-template-columns: 1fr 350px;
+    grid-template-rows: 1fr;
+    overflow: auto;
+    grid-gap: 10px;
+    max-height: 100%;
+    padding: 10px;
+}
+
+.main-content {
+    grid-area: main-content;
+    overflow-y: scroll;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.sidebar-content { 
+    grid-area: sidebar; 
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

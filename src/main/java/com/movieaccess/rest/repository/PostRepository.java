@@ -17,7 +17,7 @@ public interface PostRepository extends JpaRepository<Post, Long> {
     @Query(value = "select * from Post p", nativeQuery = true)
     List<Post> findAll();
 
-    @Query(value = "select p.* from post p join attendee a on p.post_id = a.post_id join users u on u.id = a.user_id " +
+    @Query(value = "select p.* from post p left join attendee a on p.post_id = a.post_id left join users u on u.id = a.user_id " +
             "where p.created_by = :username or u.username = :username group by p.post_id", nativeQuery = true)
     List<Post> findAllByCreatedByOrAttendee(@Param("username") String username);
 }

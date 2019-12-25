@@ -3,7 +3,7 @@ import MovieSearchResultList from './MovieSearchResultList';
 import './NewPost.css';
 import { now } from '../../../../../../../Users/andrewsalopek/Library/Caches/typescript/3.6/node_modules/moment/moment';
 import { func } from 'prop-types';
-import { getAllUsers } from '../util/APIUtils';
+import { getAllUsers, createPost } from '../util/APIUtils';
 import { NewPostDetails } from './NewPostDetails';
 
 
@@ -13,7 +13,8 @@ export class NewPost extends Component {
         this.state = {
             currentStep: 1,
             movieId: null,
-            proposedDate: null,
+            proposedDate: Date.now(),
+            movieDetails: {},
             attendees: [],
             friendFilter: '',
             friendList: []
@@ -56,24 +57,48 @@ export class NewPost extends Component {
         })
     }
 
+    handleFormSubmit = () => {
+        var postRequest = {
+            movie: this.state.movieDetails,
+            proposedDate: Math.floor(this.state.proposedDate/1000),
+            attendeeList: this.state.attendees
+        };
+        console.log(postRequest);
+        createPost(postRequest);
+    }
+
+    handleChangeDate = (event) => {
+        let value = event.target.value;
+        this.setState({
+            proposedDate: value
+        })
+    }
+
     render() {
         return (
-            <div>
-                <div className="left-pane">
-                    <MovieSearchResultList
-                        chosenMovieId={this.state.movieId}
-                        onSelectMovie={this.selectedMovie}
-                        next={this.next}
-                        prev={this.prev}
-                    />
+            <div className="post-content">
+                <div className="main-content">
+                    <div className="pane-contents">
+                        <MovieSearchResultList
+                            chosenMovieId={this.state.movieId}
+                            onSelectMovie={this.selectedMovie}
+                            next={this.next}
+                            prev={this.prev}
+                        />
+                    </div>
                 </div>
-                <div className="right-pane">
-                    <NewPostDetails
-                        friendList={this.state.friendList}
-                        handleSelectFriend={this.handleSelectFriend}
-                        handleRemoveFriend={this.handleRemoveFriend}
-                        selectedFriends={this.state.attendees}
-                    />
+                <div className="sidebar-content">
+                    <div className="pane-contents">
+                        <NewPostDetails
+                            friendList={this.state.friendList}
+                            handleSelectFriend={this.handleSelectFriend}
+                            handleRemoveFriend={this.handleRemoveFriend}
+                            handleChangeDate={this.handleChangeDate}
+                            proposedDate={this.state.proposedDate}
+                            selectedFriends={this.state.attendees}
+                            handleFormSubmit={this.handleFormSubmit}
+                        />
+                    </div>
                 </div>
             </div>
         )

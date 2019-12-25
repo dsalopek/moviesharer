@@ -1,3 +1,21 @@
-.page-content {
-  margin-top: 64px;   
+.page-container {
+  display: grid;
+  grid-template-areas:
+    "header";
+
+  grid-template-columns: 1fr;
+  grid-template-rows: 46px 1fr;
+  height: 100vh;
+}
+
+.page-header { grid-area: header; }
+.page-content { 
+  display: grid;
+  grid-template-areas:
+    "content";
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 10px;
+  overflow: auto;
+  max-height: 100%;
 }
