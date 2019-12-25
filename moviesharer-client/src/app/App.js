@@ -18,6 +18,7 @@ import {NewPost} from '../post/NewPost';
 import MovieSearchMaster from '../post/MovieSearchMaster';
 import Feed from '../post/Feed';
 import ServerError from '../common/ServerError'
+import Profile from '../user/profile/Profile';
 
 class App extends Component {
   constructor(props) {
@@ -63,23 +64,26 @@ class App extends Component {
       return <LoadingIndicator />
     }
     return (
-      <div>
-        <Navbar currentUser={this.state.currentUser}/>
-        <Switch>
-          <div className="page-content">
+      <div className="page-container">
+        <div className="page-header">
+          <Navbar currentUser={this.state.currentUser}/>
+        </div>
+        <div className="page-content">
+          <Switch>
             <Route exact path="/feed">
-                <Feed/>
+              <Feed/>
             </Route>
             <Route exact path="/newpost">
-                <NewPost/>
+              <NewPost/>
             </Route>
             <Route exact path="/login">
-                <Login onLogin={this.handleLogin}/>
+              <Login onLogin={this.handleLogin}/>
             </Route>
             <Route exact path="/profile">
+              <Profile/>
             </Route>
-          </div>
-        </Switch>
+          </Switch>
+        </div>
       </div>
     );
   }

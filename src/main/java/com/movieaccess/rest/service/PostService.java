@@ -168,13 +168,16 @@ public class PostService {
             AttendeeReply attendee = new AttendeeReply();
             attendee.setPostId(finalPost.getPostId());
             attendee.setCreatedDate(Instant.now());
-            attendee.setAttendeeId(attendeeRequest.getUserId());
+            attendee.setUserId(attendeeRequest.getId());
             attendee.setCreatedBy(userPrincipal.getUsername());
             attendee.setResponseId(ResponseIds.NORESPONSE);
             return attendee;
         }).collect(Collectors.toList());
 
         attendeeList = this.attendeeRepository.saveAll(attendeeList);
+
+        logger.info("Attendee(s) created for post id: " + post.getPostId());
+        logger.info(attendeeList.toString());
 
         return buildSinglePostResponse(post, movie, attendeeList);
     }

@@ -9,33 +9,87 @@
     margin-bottom: 40px;    
 }
 
-
-
 .post-cards {
-    text-align: center;
-    width: 100%;
+  overflow-y: scroll;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  background-color: white;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  min-height: 100%;
 }
 
 .post-card {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
   transition: 0.3s;
   margin: 10px 5px 5px 10px;
-  border-radius: 5px;
-  height: 513px;
-  width: 75%;
-  display: inline-block;
+  background-color: white;
+  width: 60%;
+  display: flex;
 }
 
-/* Add rounded corners to the top left and the top right corner of the image */
 .movie-poster {
-  border-radius: 5px;
-  width: 342px;
-  float: left;
+  border-radius: 0;
+  width: 171px;
 }
 
-/* On mouse-over, add a deeper shadow */
+.movie-details {
+  padding: 10px;
+  flex: 1;
+}
+
 .card:hover {
   box-shadow: 0 0 6px 6px rgba(72, 72, 72, 0.7);
 }
 
-/* Add some padding inside the card container */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  text-align: justify;
+}
+
+.post-container {
+  display: grid;
+  grid-template-areas: "main-content";
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  overflow: auto;
+  grid-gap: 10px;
+  max-height: 100%;
+  padding: 10px;
+}
+
+.post-attendees {
+  display: inline-block;
+  
+  /* flex-wrap: wrap;
+  flex-direction: row; */
+}
+
+.post-attendee {
+  /* background-color: orange; */
+  border: 1pt solid rgb(54, 54, 135);
+  border-radius: 3px;
+  color: rgb(54, 54, 135);
+  width: auto;
+  /* flex: 1; */
+  float: left;
+  margin: 0 5px 0 0;
+  padding: 3px 5px;
+}
+
+h1, h2, h3, p {
+  margin: 5px 0;
+}
+
+h1, h2, h3 {
+  color: #333;
+}
