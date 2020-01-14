@@ -9,7 +9,7 @@ class Profile extends Component {
     render() {
         return (
         <div className="profile-card">
-            <img className="profile-image" src="https://image.tmdb.org/t/p/w342//8j58iEBw9pOXFD2L0nt0ZXeHviB.jpg"/>
+            {/* <img className="profile-image" src="https://image.tmdb.org/t/p/w342//8j58iEBw9pOXFD2L0nt0ZXeHviB.jpg"/> */}
             <div className="profile-details">
                 <h2 className="profile-full-name">Dylan Salopek</h2>
                 <p className="profile-handle">dylan.salopek</p>
