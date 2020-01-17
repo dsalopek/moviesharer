@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getAllPosts } from '../util/APIUtils';
+import { getMyFeed } from '../util/APIUtils';
 import { POLL_LIST_SIZE } from '../constants';
 import { withRouter } from 'react-router-dom';
 import './Feed.css';
@@ -29,8 +29,8 @@ class Feed extends Component {
         this.loadPostList = this.loadPostList.bind(this);
     }
 
-    loadPostList(page = 0, size = POLL_LIST_SIZE) {
-        let promise = getAllPosts();
+    loadPostList() {
+        let promise = getMyFeed();
 
         if (!promise) {
             return;

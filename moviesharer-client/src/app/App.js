@@ -79,7 +79,7 @@ class App extends Component {
             <Route exact path="/login">
               <Login onLogin={this.handleLogin}/>
             </Route>
-            <Route exact path="/profile">
+            <Route exact path="/profile" isAuthenticated={this.state.isAuthenticated}>
               <Profile/>
             </Route>
           </Switch>
