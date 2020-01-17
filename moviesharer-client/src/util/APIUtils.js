@@ -82,9 +82,16 @@ export function getUserProfile(username) {
 //     });
 // }
 
-export function getAllPosts() {
+export function getMyFeed() {
     return request({
-        url: API_BASE_URL + "/post/",
+        url: API_BASE_URL + "/post/feed",
+        method: 'GET'
+    })
+}
+
+export function getAllMyPosts() {
+    return request({
+        url: API_BASE_URL + "/post/profile",
         method: 'GET'
     })
 }

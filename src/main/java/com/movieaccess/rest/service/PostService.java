@@ -49,12 +49,23 @@ public class PostService {
         return buildMultiplePostResponse(posts, movies, attendeeList);
     }
 
+    public List<PostResponse> getPostsForUser(String username) {
+        List<Post> posts = this.postRepository.findAllByCreatedBy(username);
+
+        return getPostResponseGivenPosts(posts);
+    }
+
     public List<PostResponse> getPostFeedForUser(String username) {
         List<Post> posts = this.postRepository.findAllByCreatedByOrAttendee(username);
+
+        return getPostResponseGivenPosts(posts);
+    }
+
+    private List<PostResponse> getPostResponseGivenPosts(List<Post> posts) {
         List<Long> postIds = posts.stream().map(Post::getPostId).collect(Collectors.toList());
         List<Long> movieIds = posts.stream().map(Post::getMovieId).collect(Collectors.toList());
         List<Movie> movies = this.movieRepository.findAllByMovieIdIn(movieIds)
-                .orElseThrow(() -> new NoSuchElementException("Movies now found with post ids: " + movieIds + "!"));
+                .orElseThrow(() -> new NoSuchElementException("Movies not found with post ids: " + movieIds + "!"));
         List<AttendeeReply> attendeeList = this.attendeeRepository.findAllByPostIdIn(postIds);
 
         return buildMultiplePostResponse(posts, movies, attendeeList);
