@@ -29,7 +29,7 @@
   margin: 10px 5px 5px 10px;
   background-color: white;
   width: 60%;
-  display: flex;
+  
 }
 
 .movie-poster {
@@ -65,6 +65,7 @@ p {
   grid-gap: 10px;
   max-height: 100%;
   padding: 10px;
+  
 }
 
 .post-attendees {
@@ -86,10 +87,55 @@ p {
   padding: 3px 5px;
 }
 
+.attendee-accept {
+  border: 1pt solid rgb(10, 99, 23);
+  background-color: rgb(10, 99, 23);
+  color: white;
+}
+
+.attendee-decline {
+  border: 1pt solid rgb(120, 12, 12);
+  background-color: rgb(120, 12, 12);
+  color: white;
+}
+
+.attendee-tentative {
+  border: 1pt solid rgb(145, 109, 17);
+  background-color: rgb(145, 109, 17);
+  color: white;
+}
+
 h1, h2, h3, p {
   margin: 5px 0;
 }
 
 h1, h2, h3 {
   color: #333;
+}
+
+.post-card-header {
+  /* width: 100%; */
+  /* border-bottom: 1px solid lightgray; */
+  background-color: whitesmoke;
+  padding: 10px;
+}
+
+.post-card-contents {
+  display: flex;
+}
+
+.post-poster {
+  border-bottom: 1pt solid whitesmoke;
+  /* border-radius: 3px; */
+  color: rgb(54, 54, 135);
+  width: auto;
+  text-align: right;
+  /* flex: 1; */
+  /* float: right; */
+  /* margin: 0 5px 0 0; */
+  padding: 3px 5px;
+}
+
+.post-poster p {
+  margin: 15px;
 }
