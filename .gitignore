@@ -30,3 +30,5 @@ target/
 build/
 
 ### VS Code ###
+src/main/resources/application.properts
+target/classes/application.properts
